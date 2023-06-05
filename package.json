@@ -9,8 +9,13 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@iconify/json": "^2.2.73",
     "@nuxtjs/tailwindcss": "^6.7.0",
     "@types/node": "^18",
-    "nuxt": "^3.5.2"
+    "nuxt": "^3.5.2",
+    "unplugin-icons": "^0.16.2"
+  },
+  "dependencies": {
+    "unplugin-vue-components": "^0.25.0"
   }
 }
