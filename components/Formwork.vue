@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen relative overflow-hidden">
+  <div class="h-screen relative">
     <h2 class="text-9xl font-sans tracking-wide absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-slide-in">FORMWORK</h2>
   </div>
 </template>

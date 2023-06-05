@@ -1,11 +1,12 @@
 <script lang="ts" setup>
-
-
 </script>
 
 <template>
-  <div class="min-h-screen formworkbg">
-    <slot />
+  <div>
+    <uiNavBar />
+    <div class="min-h-screen h-full formworkbg">
+      <slot />
+    </div>
   </div>
 </template>
 
