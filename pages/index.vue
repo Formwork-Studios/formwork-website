@@ -4,6 +4,7 @@
     <Services />
     <BigQuote :bigQuote="bigQuote" />
     <Columns />
+    <uiContact />
   </div>
 </template>
 

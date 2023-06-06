@@ -1,10 +1,9 @@
-<script lang="ts" setup></script>
-
 <template>
-  <div>
-    Layout: service
-    <slot />
+  <div class="flex flex-col min-h-screen">
+    <uiNavBar />
+    <div class="flex-grow formworkbg">
+      <slot />
+    </div>
+    <uiFooter />
   </div>
 </template>
-
-<style scoped></style>

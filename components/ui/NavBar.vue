@@ -12,7 +12,7 @@
       </div>
       <div class="hidden lg:flex items-center space-x-8">
         <nuxt-link to="/" class="text-white border-none uppercase">Home</nuxt-link>
-        <nuxt-link to="/services" class="text-white border-none uppercase">Services</nuxt-link>
+        <nuxt-link to="/services/website-design" class="text-white border-none uppercase">Services</nuxt-link>
         <a href="/services/ai" class="text-white border-none uppercase">AI</a>
         <uiBtn @click="showModal = !showModal" btnText="START A PROJECT" />
       </div>

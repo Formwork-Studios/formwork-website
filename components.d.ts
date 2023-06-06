@@ -13,6 +13,7 @@ declare module '@vue/runtime-core' {
     IMdiChevronDoubleRight: typeof import('~icons/mdi/chevron-double-right')['default']
     IMdiClose: typeof import('~icons/mdi/close')['default']
     IMdiGithub: typeof import('~icons/mdi/github')['default']
+    IMdiLinkedin: typeof import('~icons/mdi/linkedin')['default']
     IMdiPinterest: typeof import('~icons/mdi/pinterest')['default']
     IMdiTwitter: typeof import('~icons/mdi/twitter')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
