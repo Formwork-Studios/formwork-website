@@ -1,13 +1,9 @@
-<script lang="ts" setup>
-</script>
-
 <template>
-  <div>
+  <div class="flex flex-col min-h-screen">
     <uiNavBar />
-    <div class="min-h-screen h-full formworkbg">
+    <div class="flex-grow formworkbg">
       <slot />
     </div>
+    <uiFooter />
   </div>
 </template>
-
-<style scoped></style>

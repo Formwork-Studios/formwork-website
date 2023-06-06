@@ -1,8 +1,9 @@
 <template>
-  <div class="h-screen overflow-auto" data-dev-class="snap snap-y snap-proximity">
-    <Formwork class="" data-dev-class="snap-start"/>
-    <Services class="" data-dev-class="snap-start"/>
-    <BigQuote :bigQuote="bigQuote" class="" data-dev-class="snap-start"/>
+  <div class="overflow-auto">
+    <Formwork />
+    <Services />
+    <BigQuote :bigQuote="bigQuote" />
+    <Columns />
   </div>
 </template>
 

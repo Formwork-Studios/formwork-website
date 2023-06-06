@@ -28,7 +28,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="flex items-center justify-center h-screen ">
+  <div class="flex items-center justify-center h-screen">
   <div 
     ref="quote" 
     class="quote text-white text-8xl font-fancy">

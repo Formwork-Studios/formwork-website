@@ -6,7 +6,7 @@
     </Teleport>
   </ClientOnly>
     <nav
-      class="flex items-center justify-between py-3 px-10 w-full background-blur backdrop-filter backdrop-blur-sm bg-stone-950 bg-opacity-60 z-50">
+      class="flex items-center justify-between pl-10 w-full background-blur backdrop-filter backdrop-blur-sm bg-stone-950 bg-opacity-60 z-50">
       <div>
         <uiBranding />
       </div>

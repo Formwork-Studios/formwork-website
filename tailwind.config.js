@@ -20,7 +20,7 @@ module.exports = {
         tertiary: '#F93943',
         black: '#252323',
         white: {
-          300: 'f6f6f6',
+          300: '#f6f6f6',
           DEFAULT: '#e5e3e3',
           500: '#d4d0d0'
       }

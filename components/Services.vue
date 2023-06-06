@@ -40,8 +40,8 @@ const services = ref([
   <div class="grid grid-cols-3 grid-rows-2 place-items-start h-screen max-w-6xl mx-auto gap-28">
     <div v-for="service in services" :key="service.title" class="group">
       <h2 class="text-2xl font-sans tracking-wide animate-slide-in text-white mb-2">{{ service.title }}</h2>
-      <div class="text-white mb-4 leading-7">{{ service.description }}</div>
-      <nuxt-link :to="service.link" class="text-white">See more <i-mdi-chevron-double-right class="inline transform transition-transform duration-200 ease-in-out group-hover:translate-x-1" /></nuxt-link>
+      <div class="text-white-500 mb-4 leading-7">{{ service.description }}</div>
+      <nuxt-link :to="service.link" class="text-secondary">See more <i-mdi-chevron-double-right class="inline transform transition-transform duration-200 ease-in-out group-hover:translate-x-1" /></nuxt-link>
     </div>
   </div>
 </template>
