@@ -2,15 +2,15 @@
   <div class="h-screen relative flex items-center justify-center break-words">
     <div class="w-screen text-center">
       <div v-show="activeMessage === 1">
-        <h2 id="message1" class="font-sans tracking-wide animate-slide-in">FORMWORK</h2>
+        <h2 id="message1" class="font-sans tracking-wide animate-fade-in-out">FORMWORK</h2>
       </div>
 
       <div v-show="activeMessage === 2">
-        <h2 id="message2" class="font-sans tracking-wide animate-slide-in">WE ARE A FULL SERVICE DIGITAL DESIGN AGENCY</h2>
+        <h2 id="message2" class="font-sans tracking-wide animate-fade-in-out">WE ARE A FULL SERVICE DIGITAL DESIGN AGENCY</h2>
       </div>
 
       <div v-show="activeMessage === 3">
-        <h2 id="message3" class="font-sans tracking-wide animate-slide-in">LET'S BUILD SOMETHING</h2>
+        <h2 id="message3" class="font-sans tracking-wide animate-fade-in-out">LET'S BUILD SOMETHING</h2>
       </div>
     </div>
   </div>
@@ -29,38 +29,36 @@ onMounted(() => {
 </script>
 
 <style scoped>
-@keyframes slide-in {
+@keyframes fade-in-out {
   0% {
-  
     opacity: 0;
   }
-  100% {
- 
+  50% {
     opacity: 1;
   }
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-fade-in-out {
+  animation: fade-in-out 5s infinite;
 }
 
 #message1 {
-  animation: slide-in 2s forwards ease-in-out;
   font-size: clamp(6vw, 14vw, 90vw);
   color: #fff;
-
 }
 
 #message2 {
-  animation: slide-in 2s forwards ease-in-out;
   font-size: clamp(6vw, 8vw, 70vw);
   line-height: 1.2; 
   color: #fff;
-
 }
 
 #message3 {
-  animation: slide-in 2s forwards ease-in-out;
   font-size: clamp(6vw, 12vw, 80vw);
   line-height: 1.2; 
   color: #fff;
-
 }
-
 </style>
