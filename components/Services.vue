@@ -1,7 +1,20 @@
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { ref, onMounted,  nextTick, computed } from 'vue'
+
+
 
 const hoveredService = ref(null)
+const animationServices = ref([]);
+const visibleServices = ref([]);
+
+const isServiceVisible = computed(() => {
+  return (serviceTitle) => visibleServices.value.includes(serviceTitle)
+})
+
+const serviceBrightness = computed(() => {
+  return (serviceTitle) => hoveredService.value === serviceTitle || hoveredService.value === null ? 1 : 0.6
+})
+
 
 const services = ref([
   {
@@ -36,51 +49,95 @@ const services = ref([
   }
 ])
 
+const serviceList = ref(null)
+onMounted(() => {
+  nextTick(() => {
+    let delay = 0.1;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.animationDelay = `${delay}s`;
+            entry.target.classList.add('animate-delay');
+            observer.unobserve(entry.target);
+
+            animationServices.value.push({
+              title: entry.target.getAttribute('data-title'),
+              delay
+            });
+
+            delay += 0.1; 
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    // Assuming that each service container has a class 'service-container'
+    const serviceContainers = document.querySelectorAll('.service-container');
+    serviceContainers.forEach(container => {
+      observer.observe(container);
+    });
+  });
+
+  watch(animationServices, (newServices) => {
+    newServices.forEach(({ title, delay }) => {
+      setTimeout(() => {
+        visibleServices.value.push(title);
+      }, delay * 1000); // convert delay from seconds to milliseconds
+    });
+  }, { deep: true });
+});
+
+
+
+
 </script>
-
-
 
 <template>
   <div class="grid grid-cols-3 grid-rows-2 place-items-start h-screen max-w-6xl mx-auto gap-28">
-    <div 
-      v-for="service in services" 
-      :key="service.title" 
-      class="service-container"
-      :class="{ 'not-hovered': hoveredService !== null && service.title !== hoveredService }"
+    <div
+      v-for="service in services"
+      :key="service.title"
+      class="service-container serviceList"
+      :data-title="service.title"
       @mouseover="hoveredService = service.title"
       @mouseout="hoveredService = null"
     >
-      <h2 class="text-2xl font-sans tracking-wide animate-slide-in text-white mb-2">{{ service.title }}</h2>
-      <div class="text-white-500 mb-4 leading-7">{{ service.description }}</div>
-      <nuxt-link :to="service.link" class="text-secondary group">See more <i-mdi-chevron-double-right class="inline transform transition-transform duration-200 ease-in-out group-hover:translate-x-1" /></nuxt-link>
+      <div
+        class="content-wrapper"
+        :class="{'dim': hoveredService !== null && service.title !== hoveredService}"
+      >
+        <h2 class="text-2xl font-sans tracking-wide animate-slide-in text-white mb-2">{{ service.title }}</h2>
+        <div class="text-white-500 mb-4 leading-7">{{ service.description }}</div>
+        <nuxt-link :to="service.link" class="text-secondary group">See more <i-mdi-chevron-double-right class="inline transform transition-transform duration-200 ease-in-out group-hover:translate-x-1" /></nuxt-link>
+      </div>
     </div>
   </div>
 </template>
 
+
 <style scoped>
-.service-container {
-  position: relative;
-  transition: filter 0.3s ease; /* Add this line */
-}
-.service-container::before {
-  content: '';
-  position: absolute;
-  left: -25px; /* Adjust this value as needed */
-  top: 8%;
-  transform: translate(-50%, -50%) scale(0.5);
-  transition: all 0.3s ease-in-out;
-  opacity: 0;
-  width: 100px; /* Set this to the original size of your image */
-  height: 100px; /* Set this to the original size of your image */
-  background-image: url('formwork_100.png');
-  background-size: contain;
-  background-repeat: no-repeat;
+
+.content-wrapper {
+  transition: filter 0.3s ease;
 }
 
-.service-container:hover::before {
-  left: -35px; /* Adjust this value as needed */
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(0.5) rotate(-10deg); /* Rotate 10 degrees on hover */
+.content-wrapper.dim {
+  filter: brightness(0.6);
+}
+
+
+.service-container {
+  position: relative;
+}
+
+
+.service-container.dim {
+  filter: brightness(0.6);
 }
 
 
@@ -88,4 +145,83 @@ const services = ref([
   filter: brightness(0.6);
 }
 
+.service-container.dim {
+  filter: brightness(0.6);
+}
+
+
+.service-container::before {
+  content: '';
+  position: absolute;
+  left: -25px;
+  top: 8%;
+  transform: translate(-50%, -50%) scale(0.4); 
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  width: 100px;
+  height: 100px;
+  background-image: url('formwork_100.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.service-container:hover::before {
+  left: -35px;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(.6) rotate(-10deg); 
+}
+
+
+
+.animate-delay {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-name: animate-delay;
+}
+
+@keyframes animate-delay {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+    -webkit-transform: translateY(20px);
+    -moz-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    -o-transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+  }
+}
+
+.serviceList {
+  opacity: 0;
+  transform: translateY(10px);
+  -webkit-transform: translateY(20px);
+  -moz-transform: translateY(20px);
+  -ms-transform: translateY(20px);
+  -o-transform: translateY(20px);
+}
+
+::v-deep  .visible {
+  opacity: 1 !important;
+}
+
+.serviceList {
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s;
+  transform: translateY(10px);
+}
+
+.visible {
+  opacity: 1 !important;
+  transform: translateY(0px) !important;
+}
+
 </style>
+
