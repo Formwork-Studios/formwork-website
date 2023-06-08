@@ -19,6 +19,7 @@ module.exports = {
         secondary: '#8A4F7D', 
         tertiary: '#F93943',
         black: '#252323',
+        gray: '#9fa1a5',
         white: {
           300: '#f6f6f6',
           DEFAULT: '#e5e3e3',

@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen relative flex items-center justify-center break-words">
+  <div class="h-screen min-h-screen relative flex items-center justify-center break-words mb-20">
     <div class="w-screen text-center">
       <div v-show="activeMessage === 1">
         <h2 id="message1" class="font-sans tracking-wide animate-fade-in-out">FORMWORK</h2>

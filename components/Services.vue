@@ -96,13 +96,12 @@ onMounted(() => {
 
 
 </script>
-
 <template>
-  <div class="grid grid-cols-3 grid-rows-2 place-items-start h-screen max-w-6xl mx-auto gap-28">
+  <div class="grid grid-cols-3 gap-x-28 place-items-start h-screen max-w-6xl mx-auto">
     <div
       v-for="service in services"
       :key="service.title"
-      class="service-container serviceList"
+      class="service-container serviceList -mt-4"
       :data-title="service.title"
       @mouseover="hoveredService = service.title"
       @mouseout="hoveredService = null"
@@ -118,6 +117,9 @@ onMounted(() => {
     </div>
   </div>
 </template>
+
+
+
 
 
 <style scoped>
