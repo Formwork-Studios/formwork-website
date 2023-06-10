@@ -13,7 +13,6 @@
       <div class="hidden lg:flex items-center space-x-8">
         <nuxt-link to="/" class="text-white border-none uppercase">Home</nuxt-link>
         <nuxt-link to="/services/website-design" class="text-white border-none uppercase">Services</nuxt-link>
-        <a href="/services/ai" class="text-white border-none uppercase">AI</a>
         <uiBtn @click="showModal = !showModal" btnText="START A PROJECT" />
       </div>
       <div class="lg:hidden">
@@ -34,7 +33,7 @@
       <div class="flex flex-col items-start space-y-4 text-2xl mr-auto">
         <nuxt-link to="/" @click="isOpen = !isOpen" class="text-white border-none uppercase">Home</nuxt-link>
         <nuxt-link to="/services" @click="isOpen = !isOpen" class="text-white border-none uppercase ">Services</nuxt-link>
-        <a href="/services/ai" class="text-white border-none uppercase">AI</a>
+  
         <div class="flex py-10 space-x-2">
           <i-mdi-github style="color: white" class="turtle-icon text-xl md:text-4xl inline col-span-1  cursor-pointer" />
           <i-mdi-pinterest style="color: white"

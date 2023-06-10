@@ -1,8 +1,8 @@
 <template>
-  <div class="flex justify-center items-start mb-40">
+  <div class="flex justify-center items-start mb-80">
     <div class="quote text-white text-7xl font-fancy flex flex-row items-center">
       <img src="/formwork_white.png" class="mr-8 h-[500px]" />
-      <div class="ml-20 quote-content items-center">
+      <div class="ml-28 text-white-500 quote-content items-center">
         <div v-for="(word, index) in words" :key="index" class="quoteWord">
           {{ word }}
         </div>

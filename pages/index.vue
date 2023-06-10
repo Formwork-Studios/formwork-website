@@ -3,8 +3,10 @@
     <Formwork />
     <Services />
     <BigQuote :bigQuote="bigQuote" />
-    <Columns />
+    <sectionInfo />
+   
     <uiContact />
+   
   </div>
 </template>
 

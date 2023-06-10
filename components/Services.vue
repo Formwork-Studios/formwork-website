@@ -20,27 +20,27 @@ const services = ref([
   {
     title: 'WEB DESIGN',
     description: 'More than what a website looks like, we focus on how it feels. Whether your project is big or small, we use industry best practices to make sure your audience gets the type of experience youre looking for.',
-    link: '#',
+    link: '/services/website-design/',
   },
   {
     title: 'DEVELOPMENT',
     description: 'Code is just a means to an end. We use the technology needed to complete the project, from cutting-edge Javascript frameworks to Wordpress and Shopify - we got you covered.',
-    link: '#',
+    link: '/services/website-app-development',
   },
   {
     title: 'DIGITAL MARKETING',
     description: 'The Digital Marketing landscape is a cluttered mess, comprised of hoards of agencies producing endless AI generated "content". We will cut through the mess and bring back the human element to your work.',
-    link: '#',
+    link: '/services/digital-marketing-ppc-seo',
   },
   {
     title: 'SOCIAL MEDIA',
     description: 'Social media is a powerful tool for any company, big or small. Let us get you running on all relevant platforms and help set up targeting marketing.',
-    link: '#',
+    link: '/services/social-media',
   },
   {
     title: 'BRANDING',
     description: 'Impeccable branding feels effortless when the work behind it is rigorous.',
-    link: '#',
+    link: '/services/branding',
   },
   {
     title: 'AUTOMATION',

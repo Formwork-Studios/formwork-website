@@ -1,6 +1,6 @@
 <template>
-  <div class="w-full h-screen !mt-96 flex items-center justify-center bg-transparent">
-    <form class="w-full max-w-xl px-6">
+  <div class="w-full h-screen flex items-center justify-center bg-transparent my-20">
+    <form ref="form" id="mainContact" class="w-full max-w-xl px-6 opacity-0">
       <uiLogoCombo />
       <div class="relative mb-8">
         <label class="block text-white text-lg font-bold mb-2 sr-only" for="name">Name</label>
@@ -35,9 +35,31 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
+
 const checked = ref(false)
+const form = ref('')
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-delay');
+        }
+      })
+    },
+    {
+      threshold: 1,
+    }
+  );
+
+  if (form.value) {
+    observer.observe(form.value);
+  }
+})
 </script>
+
 
 <style scoped>
 .border-b-extend {
@@ -73,9 +95,28 @@ textarea {
 
 input[type="checkbox"] {
   margin-right: 0.5rem; /* Add right margin for spacing */
+  background: transparent !important; /* Make the background transparent */
 }
-
 button[type="submit"] {
   margin-top: 1rem; /* Add top margin for spacing */
 }
+
+.animate-delay {
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-name: animate-delay;
+}
+
+@keyframes animate-delay {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
 </style>
