@@ -3,7 +3,7 @@
     <div class="mx-20 flex justify-between">
       <div class="flex grow">
         <div class="mr-20">
-          <img src="formwork_color.png" alt="Formwork logo" class="h-40"/>
+          <img src="/formwork_color.png" alt="Formwork logo" class="h-40"/>
         </div>
         <div v-for="section in sections" :key="section.title" class="mr-20">
           <h3 class="font-bold mb-2 border-b border-opacity-50 uppercase">{{section.title}}</h3>
