@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-2 text-black bg-white-300 text-xl w-full p-4 gap-4 ">
+  <div class="grid grid-cols-1 md:grid-cols-2 text-black bg-white-300 text-xl w-full p-4 gap-4 ">
     <!-- First Main Column -->
     <div class="col-span-1 flex flex-col h-full relative space-y-8">
       <h2 class="font-bold text-black text-6xl uppercase">A website is a machine for information and delight</h2>
@@ -16,7 +16,7 @@
       <div class="flex-grow"></div>
     </div>
     <!-- Second Main Column -->
-    <div class="col-span-1 flex flex-col gap-y-4">
+    <div class="col-span-1 flex flex-col gap-y-4 order-first md:order-2">
       <!-- First Row of Second Column -->
       <div class="grid grid-cols-2">
         <div class="col-span-2">

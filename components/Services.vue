@@ -97,7 +97,7 @@ onMounted(() => {
 
 </script>
 <template>
-  <div class="grid grid-cols-3 gap-x-28 place-items-start h-screen max-w-6xl mx-auto">
+  <div class="grid grid-cols-1 gap-y-20 md:gap-y-0 md:grid-cols-3 gap-x-28 place-items-start h-screen max-w-6xl mx-auto">
     <div
       v-for="service in services"
       :key="service.title"
