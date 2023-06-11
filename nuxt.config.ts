@@ -5,6 +5,7 @@ import IconsResolver from 'unplugin-icons/resolver'
 import Components from 'unplugin-vue-components/vite'
 
 export default defineNuxtConfig({
+  target: 'static',
     css: [
         '~/assets/css/main.css'
       ],
@@ -19,5 +20,11 @@ export default defineNuxtConfig({
         }),
         Icons(),
     ]
+},
+postcss: {
+  plugins: {
+  tailwindcss: {},
+  autoprefixer: {},
+}
 },
 })
