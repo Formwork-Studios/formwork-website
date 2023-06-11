@@ -22,6 +22,9 @@
     <a href="https://www.linkedin.com" target="_blank">
       <i-mdi-linkedin />
     </a>
+    <a href="https://www.github.com" target="_blank">
+      <i-mdi-github />
+    </a>
   </div>
   <div class="text-right h-full flex flex-col justify-end text-sm text-stone-400">
     <p class="mt-auto">© 2023 Formwork Studios. All rights reserved.</p>
@@ -40,6 +43,21 @@
   column-gap: 40px;
 }
 
+li {
+  position: relative;
+}
+
+a {
+  position: relative;
+}
+
+a:hover:before {
+  content: "+";
+  position: absolute;
+  left: -20px; /* adjust as necessary */
+  color: #FFF;
+  opacity: 40%;
+}
 </style>
 
 <script>
