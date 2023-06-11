@@ -48,7 +48,7 @@ export default {
     return {
       sections: [
         { title: 'About', links: [{name: 'Team', url: '#team'}, {name: 'Contact', url: '#contact'}] },
-        { title: 'Services', links: [{name: 'Website Development', url: '#webdev'}, {name: 'Website Design', url: '#webdesign'}, {name: 'Digital Marketing', url: '#digitalmarketing'}, {name: 'SEO', url: '#seo'}, {name: 'Social Media', url: '#socialmedia'}, {name: 'Artificial Intelligence', url: '#ai'}, {name: 'Branding', url: '#else'}, {name: 'Cloud Services', url: '#anotherservice'}, {name: 'Consulting', url: '#moreservices'}] }
+        { title: 'Services', links: [{name: 'Website Development', url: '#webdev'}, {name: 'Website Design', url: '#webdesign'}, {name: 'Digital Marketing', url: '#digitalmarketing'}, {name: 'SEO', url: '#seo'}, {name: 'Social Media', url: '#socialmedia'}, {name: 'Artificial Intelligence', url: '/services/ai-chatbot-integration'}, {name: 'Branding', url: '#else'}, {name: 'Cloud Services', url: '#anotherservice'}, {name: 'Consulting', url: '#moreservices'}] }
       ],
     };
   }
