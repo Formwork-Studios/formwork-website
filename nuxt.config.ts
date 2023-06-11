@@ -7,7 +7,7 @@ import Components from 'unplugin-vue-components/vite'
 export default defineNuxtConfig({
   target: 'static',
     css: [
-        '~/assets/css/main.css'
+        '@/assets/css/main.css'
       ],
   modules: [
     '@nuxtjs/tailwindcss',
