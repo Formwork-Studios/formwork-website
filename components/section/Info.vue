@@ -5,7 +5,7 @@
       <h2 class="font-bold text-black text-6xl uppercase">A website is a machine for information and engagement</h2>
 
       <div class="p-20 text-2xl text-black-300 text-right w-full ml-auto"><div class="ml-auto max-w-[40ch]">We must always create with the intention of reaching a goal. Digital Media is no different. There is a two-way road between knowing what you want and what the user wants.</div></div>
-
+<div class="inline">Read More <i-mdi-chevron-double-right class="inline" /> </div>
       <div class="flex-grow"></div>
     </div>
     <!-- Second Main Column -->
