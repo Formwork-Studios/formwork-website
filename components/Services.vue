@@ -162,7 +162,7 @@ onMounted(() => {
   opacity: 0;
   width: 100px;
   height: 100px;
-  background-image: url('formwork_100.png');
+  background-image: url('/formwork_100.png');
   background-size: contain;
   background-repeat: no-repeat;
 }
