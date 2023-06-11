@@ -1,6 +1,6 @@
 <template>
   <div class="w-full h-screen flex items-center justify-center bg-transparent my-20">
-    <form ref="form" id="mainContact" class="w-full max-w-xl px-6 opacity-0">
+    <form ref="form" id="mainContact" class="w-full max-w-xl px-6 opacity-0" @submit.prevent="submitForm">
       <uiLogoCombo />
       <div class="relative mb-8">
         <label class="block text-white text-lg font-bold mb-2 sr-only" for="name">Name</label>
@@ -26,10 +26,12 @@
       </div>
 
       <div class="flex items-center justify-between">
-        <button class="bg-transparent hover:bg-white text-white font-bold py-2 px-4 border border-white hover:text-black" type="submit">
-          Send
-        </button>
-      </div>
+  <button class="bg-transparent hover:bg-white text-white font-bold py-2 px-4 border border-white hover:text-black w-20 h-10 grid place-items-center" type="submit" @click.prevent="submitForm">
+    <span v-show="!isLoading" class="uppercase">Send</span>
+    <i-ri-loader-4-line v-show="isLoading" class="animate-spin" />
+  </button>
+</div>
+
     </form>
   </div>
 </template>
@@ -39,6 +41,7 @@ import { ref, onMounted } from 'vue'
 
 const checked = ref(false)
 const form = ref('')
+const isLoading = ref(false)
 
 onMounted(() => {
   const observer = new IntersectionObserver(
@@ -58,6 +61,14 @@ onMounted(() => {
     observer.observe(form.value);
   }
 })
+
+const submitForm = () => {
+  isLoading.value = true;
+
+  setTimeout(() => {
+    isLoading.value = false;
+  }, 1000);
+}
 </script>
 
 
@@ -78,27 +89,25 @@ onMounted(() => {
   transform: scaleX(1);
 }
 
-/* Additional Styles */
-
 form {
-  max-width: 500px; /* Adjust the maximum width as needed */
-  margin: 0 auto; /* Center the form horizontally */
+  max-width: 500px; 
+  margin: 0 auto;
 }
 
 input[type="text"],
 input[type="email"],
 textarea {
-  width: 100%; /* Make the form elements occupy the full width */
-  padding: 0.75rem; /* Increase the padding for more spacing */
-  margin-bottom: 1.5rem; /* Add bottom margin for vertical spacing */
+  width: 100%; 
+  padding: 0.75rem;
+  margin-bottom: 1.5rem;
 }
 
 input[type="checkbox"] {
-  margin-right: 0.5rem; /* Add right margin for spacing */
-  background: transparent !important; /* Make the background transparent */
+  margin-right: 0.5rem;
+  background: transparent !important;
 }
 button[type="submit"] {
-  margin-top: 1rem; /* Add top margin for spacing */
+  margin-top: 1rem; 
 }
 
 .animate-delay {

@@ -16,6 +16,7 @@ declare module '@vue/runtime-core' {
     IMdiLinkedin: typeof import('~icons/mdi/linkedin')['default']
     IMdiPinterest: typeof import('~icons/mdi/pinterest')['default']
     IMdiTwitter: typeof import('~icons/mdi/twitter')['default']
+    IRiLoader4Line: typeof import('~icons/ri/loader4-line')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
