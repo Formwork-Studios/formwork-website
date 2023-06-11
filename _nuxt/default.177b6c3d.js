@@ -1,1 +1,0 @@
-import{_ as n,a as _}from"./Footer.934ed1f0.js";import{e as a,q as e,f as r,E as c,o as l}from"./entry.a950b06e.js";import"./nuxt-link.cdc3b511.js";const m={class:"flex flex-col min-h-screen"},p={class:"flex-grow formworkbg"},h={__name:"default",setup(f){return(o,i)=>{const t=n,s=_;return l(),a("div",m,[e(t),r("div",p,[c(o.$slots,"default")]),e(s)])}}};export{h as default};
