@@ -30,7 +30,7 @@ const services = ref([
   {
     title: 'DIGITAL MARKETING',
     description: 'The Digital Marketing landscape is a cluttered mess, comprised of hoards of agencies producing endless AI generated "content". We will cut through the mess and bring back the human element to your work.',
-    link: '/services/digital-marketing-ppc-seo',
+    link: '/services/digital-marketing',
   },
   {
     title: 'SOCIAL MEDIA',
