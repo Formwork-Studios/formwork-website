@@ -16,6 +16,9 @@
     "unplugin-icons": "^0.16.2"
   },
   "dependencies": {
-    "unplugin-vue-components": "^0.25.0"
+    "openai": "^3.2.1",
+    "pinecone-client": "^1.1.0",
+    "unplugin-vue-components": "^0.25.0",
+    "zod": "^3.21.4"
   }
 }
