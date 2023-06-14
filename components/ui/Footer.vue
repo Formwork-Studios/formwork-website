@@ -11,27 +11,40 @@
             <li v-for="link in section.links" :key="link.name"><a :href="link.url" class="text-white-500 hover:text-white-300 hover:text-white">{{link.name}}</a></li>
           </ul>
         </div>
+        <!-- New column for Business Inquiries -->
+        <div class="mr-20">
+          <h3 class="font-bold mb-2 border-b border-opacity-50 uppercase">Business Inquiries</h3>
+          <ul>
+            <li><a href="#inquiry1" class="text-white-500 hover:text-white-300 hover:text-white">+1-222-222-2222</a></li>
+            <li><a href="#inquiry2" class="text-white-500 hover:text-white-300 hover:text-white">hello@formworkstudios.com</a></li>
+            <!-- Add more inquiries as needed -->
+          </ul>
+        </div>
+        <!-- End of new column -->
         <div id="lastcol" class="flex grow flex-col h-full justify-between">
-  <div class="flex flex-row justify-end space-x-4 text-xl">
-    <a href="https://www.pinterest.com" target="_blank">
-      <i-mdi-pinterest />
-    </a>
-    <a href="https://www.twitter.com" target="_blank">
-      <i-mdi-twitter />
-    </a>
-    <a href="https://www.linkedin.com" target="_blank">
-      <i-mdi-linkedin />
-    </a>
-  </div>
-  <div class="text-right h-full flex flex-col justify-end text-sm text-stone-400">
-    <p class="mt-auto">© 2023 Formwork Studios. All rights reserved.</p>
-  </div>
-</div>
-
+          <div class="flex flex-row justify-end space-x-4 text-xl">
+            <a href="https://www.pinterest.com" target="_blank">
+              <i-mdi-pinterest />
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+              <i-mdi-twitter />
+            </a>
+            <a href="https://www.linkedin.com" target="_blank">
+              <i-mdi-linkedin />
+            </a>
+            <a href="https://www.github.com" target="_blank">
+              <i-mdi-github />
+            </a>
+          </div>
+          <div class="text-right h-full flex flex-col justify-end text-sm text-stone-400">
+            <p class="mt-auto">© 2023 Formwork Studios. All rights reserved.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
+
 
 
 <style scoped>
@@ -40,6 +53,21 @@
   column-gap: 40px;
 }
 
+li {
+  position: relative;
+}
+
+a {
+  position: relative;
+}
+
+a:hover:before {
+  content: "+";
+  position: absolute;
+  left: -20px; /* adjust as necessary */
+  color: #FFF;
+  opacity: 40%;
+}
 </style>
 
 <script>

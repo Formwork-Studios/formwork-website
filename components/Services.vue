@@ -30,7 +30,7 @@ const services = ref([
   {
     title: 'DIGITAL MARKETING',
     description: 'The Digital Marketing landscape is a cluttered mess, comprised of hoards of agencies producing endless AI generated "content". We will cut through the mess and bring back the human element to your work.',
-    link: '/services/digital-marketing-ppc-seo',
+    link: '/services/digital-marketing',
   },
   {
     title: 'SOCIAL MEDIA',
@@ -97,7 +97,7 @@ onMounted(() => {
 
 </script>
 <template>
-  <div class="grid grid-cols-3 gap-x-28 place-items-start h-screen max-w-6xl mx-auto">
+  <div class="grid grid-cols-1 gap-y-20 md:gap-y-0 md:grid-cols-3 gap-x-28 place-items-start h-screen max-w-6xl mx-auto">
     <div
       v-for="service in services"
       :key="service.title"
@@ -162,7 +162,7 @@ onMounted(() => {
   opacity: 0;
   width: 100px;
   height: 100px;
-  background-image: url('formwork_100.png');
+  background-image: url('/formwork_100.png');
   background-size: contain;
   background-repeat: no-repeat;
 }

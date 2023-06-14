@@ -1,8 +1,9 @@
 <template>
-  <div class="grid grid-cols-2 text-black bg-white-300 text-xl w-full p-4 gap-4 ">
+  <div class="grid grid-cols-1 md:grid-cols-2 text-black bg-white-300 text-xl w-full p-4 gap-4 relative">
     <!-- First Main Column -->
     <div class="col-span-1 flex flex-col h-full relative space-y-8">
       <h2 class="font-bold text-black text-6xl uppercase">A website is a machine for information and delight</h2>
+      <div class="bg-primary w-max h-auto text-white p-2 font-bold">LATEST POST</div>
 
       <div class="text-2xl text-black-300">
         <div>
@@ -12,11 +13,11 @@
          <p class="">In every creation process, the intent should be to achieve a defined goal. The realm of Digital Media is no exception. It involves navigating a two-way path, balancing what the creator wants to convey and what the user seeks to discover.</p>
         </div>
       </div>
-      <div class="inline readmore">Read More <i-mdi-chevron-double-right class="inline chevron" /> </div>
+      <div class="inline readmore text-black-300 text-base">Read More <i-mdi-chevron-double-right class="inline chevron text-secondary" /> </div>
       <div class="flex-grow"></div>
     </div>
     <!-- Second Main Column -->
-    <div class="col-span-1 flex flex-col gap-y-4">
+    <div class="col-span-1 flex flex-col gap-y-4 order-first md:order-2">
       <!-- First Row of Second Column -->
       <div class="grid grid-cols-2">
         <div class="col-span-2">

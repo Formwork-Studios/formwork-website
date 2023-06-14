@@ -5,7 +5,8 @@ import '@/assets/css/main.css'
 <template>
   <div class="flex flex-col min-h-screen">
     <uiNavBar />
-    <div class="flex-grow formworkbg">
+    <uiServicesSidemenu />
+    <div class="flex-grow formworkbg h-screen">
       <slot />
     </div>
     <uiFooter />
