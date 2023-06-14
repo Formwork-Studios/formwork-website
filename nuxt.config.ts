@@ -9,6 +9,12 @@ export default defineNuxtConfig({
     css: [
         '@/assets/css/main.css'
       ],
+  env: {
+    OPENAI_API_KEY: process.env.OPENAI_API_KEY,
+    PINECONE_API_KEY: process.env.PINECONE_API_KEY,
+    PINECONE_BASE_URL: process.env.PINECONE_BASE_URL,
+    PINECONE_ENVIRONMENT: process.env.PINECONE_ENVIRONMENT,
+  },
   modules: [
     '@nuxtjs/tailwindcss',
     ['unplugin-icons/nuxt', { autoInstall: true }],
