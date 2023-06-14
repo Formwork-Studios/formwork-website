@@ -1,5 +1,5 @@
 <template>
-	<div class="h-screen text-white p-6 box-border">
+	<div class="h-screen text-white box-border">
 		<ChatBot />
 	</div>
 </template>
