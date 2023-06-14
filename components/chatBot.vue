@@ -102,7 +102,7 @@ const handleClick = async () => {
 		<p>
 			<span class="font-workSans text-black font-black text-4xl">CHATBOT</span>
 			<span class="font-workSans text-black text-sm ml-2">
-				Powered by GPT-3.5 (using the <a class="text-blue-300" href="https://stevejobsarchive.com/book">Steve Job Book</a> as knowledge base)
+				Powered by GPT-3.5 (using the <a class="text-blue-700" href="https://stevejobsarchive.com/book">Steve Job Book</a> as knowledge base)
 			</span>
 		</p>
 	</div>
