@@ -142,7 +142,7 @@ const handleClick = async () => {
 			<input
 				@keyup.enter="handleClick"
 				v-model="keyword"
-				class="font-workSans bg-gray1 w-full rounded-none mr-2 focus:outline-gray-500 p-1"
+				class="font-workSans bg-gray1 w-full rounded-none mr-2 focus:outline-gray-500 p-1 text-black"
 			/>
 			<button
 				class="font-workSans disabled:opacity-60 disabled:cursor-not-allowed"
