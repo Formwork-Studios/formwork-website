@@ -98,7 +98,16 @@ const handleClick = async () => {
 </script>
 
 <template>
+	<div class="w-full h-10 absolute top-10">
+		<p>
+			<span class="font-sans text-3xl">Chatbot</span>
+			<span class="font-workSans text-sm ml-2">
+				Powered by GPT-3.5 (using the <a class="text-blue-300" href="https://stevejobsarchive.com/book">Steve Job Book</a> as knowledge base)
+			</span>
+		</p>
+	</div>
 	<div class="h-full w-full flex flex-col justify-end">
+		
 		<div class="flex flex-col">
 			<div
 				v-for="item in chat"
