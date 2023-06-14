@@ -98,12 +98,10 @@ const handleClick = async () => {
 </script>
 
 <template>
-	<div class="w-full min-h-fit px-4 py-1 box-content fixed top-10 bg-white">
-		<p>
-			<span class="font-workSans text-black font-black text-4xl">CHATBOT</span>
-			<span class="font-workSans text-black text-sm ml-2">
-				Powered by GPT-3.5 (using the <a class="text-blue-700" href="https://stevejobsarchive.com/book">Steve Job Book</a> as knowledge base)
-			</span>
+	<div class="w-full min-h-fit px-4 py-1 box-content fixed top-10 bg-white flex flex-col md:flex-row md:items-end">
+		<p class="font-workSans text-black font-black text-4xl">CHATBOT</p>
+		<p class="font-workSans text-black text-sm ml-2 mb-1">
+			Powered by GPT-3.5 (using the <a class="text-blue-700" href="https://stevejobsarchive.com/book">Steve Job Book</a> as knowledge base)
 		</p>
 	</div>
 	<div class="h-full w-full flex flex-col justify-end p-6">
