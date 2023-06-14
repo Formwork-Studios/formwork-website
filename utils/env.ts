@@ -8,6 +8,6 @@ const envSchema = z.object({
 
 export type Env = z.infer<typeof envSchema>;
 
-const env = envSchema.parse(process.env);
+const env = envSchema.parse(useRuntimeConfig());
 
 export default env;
