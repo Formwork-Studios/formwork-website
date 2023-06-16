@@ -1,14 +1,11 @@
-<script setup>
-import '@/assets/css/main.css'
-
-</script>
 <template>
-  <div class="flex flex-col min-h-screen">
-    <uiNavBar />
-    <uiServicesSidemenu />
-    <div class="flex-grow formworkbg h-screen">
-      <slot />
+    <div class="flex flex-col min-h-screen bg-stone-950">
+      <uiNavBar />
+  <slot />
     </div>
-    <uiFooter />
-  </div>
-</template>
+  </template>
+  
+  <script setup>
+
+  </script>
+  
