@@ -9,6 +9,7 @@ export default defineNuxtConfig({
 	css: ["@/assets/css/main.css"],
 	modules: [
 		"@nuxtjs/tailwindcss",
+		'@pinia/nuxt',
 		["unplugin-icons/nuxt", { autoInstall: true }],
 	],
 	vite: {

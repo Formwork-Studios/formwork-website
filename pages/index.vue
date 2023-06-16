@@ -1,6 +1,6 @@
 <template>
   <div class="overflow-auto">
-    <div v-if="!passwordEntered">
+    <div v-if="!passwordEntered && isProduction">
       <div id="password-popup">
         <div id="password-form">
           <h2 class="my-4">Enter Password</h2>
@@ -20,6 +20,30 @@
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+import { ref, onMounted } from 'vue'
+
+const bigQuote = ref("We Help Ideas Take Shape")
+const password = ref("")
+const passwordEntered = ref(false)
+const passwordError = ref(false)
+const isProduction = process.env.NODE_ENV === 'production'
+
+function checkPassword() {
+  if (isProduction && password.value === "production-password") {
+    passwordEntered.value = true;
+  } else if (!isProduction) {
+    passwordEntered.value = true;
+  } else {
+    passwordError.value = true;
+  }
+}
+
+onMounted(() => {
+  console.log('NODE_ENV:', process.env.NODE_ENV)
+})
+</script>
 
 <style scoped>
 /* Style for the password popup */
@@ -60,20 +84,3 @@
   background-color: #555;
 }
 </style>
-
-<script setup lang="ts">
-import { ref } from 'vue'
-
-const bigQuote = ref("We Help Ideas Take Shape")
-const password = ref("")
-const passwordEntered = ref(false)
-const passwordError = ref(false)
-
-function checkPassword() {
-  if (password.value === "development") {
-    passwordEntered.value = true;
-  } else {
-    passwordError.value = true;
-  }
-}
-</script>

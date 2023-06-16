@@ -12,13 +12,19 @@
     "@iconify/json": "^2.2.73",
     "@nuxtjs/tailwindcss": "^6.7.0",
     "@types/node": "^18",
-    "nuxt": "^3.5.2",
+    "nuxt": "^3.5.3",
     "unplugin-icons": "^0.16.2"
   },
   "dependencies": {
+    "@pinia/nuxt": "^0.4.11",
+    "dotenv": "^16.1.4",
     "openai": "^3.2.1",
     "pinecone-client": "^1.1.0",
+    "pinia": "^2.1.4",
     "unplugin-vue-components": "^0.25.0",
     "zod": "^3.21.4"
+  },
+  "overrides": {
+    "vue": "latest"
   }
 }
