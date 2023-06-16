@@ -1,5 +1,5 @@
 <template>
-  <div class="overflow-auto">
+  <div class="overflow-y-auto">
     <div v-if="!passwordEntered">
       <div id="password-popup">
         <div id="password-form">

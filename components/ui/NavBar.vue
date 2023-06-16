@@ -29,7 +29,7 @@
       </div>
     </nav>
     <div id="nav-menu" :class="{ 'menu-open': isOpen, 'fixed inset-0 bg-gray-900 flex': isOpen }"
-      class="bg-stone-900 p-4 lg:hidden shadow-md pt-20 transition-all transition-150 nav-menu opacity-0 mt-14">
+      class="bg-stone-900 p-4 lg:hidden shadow-md pt-20 transition-all transition-150 nav-menu opacity-0 mt-7">
       <div class="flex flex-col items-start space-y-4 text-2xl mr-auto">
         <nuxt-link to="/" @click="isOpen = !isOpen" class="text-white border-none uppercase">Home</nuxt-link>
         <nuxt-link to="/services" @click="isOpen = !isOpen" class="text-white border-none uppercase ">Services</nuxt-link>
