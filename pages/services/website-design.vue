@@ -54,7 +54,7 @@
 </template>
 
 <script setup>
-import { useStore } from '~/store/store.ts';
+import { useStore } from '/store/store.ts';
 import { ref, watchEffect } from 'vue';
 
 definePageMeta({

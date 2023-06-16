@@ -1,11 +1,6 @@
 <template>
-<<<<<<< HEAD
   <div class="overflow-auto">
     <div v-if="!passwordEntered && isProduction">
-=======
-  <div class="overflow-y-auto">
-    <div v-if="!passwordEntered">
->>>>>>> 0f7aa6e88c714911d514f26fab6a010ec8efa041
       <div id="password-popup">
         <div id="password-form">
           <h2 class="my-4">Enter Password</h2>
