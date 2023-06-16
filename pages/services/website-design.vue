@@ -26,8 +26,8 @@
           <div v-if="selectedSubService" :key="selectedSubService.sid">
             <div class="grid grid-cols-3 gap-x-20">
               <div class="col-span-1">
-                <div class="text-white font-bold mb-2 text-3xl" v-if="selectedSubService.header">
-                  {{ selectedSubService.header }}
+                <div class="text-white font-bold mb-4 text-3xl" v-if="selectedSubService.header">
+                  <span class=" border-b-4 border-primary">{{ selectedSubService.header }}</span>
                 </div>
                 <div class="text-white mb-4">
                   {{ selectedSubService.description }}
@@ -42,7 +42,7 @@
         </transition-group>
 
         <div
-          class="absolute bottom-0 right-0 h-auto w-auto px-4 py-4 bg-secondary font-bold flex items-center justify-center text-base"
+          class="absolute bottom-0 right-0 h-auto w-auto px-4 py-4 bg-secondary  font-bold flex items-center justify-center text-base"
           :class="contactPulseAnimation">
           <span class="pr-2">GET IN TOUCH</span>
           <i-mdi-arrow-right-thick style="align-self: center;" />
