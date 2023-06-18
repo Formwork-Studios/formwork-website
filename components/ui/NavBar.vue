@@ -6,7 +6,7 @@
       </Teleport>
     </ClientOnly>
     <nav
-      class="flex items-center justify-between pl-10 w-full background-blur backdrop-filter backdrop-blur-sm bg-stone-950 bg-opacity-60 z-50">
+      class="flex items-center justify-between pl-4 lg:pl-10 w-full background-blur backdrop-filter backdrop-blur-sm bg-stone-950 bg-opacity-60 z-50">
       <div>
         <uiBranding />
       </div>
@@ -19,26 +19,27 @@
               class="inline transform transition-transform duration-200 ease-in-out group-hover:translate-x-1" />
           </div>
           <div v-show="isDropdownOpen" class="absolute top-full mt-2 w-48 py-2 bg-stone-950 text-white border-white border-2 rounded-lg shadow-md">
-    <nuxt-link v-for="item in serviceItems" :key="item.id" :to="`/services/${item.id}`" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-500 hover:text-white">{{ item.name }}</nuxt-link>
+    <nuxt-link v-for="item in serviceItems" :key="item.id" :to="`/services/${item.id}`" class="block px-4 py-2 text-sm text-gray-700 hover:bg-secondary hover:text-white">{{ item.name }}</nuxt-link>
   </div>
         </div>
         <uiBtn @click="showModal = !showModal" btnText="START A PROJECT" />
       </div>
-      <div class="lg:hidden">
-        <button @click="isOpen = !isOpen" class="text-white z-50">
-          <svg v-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 cursor-pointer z-50" fill="none"
-            viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-          <svg v-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 cursor-pointer z-50" fill="none"
-            viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-      </div>
+      <div class="m-2 lg:hidden flex items-center">
+  <button @click="isOpen = !isOpen" class="text-white z-50">
+    <svg v-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 cursor-pointer z-50" fill="none"
+      viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+    <svg v-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 cursor-pointer z-50" fill="none"
+      viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+    </svg>
+  </button>
+</div>
+
     </nav>
     <div id="nav-menu" :class="{ 'menu-open': isOpen, 'fixed inset-0 bg-gray-900 flex': isOpen }"
-      class="bg-stone-900 p-4 lg:hidden shadow-md pt-20 transition-all transition-150 nav-menu opacity-0 mt-7">
+      class="bg-stone-900 p-4 lg:hidden shadow-md pt-20 transition-all transition-150 nav-menu opacity-0 mt-10">
       <div class="flex flex-col       items-start space-y-4 text-2xl mr-auto">
         <nuxt-link to="/" @click="isOpen = !isOpen" class="text-white border-none uppercase">Home</nuxt-link>
         <div @click="isDropdownOpen = !isDropdownOpen" class="cursor-pointer text-white border-none uppercase">Services
@@ -47,8 +48,10 @@
             class="inline transform transition-transform duration-200 ease-in-out group-hover:translate-x-1" />
         </div>
         <div v-show="isDropdownOpen" class="ml-2">
-    <nuxt-link v-for="item in serviceItems" :key="item.id" :to="`/services/${item.id}`" @click="isOpen = !isOpen; isDropdownOpen = false" class="text-white border-none flex flex-row">{{ item.name }}</nuxt-link>
+    <nuxt-link v-for="item in serviceItems" :key="item.id" :to="`/services/${item.id}`" @click="isOpen = !isOpen; isDropdownOpen = false" class="text-white border-none flex flex-row text-lg py-1">{{ item.name }}</nuxt-link>
   </div>
+  <nuxt-link to="/contact" @click="isOpen = !isOpen" class="text-white border-none uppercase">Contact</nuxt-link>
+
         <div class="flex py-10 space-x-2">
           <i-mdi-github style="color: white" class="turtle-icon text-xl md:text-4xl inline col-span-1  cursor-pointer" />
           <i-mdi-pinterest style="color: white"
