@@ -11,6 +11,7 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     IMdiArrowRightThick: typeof import('~icons/mdi/arrow-right-thick')['default']
     IMdiChevronDoubleRight: typeof import('~icons/mdi/chevron-double-right')['default']
+    IMdiChevronDown: typeof import('~icons/mdi/chevron-down')['default']
     IMdiClose: typeof import('~icons/mdi/close')['default']
     IMdiGithub: typeof import('~icons/mdi/github')['default']
     IMdiLinkedin: typeof import('~icons/mdi/linkedin')['default']

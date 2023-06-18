@@ -1,0 +1,162 @@
+<template>
+  <div class="flex flex-col h-screen overflow-hidden">
+    <!-- Top Part -->
+    <div class="bg-stone-950 px-10 pt-14 flex-basis-50">
+      <div id="toparea" class="col-span-1 p-4 h-full flex flex-col justify-end custom-border">
+        <div class="text-xl text-white clamp-text font-black mb-8 uppercase">
+          {{ serviceName }}
+        </div>
+      </div>
+    </div>
+    <!-- Bottom Part -->
+    <div class="flex flex-grow overflow-auto px-10 pb-10 bg-stone-950 flex-basis-50">
+      <!-- Menu - 1 column -->
+      <div class="w-1/4 flex-none p-4 mr-20"> <!-- Give this div a width of 1/3 -->
+        <ul class="space-y-4 text-xl uppercase">
+          <li v-for="subService in subServices" :key="subService.sid"
+            :class="{ 'text-stone-600': subService !== selectedSubService, 'text-white': subService === selectedSubService }"
+            class="cursor-pointer hover:text-white" @click="selectSubService(subService)">
+            <!-- Add '+' if subService is the selected one -->
+            <span v-if="subService === selectedSubService" class="pr-2">+</span>{{ subService.name }}
+          </li>
+        </ul>
+      </div>
+      <!-- Description Area -->
+      <div class="text-white text-2xl flex-grow p-4 relative">
+        <transition-group name="fade">
+          <div v-if="selectedSubService" :key="selectedSubService.sid">
+            <div class="text-white font-bold mb-4 text-3xl uppercase" v-if="selectedSubService.header">
+              <span class="">{{ selectedSubService.header }}</span>
+            </div>
+            <div class="text-white-500 mb-4 text-lg">
+              {{ selectedSubService.description }}
+            </div>
+            <a :href="selectedSubService.link" class="text-secondary text-lg group" target="_blank">{{
+              selectedSubService.linkText }}
+              <i-mdi-chevron-double-right
+                class="inline transform transition-transform duration-200 ease-in-out group-hover:translate-x-1" />
+            </a>
+            <div
+              class="absolute bottom-0 right-0 h-auto w-auto px-4 py-4 bg-secondary text-white font-bold flex items-center justify-center text-base"
+              :class="contactPulseAnimation">
+              <span class="pr-2">GET IN TOUCH</span>
+              <i-mdi-arrow-right-thick style="align-self: center;" />
+            </div>
+          </div>
+        </transition-group>
+      </div>
+    </div>
+  </div>
+</template>
+
+
+
+
+
+
+
+
+
+<script setup>
+import { useStore } from '/store/store.ts';
+import { ref, watchEffect, onUnmounted } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
+
+definePageMeta({
+  layout: "service",
+});
+
+const store = useStore();
+
+const route = useRoute();
+const router = useRouter();
+const currentService = ref(route.params.service);
+console.log(currentService.value)
+
+const selectedSubService = ref({}); // initialize as an empty object
+const subServices = ref([]);
+const serviceName = ref('');
+const serviceDescription = ref('');
+const serviceQuestion = ref('');
+const contactPulseAnimation = ref('');
+
+watchEffect(() => {
+  const service = store.projects.find(project => project.slug === currentService.value);
+  if (!service) {
+    router.push('/error'); // assuming you have an error page
+    return;
+  }
+
+  serviceName.value = service ? service.name : '';
+  serviceDescription.value = service ? service.description : '';
+  serviceQuestion.value = service ? service.subServices[0].question : ''; // Assuming question is part of each subService
+  subServices.value = service ? service.subServices : [];
+  const defaultSubService = subServices.value.find(subService => subService.sid === 0);
+  selectedSubService.value = defaultSubService || {};
+
+  const pulseAnimationInterval = setInterval(() => {
+    contactPulseAnimation.value = 'animate-pulse';
+    setTimeout(() => {
+      contactPulseAnimation.value = '';
+    }, 2000); // Remove the animation after 2 seconds
+  }, 7000); // Start the animation every 7 seconds (5 seconds wait + 2 seconds animation)
+
+  // IMPORTANT: remember to clear the interval when the component unmounts
+  onUnmounted(() => {
+    clearInterval(pulseAnimationInterval);
+  });
+});
+
+function selectSubService(subService) {
+  selectedSubService.value = subService;
+}
+</script>
+
+
+
+
+
+  
+<style scoped>
+.custom-border {
+  border: 10px solid white;
+  border-radius: 10px;
+}
+
+#toparea {
+  background-image: url(/public/birds2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.clamp-text {
+  font-size: clamp(1rem, 5vw, 5rem);
+  text-align: left;
+}
+
+.fade-enter-active {
+  transition: opacity 0.5s;
+  transition-delay: 0.5s;
+  /* delay equal to the leave transition */
+}
+
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-to,
+.fade-leave-from {
+  opacity: 1;
+}
+
+.text-white {
+  color: white;
+}
+</style>
+  

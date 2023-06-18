@@ -28,7 +28,7 @@ const services = ref([
 		title: "DEVELOPMENT",
 		description:
 			"Code is just a means to an end. We use the technology needed to complete the project, from cutting-edge Javascript frameworks to Wordpress and Shopify - we got you covered.",
-		link: "/services/website-app-development",
+		link: "/services/website-development",
 	},
 	{
 		title: "DIGITAL MARKETING",
@@ -46,13 +46,13 @@ const services = ref([
 		title: "BRANDING",
 		description:
 			"Impeccable branding feels effortless when the work behind it is rigorous.",
-		link: "/services/branding",
+		link: "/services/branding-identity",
 	},
 	{
-		title: "AUTOMATION",
+		title: "E-commerce Solutions",
 		description:
 			"We will leverage the latest automation systems to help you save time and money.",
-		link: "#",
+		link: "/services/e-commerce-solutions",
 	},
 ]);
 

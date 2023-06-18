@@ -14,6 +14,9 @@ module.exports = {
       'sans': ['Work Sans', 'sans-serif'],
     },
     extend: {
+      flex: {
+        'basis-50': '0 0 50%'
+      },
       colors: {
         primary: "#14B8A6",
         secondary: '#8A4F7D', 
@@ -23,7 +26,10 @@ module.exports = {
         white: {
           300: '#f6f6f6',
           DEFAULT: '#e5e3e3',
-          500: '#d4d0d0'
+          500: '#d4d0d0',
+          600: '#BDB9B9',
+          700: ' #A7A3A3',
+          800: '#918D8D'
       }
     },
   },

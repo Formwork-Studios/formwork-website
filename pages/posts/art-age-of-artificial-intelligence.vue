@@ -1,12 +1,11 @@
-<script setup lang="ts">
-
+<script lang="ts" setup>
 definePageMeta({
-  layout: "service",
+  layout: "post",
 });
 </script>
 
 <template>
-  <div class="">
+  <div>
     Page: foo
   </div>
 </template>
