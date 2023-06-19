@@ -19,7 +19,7 @@
               class="inline transform transition-transform duration-200 ease-in-out group-hover:translate-x-1" />
           </div>
           <div v-show="isDropdownOpen" class="absolute top-full mt-2 w-48 py-2 bg-stone-950 text-white border-white border-2 rounded-lg shadow-md">
-    <nuxt-link v-for="item in serviceItems" :key="item.id" :to="`/services/${item.id}`" class="block px-4 py-2 text-sm text-gray-700 hover:bg-secondary hover:text-white">{{ item.name }}</nuxt-link>
+    <nuxt-link v-for="item in serviceItems" :key="item.id" :to="`/services/${item.slug}`" class="block px-4 py-2 text-sm text-gray-700 hover:bg-secondary hover:text-white">{{ item.name }}</nuxt-link>
   </div>
         </div>
         <uiBtn @click="showModal = !showModal" btnText="START A PROJECT" />
@@ -39,27 +39,45 @@
 
     </nav>
     <div id="nav-menu" :class="{ 'menu-open': isOpen, 'fixed inset-0 bg-gray-900 flex': isOpen }"
-      class="bg-stone-900 p-4 lg:hidden shadow-md pt-20 transition-all transition-150 nav-menu opacity-0 mt-10">
-      <div class="flex flex-col       items-start space-y-4 text-2xl mr-auto">
-        <nuxt-link to="/" @click="isOpen = !isOpen" class="text-white border-none uppercase">Home</nuxt-link>
-        <div @click="isDropdownOpen = !isDropdownOpen" class="cursor-pointer text-white border-none uppercase">Services
-          <i-mdi-chevron-down
-            :class="isDropdownOpen ? 'rotate-180' : ''"
-            class="inline transform transition-transform duration-200 ease-in-out group-hover:translate-x-1" />
-        </div>
-        <div v-show="isDropdownOpen" class="ml-2">
-    <nuxt-link v-for="item in serviceItems" :key="item.id" :to="`/services/${item.id}`" @click="isOpen = !isOpen; isDropdownOpen = false" class="text-white border-none flex flex-row text-lg py-1">{{ item.name }}</nuxt-link>
-  </div>
-  <nuxt-link to="/contact" @click="isOpen = !isOpen" class="text-white border-none uppercase">Contact</nuxt-link>
-
-        <div class="flex py-10 space-x-2">
-          <i-mdi-github style="color: white" class="turtle-icon text-xl md:text-4xl inline col-span-1  cursor-pointer" />
-          <i-mdi-pinterest style="color: white"
-            class="turtle-icon text-xl md:text-4xl inline col-span-1  cursor-pointer" />
-          <i-mdi-twitter style="color: white" class="turtle-icon text-xl md:text-4xl inline col-span-1  cursor-pointer" />
-        </div>
+  class="bg-stone-900 lg:hidden shadow-md pt-20 transition-all transition-150 nav-menu opacity-0 mt-10 w-full">
+  <div class="flex flex-col h-full w-full justify-between items-start space-y-4 text-2xl">
+    <div class="p-4">
+      <nuxt-link to="/" @click="isOpen = !isOpen" class="text-white border-none uppercase">Home</nuxt-link>
+      <div @click="isDropdownOpen = !isDropdownOpen" class="cursor-pointer text-white border-none uppercase">Services
+        <i-mdi-chevron-down
+          :class="isDropdownOpen ? 'rotate-180' : ''"
+          class="inline transform transition-transform duration-200 ease-in-out group-hover:translate-x-1" />
       </div>
+      <div v-show="isDropdownOpen" class="ml-2">
+  <nuxt-link 
+    v-for="(item, index) in serviceItems" 
+    :key="item.id" 
+    :to="`/services/${item.id}`" 
+    @click="isOpen = !isOpen; isDropdownOpen = false" 
+    :class="['text-white border-none flex flex-row text-lg py-1', { 'mb-4': index === serviceItems.length - 1 }]"
+  >
+    {{ item.name }}
+  </nuxt-link>
+</div>
+
+      <nuxt-link to="/contact" @click="isOpen = !isOpen" class="text-white border-none uppercase">Contact</nuxt-link>
     </div>
+
+    <div class="flex flex-row bottom-0 w-full items-center bg-gray-400">
+  <a href="https://github.com" class="flex justify-center items-center bg-primary w-1/3 h-16" target="_blank">
+    <i-mdi-github style="color: white" class="turtle-icon text-xl md:text-4xl cursor-pointer" />
+  </a>
+  <a href="https://pinterest.com" class="flex justify-center items-center bg-secondary w-1/3 h-16" target="_blank">
+    <i-mdi-pinterest style="color: white" class="turtle-icon text-xl md:text-4xl cursor-pointer" />
+  </a>
+  <a href="https://twitter.com" class="flex justify-center items-center bg-tertiary w-1/3 h-16" target="_blank">
+    <i-mdi-twitter style="color: white" class="turtle-icon text-xl md:text-4xl cursor-pointer" />
+  </a>
+</div>
+
+  </div>
+</div>
+
   </header>
 </template>
 

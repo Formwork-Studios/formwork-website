@@ -24,11 +24,8 @@
 						:class="{ 'column-list': section.links.length > 5 }"
 					>
 						<li v-for="link in section.links" :key="link.name">
-							<a
-								:href="link.url"
-								class="text-white-500 hover:text-white-300 hover:text-white"
-								>{{ link.name }}</a
-							>
+							<a :href="link.url" class="text-white-500 hover:text-white-300 hover:text-white section-link">{{ link.name }}</a>
+
 						</li>
 					</ul>
 				</div>
@@ -103,13 +100,14 @@ a {
 	position: relative;
 }
 
-a:hover:before {
-	content: "+";
-	position: absolute;
-	left: -20px; /* adjust as necessary */
-	color: #fff;
-	opacity: 40%;
+.section-link:hover:before {
+  content: "+";
+  position: absolute;
+  left: -20px; /* adjust as necessary */
+  color: #fff;
+  opacity: 40%;
 }
+
 </style>
 
 <script>
@@ -120,25 +118,24 @@ export default {
 				{
 					title: "About",
 					links: [
-						{ name: "Team", url: "#team" },
-						{ name: "Contact", url: "#contact" },
+						{ name: "Team", url: "/team" },
+						{ name: "Contact", url: "/contact" },
 					],
 				},
 				{
 					title: "Services",
 					links: [
-						{ name: "Website Development", url: "#webdev" },
-						{ name: "Website Design", url: "#webdesign" },
-						{ name: "Digital Marketing", url: "#digitalmarketing" },
-						{ name: "SEO", url: "#seo" },
-						{ name: "Social Media", url: "#socialmedia" },
+						{ name: "Website Development", url: "/services/website-development" },
+						{ name: "Website Design", url: "/services/website-design" },
+						{ name: "Digital Marketing", url: "/services/digital-marketing" },
+						{ name: "SEO", url: "/services/digital-marketing" },
+						{ name: "Social Media", url: "/services/socialmedia" },
 						{
 							name: "Artificial Intelligence",
 							url: "/services/ai-chatbot-integration",
 						},
-						{ name: "Branding", url: "#else" },
-						{ name: "Cloud Services", url: "#anotherservice" },
-						{ name: "Consulting", url: "#moreservices" },
+						{ name: "Branding", url: "/services/branding-identity" },
+	
 					],
 				},
 			],
