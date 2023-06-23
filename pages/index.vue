@@ -31,7 +31,7 @@ const passwordError = ref(false)
 const isProduction = process.env.NODE_ENV === 'production'
 
 function checkPassword() {
-  if (isProduction && password.value === "production-password") {
+  if (isProduction && password.value === "formwork") {
     passwordEntered.value = true;
   } else if (!isProduction) {
     passwordEntered.value = true;
