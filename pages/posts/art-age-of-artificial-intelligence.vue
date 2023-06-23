@@ -7,7 +7,7 @@ definePageMeta({
 <template>
   <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Header Image -->
-    <img class="w-full h-64 object-cover mt-6" src="path_to_your_image.jpg" alt="Blog post header image">
+ <!--   <img class="w-full h-64 object-cover mt-6" src="path_to_your_image.jpg" alt="Blog post header image"> -->
 
     <!-- Blog post title -->
     <h1 class="mt-4 mb-8 text-3xl font-bold">Your Blog Post Title</h1>
