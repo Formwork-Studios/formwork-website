@@ -38,8 +38,10 @@
 </div>
 
     </nav>
-    <div id="nav-menu" :class="{ 'menu-open': isOpen, 'fixed inset-0 bg-gray-900 flex': isOpen }"
+    <div id="nav-menu" 
+  :class="{ 'menu-open': isOpen, 'menu-closed': !isOpen, 'fixed inset-0 bg-gray-900 flex': isOpen }"
   class="bg-stone-900 lg:hidden shadow-md pt-20 transition-all transition-150 nav-menu opacity-0 mt-10 w-full">
+
   <div class="flex flex-col h-full w-full justify-between items-start space-y-4 text-2xl">
     <div class="p-4">
       <nuxt-link to="/" @click="isOpen = !isOpen" class="text-white border-none uppercase">Home</nuxt-link>
@@ -56,7 +58,7 @@
     @click="isOpen = !isOpen; isDropdownOpen = false" 
     :class="['text-white border-none flex flex-row text-lg py-1', { 'mb-4': index === serviceItems.length - 1 }]"
   >
-    {{ item.name }}
+    {{ item.name }} 
   </nuxt-link>
 </div>
 
@@ -131,5 +133,11 @@ body {
 .rotate-180 {
   transform: rotate(180deg);
 }
+
+.menu-closed {
+  display: none;
+}
+
+
 </style>
 

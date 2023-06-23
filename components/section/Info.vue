@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-1 md:grid-cols-2 text-black bg-white-300 text-xl w-full p-4 gap-4 relative">
+  <div class="grid grid-cols-1 md:grid-cols-2 text-black bg-white-300 text-xl w-full p-2 md:p-4 gap-4 relative">
     <!-- First Main Column -->
     <div class="col-span-1 flex flex-col h-full relative space-y-8">
       <h2 class="font-bold text-black text-6xl uppercase">A website is a machine for information and delight</h2>
@@ -7,17 +7,17 @@
 
       <div class="text-2xl text-black-300">
         <div>
-          <p class="py-4">Far from being simply functional or purely aesthetic, a website serves as a conduit for both information and pleasure. Its design should be intuitive, effortlessly guiding users while also predicting their needs by presenting the right information at the right moment. Consequently, a website is a mechanism that delivers outcomes not only visually but also socially. It may persuade a user to make a purchase, join a community, 
-            or share a fascinating article with their circle. To manifest this tangible impact, however, a website must intertwine the informative with the delightful..</p> 
-          <p class="pb-4">The esteemed French architect Le Corbusier once proclaimed, "The house is a machine for living in." While a website may not seem to fulfill such a lofty objective as providing a 'habitat for living,' in the digital era, it contends for a respectable position on the importance hierarchy, rivaling physical living spaces. It suggests that information and its organization have become crucial components of our modern existence.</p>
-         <p class="">In every creation process, the intent should be to achieve a defined goal. The realm of Digital Media is no exception. It involves navigating a two-way path, balancing what the creator wants to convey and what the user seeks to discover.</p>
+          <p class="py-4">In the post-WW2 reconstruction era, Béton Brut — the French term for Raw Concrete — became the material of choice for architects tasked with the goal of rebuilding a war-torn Europe. In response to what must be considered the most catastrophic conflict in human history, a collective desire emerged to begin the process of rebuilding society. Inspired by the Modernist principle of 'form follows function,' architects sought to create buildings that embodied the ideals of utilitarianism, egalitarianism, and honesty. In Modernism, there was no need for the ornate flourishes typical of classical architecture. Instead, Architects of that time embraced Le Corbusier's perspective, treating homes as what they fundamentally are — machines for living in."</p> 
         </div>
+        <p class="py-4">
+        The radical shift towards functionality in architecture embodied in the Modernist movement was pushed to an extreme in Brutalism — a branch of its parent philosophy — by Le Corbusier himself. </p>
+
       </div>
-      <div class="inline readmore text-black-300 text-base">Read More <i-mdi-chevron-double-right class="inline chevron text-secondary" /> </div>
+      <nuxt-link to="/posts/website-machine"><div class="inline readmore text-black-300 text-base">Read More <i-mdi-chevron-double-right class="inline chevron text-secondary" /> </div></nuxt-link>
       <div class="flex-grow"></div>
     </div>
     <!-- Second Main Column -->
-    <div class="col-span-1 flex flex-col gap-y-4 order-first md:order-2">
+    <div class="col-span-1 flex flex-col gap-y-2 md:gap-y-4 order-first md:order-2">
       <!-- First Row of Second Column -->
       <div class="grid grid-cols-2">
         <div class="col-span-2">
@@ -26,7 +26,7 @@
       </div>
 
       <!-- Second Row of Second Column -->
-      <div class="grid grid-cols-2 gap-x-4">
+      <div class="grid grid-cols-2 gap-x-2 md:gap-x-4">
         <div class="col-span-1">
           <img class="shadow-sm shadow-black" src="/birds2.jpg" alt="Image 1" style="object-fit: cover;" />
         </div>

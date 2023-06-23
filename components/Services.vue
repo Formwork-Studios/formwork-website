@@ -106,8 +106,8 @@ onMounted(() => {
 });
 </script>
 <template>
-	<div
-		class="grid grid-cols-1 gap-y-20 md:gap-y-0 md:grid-cols-3 gap-x-28 place-items-start min-h-screen h-fit max-w-6xl mx-auto mb-16 md:mb-0"
+	<div id="services"
+		class="grid md:p-4 p-12 grid-cols-1 gap-y-20 md:gap-y-0 md:grid-cols-3 gap-x-28 place-items-start min-h-screen h-fit max-w-6xl mx-auto mb-16 md:mb-0"
 	>
 		<div
 			v-for="service in services"
@@ -168,7 +168,10 @@ onMounted(() => {
 	filter: brightness(0.6);
 }
 
-.service-container::before {
+
+@media (min-width: 1800px) {
+ 
+	.service-container::before {
 	content: "";
 	position: absolute;
 	left: -25px;
@@ -181,7 +184,11 @@ onMounted(() => {
 	background-image: url("/formwork_100.png");
 	background-size: contain;
 	background-repeat: no-repeat;
-}
+
+}}
+
+
+
 
 .service-container:hover::before {
 	left: -35px;

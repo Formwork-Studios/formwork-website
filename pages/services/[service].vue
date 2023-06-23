@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col h-screen overflow-hidden">
     <!-- Top Part -->
-    <div class="bg-stone-950 px-10 pt-14 flex-basis-50">
+    <div class="bg-stone-950 px-10 pt-14 basis-1/4 md:basis-1/2">
       <div id="toparea" class="col-span-1 p-4 h-full flex flex-col justify-end custom-border">
         <div class="text-xl text-white clamp-text font-black mb-8 uppercase">
           {{ serviceName }}
@@ -9,43 +9,45 @@
       </div>
     </div>
     <!-- Bottom Part -->
-    <div class="flex flex-grow overflow-auto px-10 pb-10 bg-stone-950 flex-basis-50">
-      <!-- Menu - 1 column -->
-      <div class="w-1/4 flex-none p-4 mr-20"> <!-- Give this div a width of 1/3 -->
-        <ul class="space-y-4 text-xl uppercase">
-          <li v-for="subService in subServices" :key="subService.sid"
-            :class="{ 'text-stone-600': subService !== selectedSubService, 'text-white': subService === selectedSubService }"
-            class="cursor-pointer hover:text-white" @click="selectSubService(subService)">
-            <!-- Add '+' if subService is the selected one -->
-            <span v-if="subService === selectedSubService" class="pr-2">+</span>{{ subService.name }}
-          </li>
-        </ul>
+    <div class="flex flex-grow overflow-auto px-10 pb-10 bg-stone-950 flex-basis-50 flex-col md:flex-row">
+  <!-- Menu - 1 column -->
+  <div class="w-full md:w-1/4 flex-none p-4 mr-20"> 
+    <ul class="space-y-4 text-xl uppercase">
+      <li v-for="subService in subServices" :key="subService.sid"
+        :class="{ 'text-stone-600': subService !== selectedSubService, 'text-white': subService === selectedSubService }"
+        class="cursor-pointer hover:text-white" @click="selectSubService(subService)">
+        <!-- Add '+' if subService is the selected one -->
+        <span v-if="subService === selectedSubService" class="pr-2">+</span>{{ subService.name }}
+      </li>
+    </ul>
+  </div>
+  <!-- Description Area -->
+  <div class="w-full md:w-3/4 text-white text-2xl p-4 relative">
+    <transition-group name="fade">
+      <div v-if="selectedSubService" :key="selectedSubService.sid">
+        <div class="text-white font-bold mb-4 text-3xl uppercase" v-if="selectedSubService.header">
+          <span class="">{{ selectedSubService.header }}</span>
+        </div>
+        <div class="text-white-500 mb-4 text-lg">
+          {{ selectedSubService.description }}
+        </div>
+        <a :href="selectedSubService.link" class="text-secondary text-lg group" target="_blank">{{
+          selectedSubService.linkText }}
+          <i-mdi-chevron-double-right
+            class="inline transform transition-transform duration-200 ease-in-out group-hover:translate-x-1" />
+        </a>
+ 
       </div>
-      <!-- Description Area -->
-      <div class="text-white text-2xl flex-grow p-4 relative">
-        <transition-group name="fade">
-          <div v-if="selectedSubService" :key="selectedSubService.sid">
-            <div class="text-white font-bold mb-4 text-3xl uppercase" v-if="selectedSubService.header">
-              <span class="">{{ selectedSubService.header }}</span>
-            </div>
-            <div class="text-white-500 mb-4 text-lg">
-              {{ selectedSubService.description }}
-            </div>
-            <a :href="selectedSubService.link" class="text-secondary text-lg group" target="_blank">{{
-              selectedSubService.linkText }}
-              <i-mdi-chevron-double-right
-                class="inline transform transition-transform duration-200 ease-in-out group-hover:translate-x-1" />
-            </a>
-            <div
-              class="absolute bottom-0 right-0 h-auto w-auto px-4 py-4 bg-secondary text-white font-bold flex items-center justify-center text-base"
-              :class="contactPulseAnimation">
-              <span class="pr-2">GET IN TOUCH</span>
-              <i-mdi-arrow-right-thick style="align-self: center;" />
-            </div>
-          </div>
-        </transition-group>
-      </div>
-    </div>
+    </transition-group>
+    <div
+          class="absolute bottom-0 right-0 h-auto w-auto px-4 py-4 bg-secondary text-white font-bold flex items-center justify-center text-base"
+          :class="contactPulseAnimation">
+          <span class="pr-2">GET IN TOUCH</span>
+          <i-mdi-arrow-right-thick style="align-self: center;" />
+        </div>
+  </div>
+</div>
+
   </div>
 </template>
 

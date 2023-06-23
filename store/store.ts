@@ -149,7 +149,7 @@ export const useStore = defineStore("store", {
       
     {
       id: 4,
-      name: "E-commerce Solutions",
+      name: "E-commerce",
       image: "/birds2.jpg",
       imageAria: "E-commerce Solutions",
       description: "Crafting online stores to drive growth and sales",

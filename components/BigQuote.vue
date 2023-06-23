@@ -1,13 +1,13 @@
 <template>
-	<div class="flex justify-center items-start mb-80">
+	<div class="flex justify-center items-start mb-20 md:mb-80">
 		<div
-			class="quote text-white text-7xl font-fancy flex flex-col md:flex-row items-center"
+			class="quote text-white text-4xl md:text-7xl font-fancy flex flex-col md:flex-row items-center"
 		>
 			<img
 				src="/formwork_white.png"
-				class="mr-8 md:h-[500px] h-[300px]"
+				class="mr-0 md:mr-8 md:h-[500px] h-[300px]"
 			/>
-			<div class="ml-28 text-white-500 quote-content items-center">
+			<div class="my-10 md:m-10 md:ml-28 text-white-500 quote-content items-center">
 				<div
 					v-for="(word, index) in words"
 					:key="index"
