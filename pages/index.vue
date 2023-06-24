@@ -15,7 +15,7 @@
       <Formwork />
       <Services />
       <BigQuote :bigQuote="bigQuote" />
-      <sectionInfo />
+      <sectionFeaturedBlog />
       <uiContact />
     </div>
   </div>

@@ -12,10 +12,10 @@ definePageMeta({
       Corbusier's brutalist architecture.</span>
 
     <!-- Blog post title -->
-    <h1 class="mt-4 mb-8 text-3xl font-bold">"A Website is a Machine for Information and Delight": Brutalism and UI/UX
-      Design
+    <h1 class="mt-4 mb-8 text-3xl font-bold uppercase">A Website is a Machine for Information and Delight
     </h1>
-
+    <h2 class="mt-4 mb-8 text-2xl font-bold normal-case">Le Corbusier & Brutalism in the age of Digital Design
+    </h2>
     <div class="leading-loose text-lg">
       <p>In the post-WW2 reconstruction era, <a href="https://en.wikipedia.org/wiki/B%C3%A9ton_brut" target="_blank"
           class="border-b-2 border-opacity-50 hover:border-opacity-100 border-primary">Béton Brut</a> —

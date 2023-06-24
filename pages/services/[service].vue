@@ -28,7 +28,7 @@
         <div class="text-white font-bold mb-4 text-3xl uppercase" v-if="selectedSubService.header">
           <span class="">{{ selectedSubService.header }}</span>
         </div>
-        <div class="text-white-500 mb-4 text-lg">
+        <div class="text-white-500 mb-4 text-lg max-w-[80ch]">
           {{ selectedSubService.description }}
         </div>
         <a :href="selectedSubService.link" class="text-secondary text-lg group" target="_blank">{{
@@ -121,7 +121,7 @@ function selectSubService(subService) {
   
 <style scoped>
 .custom-border {
-  border: 10px solid white;
+  border: 6px solid white;
   border-radius: 10px;
 }
 
