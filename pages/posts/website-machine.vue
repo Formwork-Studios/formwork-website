@@ -10,7 +10,7 @@ definePageMeta({
 </script>
 
 <template>
-  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 blog py-40">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 blog py-40 tracking-wide">
     <!-- Header Image -->
     <img class="w-full h-64 object-cover" src="/Unite-dhabitation-Marseille_C.-Emden.jpg" alt="Blog post header image">
     <span class="pt-1.5 pb-7 inline-block text-white-800 text-base">The Unite d'habitation in Marseille, an example of Le

@@ -9,7 +9,7 @@ definePageMeta({
 </script>
 
 <template>
-  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 tracking-wide">
     <!-- Header Image -->
  <!--   <img class="w-full h-64 object-cover mt-6" src="path_to_your_image.jpg" alt="Blog post header image"> -->
 

@@ -39,12 +39,14 @@
  
       </div>
     </transition-group>
+    <nuxt-link to="/contact">
     <div
           class="absolute bottom-0 right-0 h-auto w-auto px-4 py-4 bg-secondary text-white font-bold flex items-center justify-center text-base"
           :class="contactPulseAnimation">
           <span class="pr-2">GET IN TOUCH</span>
           <i-mdi-arrow-right-thick style="align-self: center;" />
         </div>
+        </nuxt-link>
   </div>
 </div>
 

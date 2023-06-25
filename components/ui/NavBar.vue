@@ -10,17 +10,26 @@
       <div>
         <uiBranding />
       </div>
-      <div class="hidden lg:flex items-center space-x-8 relative">
+      <div class="hidden lg:flex items-center space-x-8 relative tracking-wide">
         <nuxt-link to="/" class="text-white border-none uppercase">Home</nuxt-link>
+        <nuxt-link to="/posts/" class="text-white border-none uppercase">Blog</nuxt-link>
         <div class="flex flex-col">
           <div @click="isDropdownOpen = !isDropdownOpen" class="cursor-pointer text-white border-none uppercase">Services
             <i-mdi-chevron-down
               :class="isDropdownOpen ? 'rotate-180' : ''"
               class="inline transform transition-transform duration-200 ease-in-out group-hover:translate-x-1" />
           </div>
-          <div v-show="isDropdownOpen" class="absolute top-full mt-2 w-96 py-2 bg-stone-950 text-white border-white border-2 shadow-md right-0">
-    <nuxt-link v-for="item in serviceItems" :key="item.id" :to="`/services/${item.slug}`" class="block px-4 py-2 text-sm text-gray-700 hover:bg-secondary hover:text-white">{{ item.name }}</nuxt-link>
-  </div>
+          <div v-show="isDropdownOpen" class="absolute top-full w-96 bg-stone-950 text-white border-white border-2 shadow-md right-0">
+    <nuxt-link 
+        v-for="item in serviceItems" 
+        :key="item.id" 
+        :to="`/services/${item.slug}`" 
+        class="block px-4 py-2 text-sm text-gray-700 transition-colors duration-200 hover:bg-secondary hover:text-white tracking-wide"
+    >
+        {{ item.name }}
+    </nuxt-link>
+</div>
+
         </div>
         <uiBtn @click="showModal = !showModal" btnText="START A PROJECT" />
       </div>
@@ -40,12 +49,13 @@
     </nav>
     <div id="nav-menu" 
   :class="{ 'menu-open': isOpen, 'menu-closed': !isOpen, 'fixed inset-0 bg-gray-900 flex': isOpen }"
-  class="bg-stone-900 lg:hidden shadow-md pt-20 transition-all transition-150 nav-menu opacity-0 mt-10 w-full">
+  class="bg-stone-950 lg:hidden shadow-md pt-20 transition-all transition-150 nav-menu opacity-0 mt-10 w-full">
 
   <div class="flex flex-col h-full w-full justify-between items-start space-y-4 text-2xl">
     <div class="p-4">
-      <nuxt-link to="/" @click="isOpen = !isOpen" class="text-white border-none uppercase">Home</nuxt-link>
-      <div @click="isDropdownOpen = !isDropdownOpen" class="cursor-pointer text-white border-none uppercase">Services
+      <nuxt-link to="/" @click="isOpen = !isOpen" class="text-white border-none uppercase block mb-2">Home</nuxt-link>
+      <nuxt-link to="/posts/" class="text-white border-none uppercase block mb-2">Blog</nuxt-link>
+      <div @click="isDropdownOpen = !isDropdownOpen" class="cursor-pointer text-white border-none uppercase block mb-2">Services
         <i-mdi-chevron-down
           :class="isDropdownOpen ? 'rotate-180' : ''"
           class="inline transform transition-transform duration-200 ease-in-out group-hover:translate-x-1" />
@@ -56,9 +66,10 @@
     :key="item.id" 
     :to="`/services/${item.id}`" 
     @click="isOpen = !isOpen; isDropdownOpen = false" 
-    :class="['text-white border-none flex flex-row text-lg py-1', { 'mb-4': index === serviceItems.length - 1 }]"
+    class="tracking-wide"
+    :class="['text-white border-none flex flex-row text-lg py-2', { 'mb-4': index === serviceItems.length - 1 }]"
   >
-    {{ item.name }} 
+    {{ item.name }}  
   </nuxt-link>
 </div>
 

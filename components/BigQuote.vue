@@ -7,7 +7,7 @@
 				src="/formwork_white.png"
 				class="mr-0 md:mr-8 md:h-[500px] h-[300px]"
 			/>
-			<div class="my-10 md:m-10 md:ml-28 text-white-500 quote-content items-center">
+			<div class="my-10 md:m-10 md:ml-28 text-white-500 quote-content items-center tracking-wider">
 				<div
 					v-for="(word, index) in words"
 					:key="index"

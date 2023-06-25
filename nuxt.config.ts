@@ -6,7 +6,18 @@ import Components from "unplugin-vue-components/vite";
 
 export default defineNuxtConfig({
 	target: "static",
+
 	css: ["@/assets/css/main.css"],
+
+		router: {
+		  extendRoutes(routes, resolve) {
+			routes.push({
+			  path: '/services',
+			  redirect: '/#services'
+			});
+		  },
+		},
+	  
 	modules: [
 		"@nuxtjs/tailwindcss",
 		'@pinia/nuxt',

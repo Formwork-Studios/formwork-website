@@ -4,17 +4,29 @@
       <uiLogoCombo />
       <div class="relative mb-8">
         <label class="block text-white text-lg font-bold mb-2 sr-only" for="name">Name</label>
-        <input class="border-b !border-opacity-50 border-gray shadow appearance-none w-full text-white text-lg py-3 px-4 leading-tight focus:outline-none bg-transparent placeholder-gray focus:z-10 relative" id="name" type="text" placeholder="Your Name">
-        <div class="z-10 border-b-extend absolute bottom-0 left-0 w-full h-0.5 bg-white transform transition-transform duration-200 ease-in-out origin-left"></div>
+        <input
+          class="border-b !border-opacity-50 border-gray shadow appearance-none w-full text-white text-lg py-3 px-4 leading-tight focus:outline-none bg-transparent placeholder-gray focus:z-10 relative"
+          id="name" type="text" placeholder="Your Name">
+        <div
+          class="z-10 border-b-extend absolute bottom-0 left-0 w-full h-0.5 bg-white transform transition-transform duration-200 ease-in-out origin-left">
+        </div>
       </div>
       <div class="relative mb-8">
         <label class="block text-white text-lg font-bold mb-2 sr-only" for="email">Email</label>
-        <input class="border-b !border-opacity-50 border-gray shadow appearance-none w-full text-white text-lg py-3 px-4 leading-tight focus:outline-none bg-transparent placeholder-gray focus:z-10 relative" id="email" type="email" placeholder="Your Email">
-        <div class="z-10 border-b-extend absolute bottom-0 left-0 w-full h-0.5 bg-white transform transition-transform duration-200 ease-in-out origin-left"></div>
+        <input
+          class="border-b !border-opacity-50 border-gray shadow appearance-none w-full text-white text-lg py-3 px-4 leading-tight focus:outline-none bg-transparent placeholder-gray focus:z-10 relative"
+          id="email" type="email" placeholder="Your Email">
+        <div
+          class="z-10 border-b-extend absolute bottom-0 left-0 w-full h-0.5 bg-white transform transition-transform duration-200 ease-in-out origin-left">
+        </div>
       </div>
       <div class="relative mb-8">
-        <textarea class="border-b !border-opacity-50 border-gray  shadow appearance-none w-full text-white text-lg py-3 px-4 leading-tight focus:outline-none bg-transparent placeholder-gray focus:z-10 relative" id="message" placeholder="Your Message"></textarea>
-        <div class="z-10 border-b-extend absolute bottom-0 left-0 w-full h-0.5 bg-white transform transition-transform duration-200 ease-in-out origin-left"></div>
+        <textarea
+          class="border-b !border-opacity-50 border-gray  shadow appearance-none w-full text-white text-lg py-3 px-4 leading-tight focus:outline-none bg-transparent placeholder-gray focus:z-10 relative"
+          id="message" placeholder="Your Message"></textarea>
+        <div
+          class="z-10 border-b-extend absolute bottom-0 left-0 w-full h-0.5 bg-white transform transition-transform duration-200 ease-in-out origin-left">
+        </div>
         <label class="block text-white text-lg font-bold mt-auto sr-only" for="message">Your Message</label>
       </div>
 
@@ -26,11 +38,13 @@
       </div>
 
       <div class="flex items-center justify-between">
-  <button class="bg-transparent hover:bg-white text-white font-bold py-2 px-4 border border-white hover:text-black w-20 h-10 grid place-items-center" type="submit" @click.prevent="submitForm">
-    <span v-show="!isLoading" class="uppercase">Send</span>
-    <i-ri-loader-4-line v-show="isLoading" class="animate-spin" />
-  </button>
-</div>
+        <button
+          class="bg-transparent hover:bg-white text-white font-bold py-2 px-4 border border-white hover:text-black w-20 h-10 grid place-items-center"
+          type="submit" @click.prevent="submitForm">
+          <span v-show="!isLoading" class="uppercase">Send</span>
+          <i-ri-loader-4-line v-show="isLoading" class="animate-spin" />
+        </button>
+      </div>
 
     </form>
   </div>
@@ -85,19 +99,19 @@ const submitForm = () => {
   z-index: 100;
 }
 
-.relative:focus-within > .border-b-extend {
+.relative:focus-within>.border-b-extend {
   transform: scaleX(1);
 }
 
 form {
-  max-width: 500px; 
+  max-width: 500px;
   margin: 0 auto;
 }
 
 input[type="text"],
 input[type="email"],
 textarea {
-  width: 100%; 
+  width: 100%;
   padding: 0.75rem;
   margin-bottom: 1.5rem;
 }
@@ -106,8 +120,9 @@ input[type="checkbox"] {
   margin-right: 0.5rem;
   background: transparent !important;
 }
+
 button[type="submit"] {
-  margin-top: 1rem; 
+  margin-top: 1rem;
 }
 
 .animate-delay {
@@ -127,5 +142,6 @@ button[type="submit"] {
     transform: translateY(0px);
   }
 }
+
 
 </style>
