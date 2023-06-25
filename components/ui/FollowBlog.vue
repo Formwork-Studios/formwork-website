@@ -8,7 +8,7 @@
         </div>
         <div>
           <input type="email" v-model="email" placeholder="Enter your email" class="mb-4 p-2 w-full rounded-none"/>
-          <uiButton class="inline-flex px-4 py-2 w-full" btnText="Your custom message" />
+          <uiButton class="inline-flex px-4 py-2 w-full uppercase" btnText="Submit" />
         </div>
       </div>
       <div class="col-span-5 md:col-span-2 order-first md:order-none hidden md:flex">

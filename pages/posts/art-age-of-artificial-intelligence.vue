@@ -1,7 +1,11 @@
 <script lang="ts" setup>
 definePageMeta({
   layout: "post",
+  title: "Artificial Intelligence",
+  blurb: "this is a blurb",
+  date: "2021-10-10",
 });
+
 </script>
 
 <template>

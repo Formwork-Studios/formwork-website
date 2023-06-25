@@ -18,7 +18,7 @@
               :class="isDropdownOpen ? 'rotate-180' : ''"
               class="inline transform transition-transform duration-200 ease-in-out group-hover:translate-x-1" />
           </div>
-          <div v-show="isDropdownOpen" class="absolute top-full mt-2 w-48 py-2 bg-stone-950 text-white border-white border-2 rounded-lg shadow-md">
+          <div v-show="isDropdownOpen" class="absolute top-full mt-2 w-96 py-2 bg-stone-950 text-white border-white border-2 shadow-md right-0">
     <nuxt-link v-for="item in serviceItems" :key="item.id" :to="`/services/${item.slug}`" class="block px-4 py-2 text-sm text-gray-700 hover:bg-secondary hover:text-white">{{ item.name }}</nuxt-link>
   </div>
         </div>

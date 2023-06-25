@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col h-screen overflow-hidden">
     <!-- Top Part -->
-    <div class="bg-stone-950 px-10 pt-14 basis-1/4 md:basis-1/2">
+    <div class="bg-stone-950 px-10 pt-14 basis-1/4 md:basis-1/2 mb-10">
       <div id="toparea" class="col-span-1 p-4 h-full flex flex-col justify-end custom-border">
         <div class="text-xl text-white clamp-text font-black mb-8 uppercase">
           {{ serviceName }}
@@ -122,7 +122,6 @@ function selectSubService(subService) {
 <style scoped>
 .custom-border {
   border: 6px solid white;
-  border-radius: 10px;
 }
 
 #toparea {

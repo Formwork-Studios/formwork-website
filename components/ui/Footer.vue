@@ -1,12 +1,13 @@
 <template>
-	<div class="bg-black text-white py-4 sm:py-6 md:py-8 z-50">
-		<div class="mx-2 sm:mx-4 md:mx-6 lg:mx-8 xl:mx-10 2xl:mx-20 flex flex-col md:flex-row md:justify-between">
-			<div class="flex flex-col md:flex-row md:grow">
+	<div class="bg-black text-white py-4 sm:py-6 md:py-8 z-50 w-full">
+		<div class="flex flex-col md:flex-row md:justify-between px-2 sm:px-4 md:px-6 lg:px-8 xl:px-10 2xl:px-20 w-full">
+
+		   <div id="footer-content" class="flex flex-col md:flex-row md:grow w-full justify-between">
 				<div class="mb-4 sm:mb-5 md:mb-6 md:mr-8">
 					<img src="/formwork_color.png" alt="Formwork logo" class="h-32 sm:h-36 md:h-40" />
 				</div>
 				<div v-for="section in sections" :key="section.title" class="mb-4 sm:mb-5 md:mb-6 md:mr-20">
-					<h3 class="font-bold mb-2 border-b border-opacity-50 uppercase">
+					<h3 class="font-bold mb-2 border-b border-opacity-50 uppercase pr-20">
 						{{ section.title }}
 					</h3>
 					<ul v-if="section.links" :class="{ 'column-list': section.links.length > 5 }">
@@ -30,7 +31,7 @@
 					</ul>
 				</div>
 				<!-- End of new column -->
-				<div id="lastcol" class="flex flex-col h-full justify-between">
+				<div id="lastcol" class="flex flex-col h-full justify-between flex-grow">
 					<div class="flex flex-row justify-center md:justify-end space-x-2 sm:space-x-3 md:space-x-4 text-lg sm:text-xl mb-4 sm:mb-5 md:mb-6">
 						<a href="https://www.pinterest.com" target="_blank">
 							<i-mdi-pinterest />
@@ -49,6 +50,7 @@
 					<div class="text-center md:text-right h-full flex flex-col justify-end text-sm text-stone-400">
 						<p class="mt-auto">
 							© 2023 Formwork Studios. All rights reserved.
+					
 						</p>
 					</div>
 				</div>
@@ -94,6 +96,7 @@ export default {
 						{ name: "Team", url: "/team" },
 						{ name: "Contact", url: "/contact" },
 						{ name: "Privacy", url: "/privacy" },
+						{ name: "Blog", url: "/posts" },
 					],
 				},
 				{

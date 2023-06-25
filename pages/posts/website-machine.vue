@@ -1,7 +1,12 @@
 <script lang="ts" setup>
 definePageMeta({
   layout: "post",
+  title: "A Website is a Machine for Information and Delight",
+  blurb: "In the post-WW2 reconstruction era, Béton Brut — the French term for Raw Concrete — became the material of choice for architects tasked with the goal of rebuilding a war-torn Europe. In response to what must be considered the most catastrophic conflict in human history, a collective desire emerged to begin the process of rebuilding society. Inspired by the Modernist principle of \"form follows function,\" architects sought to create buildings that embodied the ideals of utilitarianism, egalitarianism, and honesty.", 
+  date: "2021-10-10",
 });
+
+
 </script>
 
 <template>
@@ -24,7 +29,7 @@ definePageMeta({
         the most catastrophic conflict in human history, a collective desire emerged to begin the process of rebuilding
         society. Inspired by the Modernist principle of "form follows
         function," architects sought to create buildings that embodied the ideals of utilitarianism, egalitarianism, and
-        honesty . In Modernism, there was no need for the ornate
+        honesty. In Modernism, there was no need for the ornate
         flourishes typical of classical architecture. Instead, Architects of that time embraced Le Corbusier's
         perspective, treating homes as what they fundamentally are —
         <a href="https://www.open.edu/openlearn/history-the-arts/history/heritage/le-corbusier" target="_blank"
