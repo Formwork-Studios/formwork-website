@@ -67,7 +67,7 @@ onMounted(() => {
       })
     },
     {
-      threshold: 1,
+      threshold: .5,
     }
   );
 
@@ -126,7 +126,7 @@ button[type="submit"] {
 }
 
 .animate-delay {
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-fill-mode: both;
   animation-name: animate-delay;
 }

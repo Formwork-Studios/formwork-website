@@ -4,7 +4,7 @@
     <ul class="text-xl text-white max-w-3xl mx-auto">
       <li v-for="(post, index) in posts" :key="post.path" class="py-4 animate-delay" :style="{animationDelay: index * 0.1 + 's'}">
         <nuxt-link :to="post.path"><h2>{{ post.meta.title }}</h2></nuxt-link>
-        <p>{{ post.meta.date }}</p>
+        <p class="text-white-800">{{ post.meta.date }}</p>
 
         <p class="py-2">{{ post.meta.blurb }}</p>
       </li>

@@ -106,8 +106,9 @@ onMounted(() => {
 });
 </script>
 <template>
+	<div class="mb-16 md:mb-0 md:p-4 p-12 min-h-screen h-fit ">
 	<div id="services"
-		class="grid md:p-4 p-12 grid-cols-1 gap-y-20 md:gap-y-0 md:grid-cols-3 gap-x-28 place-items-start min-h-screen h-fit max-w-6xl mx-auto mb-16 md:mb-0"
+		class="grid grid-cols-1 gap-y-20 md:gap-y-20 md:grid-cols-3 gap-x-28 place-items-start max-w-6xl mx-auto"
 	>
 		<div
 			v-for="service in services"
@@ -140,6 +141,8 @@ onMounted(() => {
 				/></nuxt-link>
 			</div>
 		</div>
+		</div>
+		<sectionFeaturedService />
 	</div>
 </template>
 

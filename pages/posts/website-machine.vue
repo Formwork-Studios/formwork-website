@@ -17,6 +17,7 @@ definePageMeta({
       Corbusier's brutalist architecture.</span>
 
     <!-- Blog post title -->
+    <div class="blog-content">
     <h1 class="mt-4 mb-8 text-3xl font-bold uppercase">A Website is a Machine for Information and Delight
     </h1>
     <h2 class="mt-4 mb-8 text-2xl font-bold normal-case">Le Corbusier & Brutalism in the age of Digital Design
@@ -150,6 +151,7 @@ definePageMeta({
         goal is to build a machine for information and delight,
         these principles serve as valuable guidance.</p>
     </div>
+  </div>
   </div>
 </template>
 

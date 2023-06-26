@@ -5,7 +5,7 @@
       <nuxt-link to="/posts/website-machine ">
         <h2 class="font-bold text-black text-6xl uppercase blogitem opacity-0">A website is a machine for information and delight</h2>
       </nuxt-link>
-      <div class="bg-primary w-max h-auto text-white p-2 font-bold blogitem opacity-0">LATEST POST</div>
+      <div class="bg-primary w-max h-auto text-white-300 p-2 font-bold blogitem opacity-0">LATEST POST</div>
 
       <div class="text-black-300 leading-loose text-lg blogitem opacity-0">
         <div>
@@ -112,7 +112,7 @@ onMounted(() => {
 			});
 		},
 		{
-			threshold: 1,
+			threshold: .25,
 		}
 	);
 
