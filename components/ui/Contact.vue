@@ -4,7 +4,7 @@
       <uiLogoCombo />
       <div class="relative mb-8">
         <label class="block text-white text-lg font-bold mb-2 sr-only" for="name">Name</label>
-        <input
+        <input v-model="name"
           class="border-b !border-opacity-50 border-gray shadow appearance-none w-full text-white text-lg py-3 px-4 leading-tight focus:outline-none bg-transparent placeholder-gray focus:z-10 relative"
           id="name" type="text" placeholder="Your Name">
         <div
@@ -13,7 +13,7 @@
       </div>
       <div class="relative mb-8">
         <label class="block text-white text-lg font-bold mb-2 sr-only" for="email">Email</label>
-        <input
+        <input v-model="email"
           class="border-b !border-opacity-50 border-gray shadow appearance-none w-full text-white text-lg py-3 px-4 leading-tight focus:outline-none bg-transparent placeholder-gray focus:z-10 relative"
           id="email" type="email" placeholder="Your Email">
         <div
@@ -21,7 +21,7 @@
         </div>
       </div>
       <div class="relative mb-8">
-        <textarea
+        <textarea v-model="message"
           class="border-b !border-opacity-50 border-gray  shadow appearance-none w-full text-white text-lg py-3 px-4 leading-tight focus:outline-none bg-transparent placeholder-gray focus:z-10 relative"
           id="message" placeholder="Your Message"></textarea>
         <div
@@ -32,7 +32,7 @@
 
       <div class="mb-8">
         <label class="flex items-center text-white text-lg">
-          <input type="checkbox" v-model="checked" class="mr-3" id="updates" />
+          <input type="checkbox" v-model="consent" class="mr-3" id="updates" />
           I agree to receive email updates
         </label>
       </div>
@@ -50,12 +50,17 @@
   </div>
 </template>
 
+
 <script setup>
 import { ref, onMounted } from 'vue'
 
-const checked = ref(false)
+const consent = ref(false)
+const name = ref('')
+const email = ref('')
+const message = ref('')
 const form = ref('')
 const isLoading = ref(false)
+const client = useSupabaseClient()
 
 onMounted(() => {
   const observer = new IntersectionObserver(
@@ -76,12 +81,29 @@ onMounted(() => {
   }
 })
 
-const submitForm = () => {
+const submitForm = async () => {
   isLoading.value = true;
 
-  setTimeout(() => {
-    isLoading.value = false;
-  }, 1000);
+  // Submit form data to Supabase
+  const { error } = await client
+    .from('blogFollows')
+    .insert([
+      { 
+        email: email.value, 
+        topic: 'home',
+        name: name.value,
+        message: message.value,
+        consent: consent.value 
+      },
+    ]);
+
+  if (error) {
+    console.error("Error submitting form:", error.message);
+  } else {
+    console.log("Form submitted successfully!");
+  }
+
+  isLoading.value = false;
 }
 </script>
 

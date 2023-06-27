@@ -1,32 +1,59 @@
 <template>
   <div class="mx-10">
     <div ref="form" class="opacity-0">
-    <div  class="max-w-2xl md:max-w-4xl bg-white w-full md:mx-auto mb-60 text-black grid grid-cols-5 h-full">
-      <div class="p-14 flex flex-col justify-between col-span-5 md:col-span-3">
-        <div class="mb-20">
-          <h3 class="text-black text-3xl font-bold inline-block">New Article Notification</h3>
-          <div class="my-4 text-lg">When you sign-up below we will kindly notify you when the next article drops.</div>
+      <div class="max-w-2xl md:max-w-4xl bg-white w-full md:mx-auto mb-60 text-black grid grid-cols-5 h-full">
+        <div class="p-14 flex flex-col justify-between col-span-5 md:col-span-3">
+          <div class="mb-20">
+            <h3 class="text-black text-3xl font-bold inline-block">New Article Notification</h3>
+            <div class="my-4 text-lg">When you sign-up below we will kindly notify you when the next article drops.</div>
+          </div>
+          <div>
+            <input type="email" v-model="email" placeholder="Enter your email" class="mb-4 p-2 w-full rounded-none"/>
+            <div class="text-red-500" v-if="emailError">{{ emailError }}</div>
+            <uiButton @click="submitEmail" class="inline-flex px-4 py-2 w-full uppercase" :disabled="!!emailError" btnText="Submit" />
+          </div>
         </div>
-       
-        <div>
-          <input type="email" v-model="email" placeholder="Enter your email" class="mb-4 p-2 w-full rounded-none"/>
-          <uiButton class="inline-flex px-4 py-2 w-full uppercase" btnText="Submit" />
+        <div class="col-span-5 md:col-span-2 order-first md:order-none hidden md:flex">
+          <img src="/birds2.jpg" class="block object-fill h-full">
         </div>
-       
-      </div>
-      <div class="col-span-5 md:col-span-2 order-first md:order-none hidden md:flex">
-        <img src="/birds2.jpg" class="block object-fill h-full">
       </div>
     </div>
-  </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 
+const client = useSupabaseClient()
+
 const email = ref('')
+const emailError = ref('')
 const form = ref('')
+
+async function submitEmail() {
+  // Simple regex for email validation
+  const regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
+
+  if (email.value && !regex.test(email.value)) {
+    emailError.value = "Invalid email address"
+    return
+  } else {
+    emailError.value = ""
+  }
+
+  const { error } = await client
+    .from('blogFollows')
+    .insert([
+      { email: email.value, topic: 'blog' },
+    ]);
+
+  if (error) {
+    console.error("Error submitting email:", error.message);
+    return;
+  }
+
+  console.log("Email submitted successfully!");
+}
 
 onMounted(() => {
   const observer = new IntersectionObserver(
@@ -48,7 +75,6 @@ onMounted(() => {
     observer.observe(form.value);
   }
 });
-
 </script>
 
 

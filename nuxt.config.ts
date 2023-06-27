@@ -22,6 +22,7 @@ export default defineNuxtConfig({
 		"@nuxtjs/tailwindcss",
 		'@pinia/nuxt',
 		["unplugin-icons/nuxt", { autoInstall: true }],
+		'@nuxtjs/supabase'
 	],
 	vite: {
 		plugins: [
