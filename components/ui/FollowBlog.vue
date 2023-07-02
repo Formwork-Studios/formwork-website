@@ -8,9 +8,12 @@
             <div class="my-4 text-lg">When you sign-up below we will kindly notify you when the next article drops.</div>
           </div>
           <div>
-            <input type="email" v-model="email" placeholder="Enter your email" class="mb-4 p-2 w-full rounded-none"/>
-            <div class="text-red-500" v-if="emailError">{{ emailError }}</div>
-            <uiButton @click="submitEmail" class="inline-flex px-4 py-2 w-full uppercase" :disabled="!!emailError" btnText="Submit" />
+            <input type="email" v-model="email" placeholder="Enter your email" class="mb-4 p-3 w-full rounded-none"/>
+            <uiButton @click="submitEmail" class="inline-flex px-4 py-2 w-full uppercase font-bold" btnText="Submit" />
+            <i-ri-loader-4-line v-show="isLoading" class="animate-spin" /> 
+          </div>
+          <div class="block">
+            <uiFormFeedback v-if="formFeedback" :formFeedback="formFeedback" class="feedback-animation" :success="success" />
           </div>
         </div>
         <div class="col-span-5 md:col-span-2 order-first md:order-none hidden md:flex">
@@ -27,19 +30,19 @@ import { ref, onMounted } from 'vue'
 const client = useSupabaseClient()
 
 const email = ref('')
-const emailError = ref('')
 const form = ref('')
+const formFeedback = ref(null)
+const success = ref(true);  
 
 async function submitEmail() {
   // Simple regex for email validation
   const regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
 
   if (email.value && !regex.test(email.value)) {
-    emailError.value = "Invalid email address"
+    formFeedback.value = "Invalid email address"
+    success.value = false; 
     return
-  } else {
-    emailError.value = ""
-  }
+  } 
 
   const { error } = await client
     .from('blogFollows')
@@ -49,10 +52,14 @@ async function submitEmail() {
 
   if (error) {
     console.error("Error submitting email:", error.message);
+    formFeedback.value = "There was an error submitting your form. Please try again."; // Update feedback message
+    success.value = false; 
     return;
   }
 
   console.log("Email submitted successfully!");
+  formFeedback.value = "Your form has been submitted successfully!"; // Update feedback message
+    success.value = true; 
 }
 
 onMounted(() => {
@@ -76,7 +83,6 @@ onMounted(() => {
   }
 });
 </script>
-
 
 
 

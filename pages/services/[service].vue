@@ -2,8 +2,14 @@
   <div class="flex flex-col h-screen overflow-hidden">
     <!-- Top Part -->
     <div class="bg-stone-950 px-10 pt-14 basis-1/4 md:basis-1/2 mb-10">
-      <div id="toparea" class="col-span-1 p-4 h-full flex flex-col justify-end custom-border">
-        <div class="text-xl text-white clamp-text font-black mb-8 uppercase">
+      <div id="toparea" class="col-span-1 p-4 h-full flex flex-col justify-end custom-border"
+        :style="{
+          'background-image': `url(${serviceImage})`,
+          'background-position': 'center bottom',
+          'background-repeat': 'no-repeat',
+          'background-size': 'cover'
+        }">
+        <div class="text-xl text-white clamp-text font-black mb-8 uppercase tracking-wide">
           {{ serviceName }}
         </div>
       </div>
@@ -74,6 +80,7 @@ const store = useStore();
 
 const route = useRoute();
 const router = useRouter();
+const serviceImage = ref(''); 
 const currentService = ref(route.params.service);
 console.log(currentService.value)
 
@@ -96,6 +103,7 @@ watchEffect(() => {
   serviceQuestion.value = service ? service.subServices[0].question : ''; // Assuming question is part of each subService
   subServices.value = service ? service.subServices : [];
   const defaultSubService = subServices.value.find(subService => subService.sid === 0);
+  serviceImage.value = service ? service.image : '';  // add this line to set the image from the store
   selectedSubService.value = defaultSubService || {};
 
   const pulseAnimationInterval = setInterval(() => {

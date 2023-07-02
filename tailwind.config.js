@@ -18,7 +18,11 @@ module.exports = {
         'basis-50': '0 0 50%'
       },
       colors: {
-        primary: "#14B8A6",
+        primary: 
+        {
+          darK: "#409087",
+          DEFAULT: "#14B8A6",
+          light: "#5BCDC1",},
         secondary: '#8A4F7D', 
         tertiary: '#F93943',
         black: '#252323',

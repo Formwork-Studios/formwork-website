@@ -14,6 +14,12 @@
     font-weight: 400;
   }
 
+  @font-face {
+    font-family: "Work Sans";
+    src: url("/assets/fonts/WorkSans-Medium.ttf");
+    font-weight: 600;
+  }
+
 @font-face {
     font-family: "Lora";
     src: url("/assets/fonts/Lora-Regular.ttf");

@@ -6,7 +6,7 @@ export const useStore = defineStore("store", {
       {
         id: 1,
         name: "Digital Marketing",
-        image: "/birds2.jpg",
+        image: "/new-york-city.webp",
         imageAria: "SEO and Marketing",
         description: "SEO and Marketing Agency.",
         slug: "digital-marketing",
@@ -48,7 +48,7 @@ export const useStore = defineStore("store", {
       {
         id: 2,
         name: "Web Design & UI/UX",
-        image: "/birds2.jpg",
+        image: "/new-york-city.webp",
         imageAria: "Web Design",
         description: "We are a web design company.",
         details: "these are some details",

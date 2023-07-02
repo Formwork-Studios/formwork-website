@@ -44,8 +44,11 @@
           <span v-show="!isLoading" class="uppercase">Send</span>
           <i-ri-loader-4-line v-show="isLoading" class="animate-spin" />
         </button>
+ 
       </div>
-
+      <div class="block">
+    <uiFormFeedback v-if="formFeedback" :formFeedback="formFeedback" class="feedback-animation" :success="success" />
+  </div>
     </form>
   </div>
 </template>
@@ -60,7 +63,9 @@ const email = ref('')
 const message = ref('')
 const form = ref('')
 const isLoading = ref(false)
+const formFeedback = ref(null) 
 const client = useSupabaseClient()
+const success = ref(true); 
 
 onMounted(() => {
   const observer = new IntersectionObserver(
@@ -83,6 +88,7 @@ onMounted(() => {
 
 const submitForm = async () => {
   isLoading.value = true;
+  formFeedback.value = null; // Reset feedback message
 
   // Submit form data to Supabase
   const { error } = await client
@@ -99,13 +105,18 @@ const submitForm = async () => {
 
   if (error) {
     console.error("Error submitting form:", error.message);
+    formFeedback.value = "There was an error submitting your form. Please try again."; // Update feedback message
+    success.value = false; 
   } else {
     console.log("Form submitted successfully!");
+    formFeedback.value = "Your form has been submitted successfully!"; // Update feedback message
+    success.value = true; 
   }
 
   isLoading.value = false;
 }
 </script>
+
 
 
 <style scoped>
@@ -165,5 +176,13 @@ button[type="submit"] {
   }
 }
 
+.feedback-animation {
+    animation: feedback-fade-in 1s ease-in-out forwards;
+    opacity: 0;
+  }
 
+  @keyframes feedback-fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
 </style>
