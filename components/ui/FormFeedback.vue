@@ -8,10 +8,22 @@ const props = defineProps({
 </script>
 
 <template>
-  <div v-if="formFeedback" 
-       class="text-white w-full block p-3 my-4 font-semibold"
+  <div v-if="formFeedback === 'error'" 
+       class="text-white w-full block p-3 mt-4 font-semibold"
        :class="{'bg-primary': success, 'bg-tertiary': !success}">
-    {{ formFeedback }}
+    There was an error processing your request. Please try again.
+  </div>
+
+  <div v-else-if="formFeedback === 'success'" 
+       class="text-white w-full block p-3 mt-4 font-semibold"
+       :class="{'bg-primary': success, 'bg-tertiary': !success}">
+    Your request was processed successfully.
+  </div>
+
+  <div v-else-if="formFeedback === 'invalidEmail'" 
+       class="text-white w-full block p-3 mt-4 font-semibold"
+       :class="{'bg-primary': success, 'bg-tertiary': !success}">
+    The email address you have entered is not valid.
   </div>
 </template>
 

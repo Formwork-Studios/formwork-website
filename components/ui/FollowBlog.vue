@@ -2,7 +2,7 @@
   <div class="mx-10">
     <div ref="form" class="opacity-0">
       <div class="max-w-2xl md:max-w-4xl bg-white w-full md:mx-auto mb-60 text-black grid grid-cols-5 h-full">
-        <div class="p-14 flex flex-col justify-between col-span-5 md:col-span-3">
+        <div class="p-14 flex flex-col justify-between col-span-5 md:col-span-3 relative"> <!-- Added relative positioning here -->
           <div class="mb-20">
             <h3 class="text-black text-3xl font-bold inline-block">New Article Notification</h3>
             <div class="my-4 text-lg">When you sign-up below we will kindly notify you when the next article drops.</div>
@@ -12,7 +12,7 @@
             <uiButton @click="submitEmail" class="inline-flex px-4 py-2 w-full uppercase font-bold" btnText="Submit" />
             <i-ri-loader-4-line v-show="isLoading" class="animate-spin" /> 
           </div>
-          <div class="block">
+          <div class="block absolute bottom-0 left-0 w-full"> <!-- Made the absolute positioned element span the width of its parent -->
             <uiFormFeedback v-if="formFeedback" :formFeedback="formFeedback" class="feedback-animation" :success="success" />
           </div>
         </div>
@@ -23,6 +23,36 @@
     </div>
   </div>
 </template>
+
+<style scoped>
+/* Updated styles */
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+/* Existing styles */
+.animate-delay {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: animate-delay;
+}
+
+@keyframes animate-delay {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+</style>
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
@@ -39,7 +69,7 @@ async function submitEmail() {
   const regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
 
   if (email.value && !regex.test(email.value)) {
-    formFeedback.value = "Invalid email address"
+    formFeedback.value = "invalidEmail"
     success.value = false; 
     return
   } 
@@ -52,13 +82,13 @@ async function submitEmail() {
 
   if (error) {
     console.error("Error submitting email:", error.message);
-    formFeedback.value = "There was an error submitting your form. Please try again."; // Update feedback message
+    formFeedback.value = "error"; // Update feedback message
     success.value = false; 
     return;
   }
 
   console.log("Email submitted successfully!");
-  formFeedback.value = "Your form has been submitted successfully!"; // Update feedback message
+  formFeedback.value = "success"; // Update feedback message
     success.value = true; 
 }
 
@@ -85,26 +115,3 @@ onMounted(() => {
 </script>
 
 
-
-<style scoped>
-
-.animate-delay {
-  animation-duration: 1s;
-  animation-fill-mode: both;
-  animation-name: animate-delay;
-}
-
-@keyframes animate-delay {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-
-
-</style>

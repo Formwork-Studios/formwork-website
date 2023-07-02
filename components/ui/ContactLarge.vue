@@ -1,7 +1,41 @@
 <template>
-  <div class="w-full h-screen flex items-center justify-center bg-transparent my-20">
-    <form ref="form" id="mainContact" class="w-full max-w-xl px-6 " @submit.prevent="submitForm">
+  <div class="w-full h-screen flex items-center justify-center bg-transparent">
+    <form ref="form" id="mainContact" class="w-full max-w-4xl px-6 " @submit.prevent="submitForm">
       <uiLogoCombo />
+      <div id="lastcol" class="flex flex-col h-full justify-between flex-grow">
+					<div class="flex flex-row justify-center md:justify-end space-x-2 sm:space-x-3 md:space-x-4 text-lg sm:text-xl mb-4 sm:mb-5 md:mb-6 md:py-0 py-4 text-white">
+						<a href="https://www.pinterest.com" target="_blank">
+							<i-mdi-pinterest />
+						</a>
+						<a href="https://www.twitter.com" target="_blank">
+							<i-mdi-twitter />
+						</a>
+						<a href="https://www.linkedin.com" target="_blank">
+							<i-mdi-linkedin />
+						</a>
+						
+						<a href="https://www.github.com" target="_blank">
+							<i-mdi-github />
+						</a>
+					</div>
+
+				</div>
+        <div class="relative mb-8">
+  <label class="block text-white text-lg font-bold mb-2" for="reason">REASON FOR CONTACT</label>
+  <select v-model="reason" id="reason" 
+          class="w-full text-white text-lg py-3 px-4 leading-tight bg-black focus:z-10 relative">
+    <option value="" disabled selected>-</option>
+    <option value="option1">Web</option>
+    <option value="option2">Option 2</option>
+    <option value="option3">Option 3</option>
+    <option value="option2">Option 2</option>
+    <option value="option3">Option 3</option>
+    <option value="option2">Option 2</option>
+    <option value="option3">Option 3</option>
+  </select>
+</div>
+
+
       <div class="relative mb-8">
         <label class="block text-white text-lg font-bold mb-2 sr-only" for="name">Name</label>
         <input v-model="name"
@@ -37,15 +71,15 @@
         </label>
       </div>
 
-      <div class="flex items-center justify-between">
-        <button
-          class="bg-transparent hover:bg-white text-white font-bold py-2 px-4 border border-white hover:text-black w-20 h-10 grid place-items-center"
-          type="submit" @click.prevent="submitForm">
-          <span v-show="!isLoading" class="uppercase">Send</span>
-          <i-ri-loader-4-line v-show="isLoading" class="animate-spin" />
-        </button>
- 
-      </div>
+      <div>
+  <button
+    class="bg-transparent hover:bg-white text-white font-bold py-2 px-4 border border-white hover:text-black w-20 h-10 flex justify-center items-center text-lg"
+    type="submit" @click.prevent="submitForm">
+    <span v-show="!isLoading" class="uppercase">Send</span>
+    <i-ri-loader-4-line v-show="isLoading" class="animate-spin" />
+  </button>
+</div>
+
       <div class="block">
     <uiFormFeedback v-if="formFeedback" :formFeedback="formFeedback" class="feedback-animation" :success="success" />
   </div>
@@ -66,6 +100,8 @@ const isLoading = ref(false)
 const formFeedback = ref(null) 
 const client = useSupabaseClient()
 const success = ref(true); 
+const reason = ref('')
+
 
 onMounted(() => {
   // Same as before
@@ -93,7 +129,8 @@ const submitForm = async () => {
         topic: 'home',
         name: name.value,
         message: message.value,
-        consent: consent.value 
+        consent: consent.value,
+        reason: reason.value 
       },
     ]);
 
@@ -115,6 +152,7 @@ const submitForm = async () => {
 
 
 <style scoped>
+#reason, #reason:focus {}
 .border-b-extend {
   background-color: #14B8A6;
   transform: scaleX(0);
@@ -180,4 +218,17 @@ button[type="submit"] {
     0% { opacity: 0; }
     100% { opacity: 1; }
   }
+
+  #reason {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0 !important;
+}
+
+#reason option {
+  border-radius: 0 !important;
+  background: #000; /* You can change this to match your theme */
+  color: #fff; /* You can change this to match your theme */
+}
 </style>

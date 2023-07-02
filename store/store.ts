@@ -150,7 +150,7 @@ export const useStore = defineStore("store", {
     {
       id: 4,
       name: "E-commerce",
-      image: "/birds2.jpg",
+      image: "/nyc-skyline.webp",
       imageAria: "E-commerce Solutions",
       description: "Crafting online stores to drive growth and sales",
       details: "From personalized shopping experiences to seamless checkout flows, we build robust e-commerce solutions.",
