@@ -3,7 +3,7 @@
     <!-- First Main Column -->
     <div class="col-span-1 flex flex-col h-full relative space-y-8" tracking-wide>
       <nuxt-link to="/posts/website-machine ">
-        <h2 class="font-bold text-black text-6xl uppercase blogitem opacity-0">A website is a machine for information and delight</h2>
+        <h2 class="font-bold text-black text-4xl md:text-6xl uppercase blogitem opacity-0">A website is a machine for information and delight</h2>
       </nuxt-link>
       <div class="bg-primary w-max h-auto text-white-300 p-2 font-bold blogitem opacity-0">LATEST POST</div>
 

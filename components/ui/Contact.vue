@@ -67,10 +67,6 @@ const formFeedback = ref(null)
 const client = useSupabaseClient()
 const success = ref(true); 
 
-onMounted(() => {
-  // Same as before
-})
-
 const submitForm = async () => {
   isLoading.value = true;
   formFeedback.value = null; // Reset feedback message
@@ -110,9 +106,6 @@ const submitForm = async () => {
   isLoading.value = false;
 }
 </script>
-
-
-
 
 <style scoped>
 .border-b-extend {

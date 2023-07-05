@@ -1,10 +1,5 @@
 <template>
   <header class="fixed top-0 left-0 right-0 z-50">
-    <ClientOnly>
-      <Teleport to="body">
-        <uiModal v-model:visible="showModal" @close="showModal = false" />
-      </Teleport>
-    </ClientOnly>
     <nav
       class="flex items-center justify-between pl-4 lg:pl-10 w-full background-blur backdrop-filter backdrop-blur-sm bg-stone-950 bg-opacity-60 z-50">
       <div>
@@ -31,7 +26,8 @@
 </div>
 
         </div>
-        <uiBtn @click="showModal = !showModal" btnText="START A PROJECT" />
+        <uiBtn @click="$router.push('/contact')" btnText="START A PROJECT" />
+
       </div>
       <div class="m-2 lg:hidden flex items-center">
   <button @click="isOpen = !isOpen" class="text-white z-50">

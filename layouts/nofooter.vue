@@ -9,6 +9,6 @@ import "@/assets/css/main.css";
 		<div class="flex-grow formworkbg z-40">
 			<slot />
 		</div>
-		<uiFooter />
+
 	</div>
 </template>

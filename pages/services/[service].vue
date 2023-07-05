@@ -59,14 +59,6 @@
   </div>
 </template>
 
-
-
-
-
-
-
-
-
 <script setup>
 import { useStore } from '/store/store.ts';
 import { ref, watchEffect, onUnmounted } from 'vue';
@@ -124,11 +116,6 @@ function selectSubService(subService) {
 }
 </script>
 
-
-
-
-
-  
 <style scoped>
 .custom-border {
   border: 6px solid white;
@@ -170,4 +157,3 @@ function selectSubService(subService) {
   color: white;
 }
 </style>
-  
