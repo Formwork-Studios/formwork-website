@@ -121,7 +121,7 @@ const handleClick = async () => {
 				/>
 				<div
 					v-else-if="item.loader"
-					class="h-fit min-h-[32px] p-1 px-2 bg-neutral-900 w-full"
+					class="h-fit min-h-[32px] p-1 px-2 bg-neutral-900 w-full chatbot"
 				>
 					<div class="flex flex-row h-fit">
 						<div
@@ -134,7 +134,7 @@ const handleClick = async () => {
 				</div>
 				<div
 					v-else
-					class="p-1 px-2 min-h-[32px] h-fit"
+					class="p-1 px-2 min-h-[32px] h-fit user"
 					v-text="item.content"
 				/>
 			</div>
@@ -177,5 +177,16 @@ const handleClick = async () => {
 .emptyState::after {
 	transform: translateY(25%) !important;
 	animation: blink 0.8s step-start infinite;
+}
+.user::before {
+    content: "You: ";
+    color: #a0a0a0;
+    /* Add other styles as needed */
+}
+
+.chatbot::before {
+    content: "Chatbot: ";
+    color: #a0a0a0;
+    /* Add other styles as needed */
 }
 </style>
