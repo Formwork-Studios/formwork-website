@@ -98,14 +98,16 @@ const handleClick = async () => {
 </script>
 
 <template>
-	<div class="w-full min-h-fit px-4 py-1 box-content fixed top-10 bg-white flex flex-col md:flex-row md:items-end">
-		<p class="font-workSans text-black font-black text-4xl">CHATBOT</p>
-		<p class="font-workSans text-black text-sm ml-2 mb-1">
-			Powered by GPT-3.5 (using the <a class="text-blue-700" href="https://stevejobsarchive.com/book">Steve Job Book</a> as knowledge base)
-		</p>
-	</div>
-	<div class="h-full w-full flex flex-col justify-end p-6">
-		
+    <div class="flex flex-col h-screen p-10 pt-16">
+        <div class="flex flex-col h-full bg-stone-900">
+            <div class=" bg-white px-4 py-1 box-content sticky top-14 flex flex-col md:flex-row md:items-end r-0">
+                <p class="font-workSans text-black font-black text-4xl">CHATBOT</p>
+                <p class="font-workSans text-black text-sm ml-2 mb-1">
+                    Powered by GPT-3.5 (using the <a class="text-secondary" href="https://stevejobsarchive.com/book">Steve Job Book</a> as knowledge base)
+                </p>
+            </div>
+            <div id="chatarea" class="flex-grow w-full flex flex-col justify-end p-6">
+         
 		<div class="flex flex-col">
 			<div
 				v-for="item in chat"
@@ -138,18 +140,23 @@ const handleClick = async () => {
 			</div>
 		</div>
 
-		<div class="flex flex-row">
-			<input
-				@keyup.enter="handleClick"
-				v-model="keyword"
-				class="font-workSans bg-gray1 w-full rounded-none mr-2 focus:outline-gray-500 p-1 text-black"
-			/>
-			<button
-				class="font-workSans disabled:opacity-60 disabled:cursor-not-allowed"
-				@click="handleClick"
-				v-text="'Send'"
-				:disabled="keyword === ''"
-			/>
+		<div class="relative flex flex-row mt-4 items-center">
+    <input
+        @keyup.enter="handleClick"
+        v-model="keyword"
+        class="font-workSans bg-gray1 w-full rounded-none mr-2 focus:outline-gray-500 p-1 text-black pr-10"
+    />
+    <button
+        class="text-primary font-workSans disabled:opacity-60 disabled:cursor-not-allowed absolute right-2 top-1/2 transform -translate-y-1/2"
+        @click="handleClick"
+        :disabled="keyword === ''"
+    >
+        <i-mdi-send class="text-xl mr-1.5" />
+    </button>
+</div>
+
+
+		</div>
 		</div>
 	</div>
 </template>
