@@ -14,6 +14,9 @@
 </style>
 
 <script setup>
+import { ref } from 'vue'
+
+
 definePageMeta({
   layout: "nofooter"})
 

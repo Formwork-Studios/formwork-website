@@ -18,17 +18,17 @@
         <div id="col2" class="w-4xl flex-grow p-4 md:p-6 lg:p-10">
           <div class="relative mb-8">
             <label class="block text-white text-lg font-bold mb-2" for="reason">REASON FOR CONTACT</label>
-            <select v-model="reason" id="reason"
-              class="w-full text-white text-lg py-3 px-4 leading-tight bg-black focus:z-10 relative">
-              <option value="" disabled selected>-</option>
-              <option value="option1">Website Design</option>
-              <option value="option2">Digital Marketing</option>
-              <option value="option3">Visual Identity</option>
-              <option value="option2">E-commerce</option>
-              <option value="option3">Social Media</option>
-              <option value="option2">Artificial Intelligence</option>
-              <option value="option3">General Inquiry</option>
-            </select>
+            <select v-model="reason" id="reason" class="w-full text-white text-lg py-3 px-4 leading-tight bg-black focus:z-10 relative">
+  <option value="" disabled>-</option>
+  <option value="option1">Website Design</option>
+  <option value="option2">Digital Marketing</option>
+  <option value="option3">Visual Identity</option>
+  <option value="option4">E-commerce</option>
+  <option value="option5">Social Media</option>
+  <option value="Artificial Intelligence">Artificial Intelligence</option>
+  <option value="option7">General Inquiry</option>
+</select>
+
           </div>
           <div class="relative mb-8">
             <label class="block text-white text-lg font-bold mb-2 sr-only" for="name">Name</label>
@@ -83,7 +83,28 @@
 
 
 <script setup>
-import { ref } from 'vue'
+import { ref, watch, onMounted } from 'vue'
+import { useRouteQuery } from '@vueuse/router'
+
+const routeQuery = useRouteQuery('reason')
+const reason = ref('')
+
+
+watch(routeQuery, newValue => {
+
+  reason.value = newValue
+})
+
+onMounted(() => {
+  console.log('Route reason:', routeQuery.value)
+  if (routeQuery.value) {
+    reason.value = routeQuery.value
+    console.log(reason.value)
+  }
+})
+
+
+
 
 const consent = ref(false)
 const name = ref('')
@@ -94,8 +115,6 @@ const isLoading = ref(false)
 const formFeedback = ref(null)
 const client = useSupabaseClient()
 const success = ref(true);
-const reason = ref('')
-
 
 
 

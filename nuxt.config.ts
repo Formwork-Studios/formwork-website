@@ -21,6 +21,7 @@ export default defineNuxtConfig({
 	modules: [
 		"@nuxtjs/tailwindcss",
 		'@pinia/nuxt',
+		'@vueuse/nuxt',
 		["unplugin-icons/nuxt", { autoInstall: true }],
 		'@nuxtjs/supabase'
 	],

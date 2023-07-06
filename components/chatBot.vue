@@ -99,7 +99,7 @@ const handleClick = async () => {
 
 <template>
     <div class="flex flex-col h-screen p-2 md:p-10 md:pt-16">
-        <div class="flex flex-col h-full bg-stone-900">
+        <div class="flex flex-col h-full bg-stone-900 shadow-md">
             <div class=" bg-white px-4 py-1 box-content sticky top-14 flex flex-col md:flex-row md:items-end r-0">
                 <p class="font-workSans text-black font-black text-4xl">CHATBOT</p>
                 <p class="font-workSans text-black text-sm ml-2 mb-1">
@@ -121,7 +121,7 @@ const handleClick = async () => {
 				/>
 				<div
 					v-else-if="item.loader"
-					class="h-fit min-h-[32px] p-1 px-2 bg-neutral-950 w-full chatbot"
+					class="h-fit min-h-[32px] p-1 px-2 bg-neutral-950 w-full chatbot shadow-md"
 				>
 					<div class="flex flex-row h-fit">
 						<div

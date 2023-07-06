@@ -2,8 +2,8 @@
 	<div class="h-screen text-white flex justify-center">
 	  <div class="box-border w-11/12 md:w-3/4">
 		<ChatBot />
-		<div class="fixed bottom-10 right-10 text-4xl">
-		  <i-mdi-information-slab-circle-outline @click="showModal = true" />
+		<div class="fixed bottom-1/2 md:bottom-10 right-4 md:right-10 text-4xl">
+		  <i-mdi-information-slab-circle-outline @click="showModal = true" class="cursor-pointer" />
   
 		  <transition name="fade">
 			<div v-if="showModal" class="modal" @click.self="showModal = false">
@@ -28,8 +28,12 @@ const showModal = ref(false)
 const router = useRouter() 
 
 const navigateToContact = () => {
-  router.push('/contact') 
+  router.push({ path: '/contact', query: { reason: 'Artificial Intelligence' } }) 
 }
+
+definePageMeta ({
+	layout: 'nofooter'
+})
   </script>
   
   <style scoped>
@@ -96,5 +100,7 @@ const navigateToContact = () => {
   .fade-enter, .fade-leave-to {
 	opacity: 0;
   }
+
+
   </style>
   

@@ -18,12 +18,15 @@
   },
   "dependencies": {
     "@pinia/nuxt": "^0.4.11",
+    "@vueuse/nuxt": "^10.2.1",
+    "@vueuse/router": "^10.2.1",
     "dotenv": "^16.1.4",
     "nuxt-route-meta": "github:dword-design/nuxt-route-meta#renovate/nuxt-3.x",
     "openai": "^3.2.1",
     "pinecone-client": "^1.1.0",
     "pinia": "^2.1.4",
     "unplugin-vue-components": "^0.25.0",
+    "vue-router": "^4.2.4",
     "vue-select": "^4.0.0-beta.6",
     "zod": "^3.21.4"
   },
