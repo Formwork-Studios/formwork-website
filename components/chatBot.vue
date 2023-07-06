@@ -98,7 +98,7 @@ const handleClick = async () => {
 </script>
 
 <template>
-    <div class="flex flex-col h-screen p-10 pt-16">
+    <div class="flex flex-col h-screen p-2 md:p-10 md:pt-16">
         <div class="flex flex-col h-full bg-stone-900">
             <div class=" bg-white px-4 py-1 box-content sticky top-14 flex flex-col md:flex-row md:items-end r-0">
                 <p class="font-workSans text-black font-black text-4xl">CHATBOT</p>
@@ -116,12 +116,12 @@ const handleClick = async () => {
 			>
 				<div
 					v-if="item.role === 'assistant' && !item.loader"
-					class="min-h-[32px] h-fit p-1 px-2 bg-neutral-900 w-full"
+					class="min-h-[32px] h-fit p-1 px-2 bg-neutral-950 w-full"
 					v-text="item.content"
 				/>
 				<div
 					v-else-if="item.loader"
-					class="h-fit min-h-[32px] p-1 px-2 bg-neutral-900 w-full chatbot"
+					class="h-fit min-h-[32px] p-1 px-2 bg-neutral-950 w-full chatbot"
 				>
 					<div class="flex flex-row h-fit">
 						<div
@@ -144,14 +144,14 @@ const handleClick = async () => {
     <input
         @keyup.enter="handleClick"
         v-model="keyword"
-        class="font-workSans bg-gray1 w-full rounded-none mr-2 focus:outline-gray-500 p-1 text-black pr-10"
+        class="font-workSans bg-gray1 w-full rounded-none focus:outline-gray-500 p-1 text-black pr-10"
     />
     <button
         class="text-primary font-workSans disabled:opacity-60 disabled:cursor-not-allowed absolute right-2 top-1/2 transform -translate-y-1/2"
         @click="handleClick"
         :disabled="keyword === ''"
     >
-        <i-mdi-send class="text-xl mr-1.5" />
+        <i-mdi-send class="text-xl" />
     </button>
 </div>
 
