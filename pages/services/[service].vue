@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col h-screen overflow-hidden">
     <!-- Top Part -->
-    <div class="bg-stone-950 px-10 pt-14 basis-1/4 md:basis-1/2 mb-6">
+    <div class="bg-stone-950 px-4 md:px-10 pt-14 basis-1/4 md:basis-1/2 mb-6">
       <div id="toparea" class="col-span-1 p-4 h-full flex flex-col justify-end custom-border"
         :style="{
           'background-image': `url(${serviceImage})`,
@@ -17,7 +17,7 @@
     <!-- Bottom Part -->
     <div class="flex flex-grow overflow-auto px-10 pb-10 bg-stone-950 flex-basis-50 flex-col md:flex-row">
   <!-- Menu - 1 column -->
-  <div class="w-full md:w-1/4 flex-none p-4 mr-6 bg-stone-800"> 
+  <div class="w-full md:w-1/4 flex-none p-4 mr-6 border-b-2 md:border-b-0 pb-8 mb-6 border-stone-500"> 
     <ul class="space-y-4 text-xl uppercase">
       <li v-for="subService in subServices" :key="subService.sid"
         :class="{ 'text-stone-600': subService !== selectedSubService, 'text-white': subService === selectedSubService }"
@@ -28,7 +28,7 @@
     </ul>
   </div>
   <!-- Description Area -->
-  <div class="w-full md:w-3/4 text-white text-2xl p-4 relative bg-stone-800">
+  <div class="w-full md:w-3/4 text-white text-2xl p-4 relative ">
     <transition-group name="fade">
       <div v-if="selectedSubService" :key="selectedSubService.sid">
         <div class="text-white font-bold mb-4 text-3xl uppercase" v-if="selectedSubService.header">
@@ -47,7 +47,7 @@
     </transition-group>
     <nuxt-link :to="{ path: '/contact', query: { reason: routeParam } }">
           <div
-          class="absolute bottom-0 right-0 h-auto w-auto px-4 py-4 bg-secondary text-white font-bold flex items-center justify-center text-base"
+          class="fixed md:absolute bottom-0 right-0 h-auto w-auto px-3 md:px-4 py-3 md:py-4 bg-secondary text-white font-bold flex items-center justify-center text-sm md:text-base"
           :class="contactPulseAnimation">
           <span class="pr-2">GET IN TOUCH</span>
           <i-mdi-arrow-right-thick style="align-self: center;" />

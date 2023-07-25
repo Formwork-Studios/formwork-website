@@ -140,7 +140,7 @@ onMounted(() => {
           /></nuxt-link>
         </div>
       </div>
-	  <sectionFeaturedService class="col-span-full md:col-span-3 flex justify-center h-screen h-min-screen my-60"/>
+	  <sectionFeaturedService class="col-span-full md:col-span-3 flex justify-center h-screen h-min-screen mt-40 mb-60"/>
     </div>
   </div>
 </template>

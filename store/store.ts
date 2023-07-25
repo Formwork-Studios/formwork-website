@@ -202,7 +202,7 @@ export const useStore = defineStore("store", {
         id: 5,
         name: "Social Media",
         routeParam: "social-media",
-        image: "/birds2.jpg",
+        image: "/new-york-city.webp",
         imageAria: "Web Design",
         description: "We are a web design company.",
         details: "these are some details",
