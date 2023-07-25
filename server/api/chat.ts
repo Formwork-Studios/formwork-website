@@ -27,7 +27,7 @@ export default defineEventHandler(async (event) => {
 
 		const { data } = await openai.createChatCompletion(
 			{
-				model: "gpt-3.5-turbo",
+				model: "gpt-4",
 				messages: [
 					{
 						content: `You are an AI assistant providing helpful advice. You will be given a question from a user and extracted parts of a long document. Provide answers based on the context provided.
