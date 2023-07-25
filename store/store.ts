@@ -6,6 +6,7 @@ export const useStore = defineStore("store", {
       {
         id: 1,
         name: "Digital Marketing",
+        routeParam: "web-development",
         image: "/new-york-city.webp",
         imageAria: "SEO and Marketing",
         description: "SEO and Marketing Agency.",
@@ -48,6 +49,7 @@ export const useStore = defineStore("store", {
       {
         id: 2,
         name: "Web Design & UI/UX",
+        routeParam: "web-design-and-ui-ux",
         image: "/new-york-city.webp",
         imageAria: "Web Design",
         description: "We are a web design company.",
@@ -94,6 +96,7 @@ export const useStore = defineStore("store", {
       {
         id: 3,
         name: "Web Development",
+        routeParam: "web-development",
         image: "/birds2.jpg",
         imageAria: "Web Design",
         description: "Transforming ideas into functional and scalable web solutions",
@@ -149,6 +152,7 @@ export const useStore = defineStore("store", {
     {
       id: 4,
       name: "E-commerce",
+      routeParam: "e-commerce",
       image: "/nyc-skyline.webp",
       imageAria: "E-commerce Solutions",
       description: "Crafting online stores to drive growth and sales",
@@ -197,6 +201,7 @@ export const useStore = defineStore("store", {
             {
         id: 5,
         name: "Social Media",
+        routeParam: "social-media",
         image: "/birds2.jpg",
         imageAria: "Web Design",
         description: "We are a web design company.",
@@ -240,6 +245,7 @@ export const useStore = defineStore("store", {
             {
         id: 6,
         name: "Branding & Identity",
+        routeParam: "branding-identity",
         image: "/birds2.jpg",
         imageAria: "Web Design",
         description: "We are a web design company.",

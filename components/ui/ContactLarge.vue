@@ -20,13 +20,14 @@
             <label class="block text-white text-lg font-bold mb-2" for="reason">REASON FOR CONTACT</label>
             <select v-model="reason" id="reason" class="w-full text-white text-lg py-3 px-4 leading-tight bg-black focus:z-10 relative">
   <option value="" disabled>-</option>
-  <option value="option1">Website Design</option>
-  <option value="option2">Digital Marketing</option>
-  <option value="option3">Visual Identity</option>
-  <option value="option4">E-commerce</option>
-  <option value="option5">Social Media</option>
+  <option value="web-design-and-ui-ux">Website Design</option>
+  <option value="web-development">Website Development</option>
+  <option value="digital-marketing">Digital Marketing</option>
+  <option value="branding-identity">Visual Identity</option>
+  <option value="e-commerce">E-commerce</option>
+  <option value="social-media">Social Media</option>
   <option value="Artificial Intelligence">Artificial Intelligence</option>
-  <option value="option7">General Inquiry</option>
+  <option value="General Inquiry">General Inquiry</option>
 </select>
 
           </div>

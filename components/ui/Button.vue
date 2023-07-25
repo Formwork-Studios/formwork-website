@@ -12,11 +12,12 @@
       'tracking-wider',
       'text-lg',
       'mt-4',
+      'border-2',
       full ? 'w-full' : 'w-max', // Conditional class
-      ghost ? 'bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white' : 'bg-primary hover:bg-primary-light text-white hover:text-white hover:shadow'
+      ghost ? 'bg-transparent border-primary text-primary hover:bg-primary hover:text-white' : 'bg-primary border-primary hover:bg-primary-light text-white hover:text-white hover:shadow'
     ]"
   >
-    {{ btnText }}
+    {{ text }}
     <i-mdi-arrow-right-thick v-if="icon === 'i-mdi-arrow-right-thick'" class="ml-2"/>
     <!-- Add other icons here with v-if checks based on icon prop -->
   </div>
@@ -28,9 +29,9 @@ import { defineProps } from 'vue'
 const props = defineProps({
   icon: {
     type: String,
-    default: 'i-mdi-arrow-right-thick'
+    default: ''
   },
-  btnText: {
+  text: {
     type: String,
     default: 'Click Me',
   },

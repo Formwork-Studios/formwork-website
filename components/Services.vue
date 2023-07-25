@@ -84,7 +84,6 @@ onMounted(() => {
 			}
 		);
 
-		// Assuming that each service container has a class 'service-container'
 		const serviceContainers =
 			document.querySelectorAll(".service-container");
 		serviceContainers.forEach((container) => {
@@ -98,7 +97,7 @@ onMounted(() => {
 			newServices.forEach(({ title, delay }) => {
 				setTimeout(() => {
 					visibleServices.value.push(title ?? "");
-				}, delay * 1000); // convert delay from seconds to milliseconds
+				}, delay * 1000); 
 			});
 		},
 		{ deep: true }
@@ -106,44 +105,44 @@ onMounted(() => {
 });
 </script>
 <template>
-	<div class="mb-16 md:mb-0 md:p-4 p-12 min-h-screen h-fit ">
-	<div id="services"
-		class="grid grid-cols-1 gap-y-20 md:gap-y-20 md:grid-cols-3 gap-x-28 place-items-start max-w-6xl mx-auto"
-	>
-		<div
-			v-for="service in services"
-			:key="service.title"
-			class="service-container serviceList -mt-4"
-			:data-title="service.title"
-			@mouseover="hoveredService = service.title"
-			@mouseout="hoveredService = ''"
-		>
-			<div
-				class="content-wrapper px-4 md:px-0"
-				:class="{
-					dim:
-						hoveredService !== '' &&
-						service.title !== hoveredService,
-				}"
-			>
-				<h2
-					class="text-2xl font-sans tracking-wide animate-slide-in text-white mb-2"
-				>
-					{{ service.title }}
-				</h2>
-				<div class="text-white-500 mb-4 leading-7">
-					{{ service.description }}
-				</div>
-				<nuxt-link :to="service.link" class="text-secondary group"
-					>See more
-					<i-mdi-chevron-double-right
-						class="inline transform transition-transform duration-200 ease-in-out group-hover:translate-x-1"
-				/></nuxt-link>
-			</div>
-		</div>
-		</div>
-		<sectionFeaturedService />
-	</div>
+	<div class="mb-16 md:mb-0 md:p-4 p-12 ">
+	  <div id="services"
+		class="grid grid-cols-1 gap-y-20 md:gap-y-20 md:grid-cols-3 gap-x-28 max-w-6xl mx-auto"
+	  >
+      <div
+        v-for="service in services"
+        :key="service.title"
+        class="service-container serviceList -mt-4"
+        :data-title="service.title"
+        @mouseover="hoveredService = service.title"
+        @mouseout="hoveredService = ''"
+      >
+        <div
+          class="content-wrapper px-4 md:px-0"
+          :class="{
+            dim:
+              hoveredService !== '' &&
+              service.title !== hoveredService,
+          }"
+        >
+          <h2
+            class="text-2xl font-sans tracking-wide animate-slide-in text-white mb-2"
+          >
+            {{ service.title }}
+          </h2>
+          <div class="text-white-500 mb-4 leading-7">
+            {{ service.description }}
+          </div>
+          <nuxt-link :to="service.link" class="text-secondary group"
+            >See more
+            <i-mdi-chevron-double-right
+              class="inline transform transition-transform duration-200 ease-in-out group-hover:translate-x-1"
+          /></nuxt-link>
+        </div>
+      </div>
+	  <sectionFeaturedService class="col-span-full md:col-span-3 flex justify-center h-screen h-min-screen my-60"/>
+    </div>
+  </div>
 </template>
 
 <style scoped>
@@ -189,9 +188,6 @@ onMounted(() => {
 	background-repeat: no-repeat;
 
 }}
-
-
-
 
 .service-container:hover::before {
 	left: -35px;
