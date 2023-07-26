@@ -5,7 +5,7 @@ import Components from "unplugin-vue-components/vite";
 export default defineNuxtConfig({
 	target: "static",
 
-	css: ["@/assets/css/main.css"],
+	css: ['~/assets/css/main.css'],
 
 		router: {
 		  extendRoutes(routes, resolve) {
