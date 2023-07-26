@@ -105,7 +105,7 @@ onMounted(() => {
 });
 </script>
 <template>
-	<div class="mb-16 md:mb-0 md:p-4 p-12 ">
+	<div class="mb-16 md:mb-0 p-4 md:p-12 ">
 	  <div id="services"
 		class="grid grid-cols-1 gap-y-20 md:gap-y-20 md:grid-cols-3 gap-x-28 max-w-6xl mx-auto"
 	  >
@@ -140,7 +140,7 @@ onMounted(() => {
           /></nuxt-link>
         </div>
       </div>
-	  <sectionFeaturedService class="col-span-full md:col-span-3 flex justify-center h-screen h-min-screen mt-40 mb-60"/>
+	  <sectionFeaturedService class="col-span-full md:col-span-3 flex justify-center h-screen h-min-screen my-20 md:mt-40 md:mb-60"/>
     </div>
   </div>
 </template>

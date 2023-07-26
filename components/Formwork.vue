@@ -24,7 +24,7 @@ const activeMessage = ref(1)
 onMounted(() => {
   setInterval(() => {
     activeMessage.value = activeMessage.value % 3 + 1
-  }, 5000) // 5000ms = 5s
+  }, 5000) 
 })
 </script>
 

@@ -1,0 +1,1 @@
+import{_ as t}from"./NavBar.06b41cd0.js";import{_ as s,f as n,q as r,P as c,e as _}from"./entry.23a0ee72.js";import"./nuxt-link.0ab953ff.js";import"./store.0e2d13d2.js";const a={},f={class:"flex flex-col min-h-screen bg-stone-950"};function i(e,l){const o=t;return _(),n("div",f,[r(o),c(e.$slots,"default")])}const x=s(a,[["render",i]]);export{x as default};

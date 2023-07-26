@@ -17,12 +17,15 @@ export default defineNuxtConfig({
 		},
 	  
 	modules: [
-		"@nuxtjs/tailwindcss",
+		'@nuxtjs/tailwindcss',
 		'@pinia/nuxt',
 		'@vueuse/nuxt',
 		["unplugin-icons/nuxt", { autoInstall: true }],
 		'@nuxtjs/supabase'
 	],
+	tailwindcss: {
+		cssPath: '~/assets/css/main.css',
+	  },
 	plugins: [
 		{
 		  src: '~/plugins/vue3-particles.ts',

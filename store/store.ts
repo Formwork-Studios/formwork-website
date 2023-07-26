@@ -18,7 +18,7 @@ export const useStore = defineStore("store", {
             header: "On-Page & Off-Page SEO",
             question: "What are you interested in building?",
             link: "some-link.html",
-            linkText: "Read More" 
+            linkText: "Free Consultation" 
           },
           {sid: 1,
             name: "Google Ads Management",
@@ -26,7 +26,7 @@ export const useStore = defineStore("store", {
             header: "Google Ads Strategy & Optimization",
             question: "What are you interested in building?",
             link: "some-link.html",
-            linkText: "Check it out" 
+            linkText: "Free Consultation" 
           },
           {sid: 2,
             name: "Social Media Marketing",
@@ -34,7 +34,7 @@ export const useStore = defineStore("store", {
             header: "Leverage Social Media Platforms",
             question: "What are you interested in building?",
             link: "some-link.html",
-            linkText: "More" 
+            linkText: "Free Consultation" 
           },
           {sid: 3,
             name: "Content Marketing",
@@ -42,7 +42,7 @@ export const useStore = defineStore("store", {
             header: "Content That Converts",
             question: "What are you interested in building?",
             link: "some-link.html",
-            linkText: "More" 
+            linkText: "Free Consultation" 
           },
         ],
       },
@@ -62,7 +62,7 @@ export const useStore = defineStore("store", {
             header: "You Dream It, We Build It",
             question: "What are you interested in building?",
             link: "some-link.html",
-            linkText: "Read More" 
+            linkText: "Free Consultation" 
           },
           {sid: 1,
             name: "UI/UX Design",
@@ -70,14 +70,14 @@ export const useStore = defineStore("store", {
             header: "Designing for Usability",
             question: "What are you interested in building?",
             link: "some-link.html",
-            linkText: "More" 
+            linkText: "Free Consultation" 
           },
           {sid: 2,
             name: "Web Accessibility",
             description: "Digital inclusivity is an integral part of our philosophy of design. Our approach is consistent with WCAG guidelines and universal design principles, enabling seamless user experience for all, including individuals with diverse abilities and needs. Learn more about Universal Web Accessibility Integration.",
             question: "What are you interested in building?",
             link: "some-link.html",
-            linkText: "More" 
+            linkText: "Free Consultation" 
           },
           {sid: 3,
             name: "Responsive Design",
@@ -85,7 +85,7 @@ export const useStore = defineStore("store", {
             header: "Stand Out on Any Device",
             question: "What are you interested in building?",
             link: "some-link.html",
-            linkText: "Read More" 
+            linkText: "Free Consultation" 
           },
         ],
       },
@@ -110,7 +110,7 @@ export const useStore = defineStore("store", {
                 header: "Bringing Designs to Life",
                 question: "What kind of user experience are you aiming for?",
                 link: "front-end-development.html",
-                linkText: "Learn More"
+                linkText: "Free Consultation"
             },
             {
                 sid: 1,
@@ -119,7 +119,7 @@ export const useStore = defineStore("store", {
                 header: "Powering Your Web Infrastructure",
                 question: "What functionality does your website need?",
                 link: "back-end-development.html",
-                linkText: "Learn More"
+                linkText: "Free Consultation"
             },
             {
                 sid: 2,
@@ -128,7 +128,7 @@ export const useStore = defineStore("store", {
                 header: "Connecting the Web",
                 question: "What third-party services would you like to integrate?",
                 link: "api-development.html",
-                linkText: "Learn More"
+                linkText: "Free Consultation"
             },
             {
                 sid: 3,
@@ -137,7 +137,7 @@ export const useStore = defineStore("store", {
                 header: "Data-Driven Web Solutions",
                 question: "What key metrics would you like to monitor?",
                 link: "analytics-tracking.html",
-                linkText: "Learn More"
+                linkText: "Free Consultation"
             }
         ]
     },
@@ -166,7 +166,7 @@ export const useStore = defineStore("store", {
               header: "Tailored Online Shopping Experiences",
               question: "What features do you want in your online store?",
               link: "custom-e-commerce-development.html",
-              linkText: "Learn More" 
+              linkText: "Free Consultation" 
           },
           {
               sid: 1,
@@ -175,7 +175,7 @@ export const useStore = defineStore("store", {
               header: "Streamlined Checkout Processes",
               question: "How can we simplify your customers' shopping experience?",
               link: "shopping-cart-integration.html",
-              linkText: "Learn More" 
+              linkText: "Free Consultation" 
           },
           {
               sid: 2,
@@ -184,7 +184,7 @@ export const useStore = defineStore("store", {
               header: "Efficient Order Delivery & Management",
               question: "How can we optimize your order delivery and fulfillment process?",
               link: "shipping-fulfillment-solutions.html",
-              linkText: "Learn More" 
+              linkText: "Free Consultation" 
           },
           {
               sid: 3,
@@ -193,7 +193,7 @@ export const useStore = defineStore("store", {
               header: "Expanding Your Online Presence",
               question: "Which marketplaces do you want to integrate with?",
               link: "amazon-marketplace-integration.html",
-              linkText: "Learn More" 
+              linkText: "Free Consultation" 
           }
       ]
   },
@@ -214,7 +214,7 @@ export const useStore = defineStore("store", {
             header: "You Dream It, We Build It",
             question: "What are you interested in building?",
             link: "some-link.html",
-            linkText: "More" 
+            linkText: "Free Consultation" 
           },
           {sid: 1,
             name: "Content Creation & Curation",
@@ -222,7 +222,7 @@ export const useStore = defineStore("store", {
             header: "RWD Header",
             question: "What are you interested in building?",
             link: "some-link.html",
-            linkText: "More" 
+            linkText: "Free Consultation" 
           },
           {sid: 2,
             name: "Advertising & Promotion",
@@ -230,7 +230,7 @@ export const useStore = defineStore("store", {
             header: "UI/UX Design Header",
             question: "What are you interested in building?",
             link: "some-link.html",
-            linkText: "More" 
+            linkText: "Free Consultation" 
           },
           {sid: 3,
             name: "Reputation & Crisis Management",
@@ -238,7 +238,7 @@ export const useStore = defineStore("store", {
             header: "E-commerce Header",
             question: "What are you interested in building?",
             link: "some-link.html",
-            linkText: "More" 
+            linkText: "Free Consultation" 
           },
         ],
       },
@@ -259,7 +259,7 @@ export const useStore = defineStore("store", {
             header: "You Dream It, We Build It",
             question: "What are you interested in building?",
             link: "some-link.html",
-            linkText: "See More" 
+            linkText: "Free Consultation" 
           },
           {sid: 1,
             name: "Logo & Visual Identity Design",
@@ -267,7 +267,7 @@ export const useStore = defineStore("store", {
             header: "RWD Header",
             question: "What are you interested in building?",
             link: "some-link.html",
-            linkText: "See More" 
+            linkText: "Free Consultation" 
           },
           {sid: 2,
             name: "Brand Style Guidelines",
@@ -275,7 +275,7 @@ export const useStore = defineStore("store", {
             header: "UI/UX Design Header",
             question: "What are you interested in building?",
             link: "some-link.html",
-            linkText: "See More" 
+            linkText: "Free Consultation" 
           },
           {sid: 3,
             name: "Brand Strategy & Development",
@@ -283,7 +283,7 @@ export const useStore = defineStore("store", {
             header: "E-commerce Header",
             question: "What are you interested in building?",
             link: "some-link.html",
-            linkText: "See More" 
+            linkText: "Free Consultation" 
           },
         ],
       },
