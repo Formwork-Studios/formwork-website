@@ -2,7 +2,7 @@
 definePageMeta({
   layout: "post",
   title: "A Website is a Machine for Information and Delight",
-  blurb: "In the post-WW2 reconstruction era, Béton Brut — the French term for Raw Concrete — became the material of choice for architects tasked with the goal of rebuilding a war-torn Europe. In response to what must be considered the most catastrophic conflict in human history, a collective desire emerged to begin the process of rebuilding society. Inspired by the Modernist principle of \"form follows function,\" architects sought to create buildings that embodied the ideals of utilitarianism, egalitarianism, and honesty.", 
+  blurb: "In the post-WW2 reconstruction era, Béton Brut — the French term for Raw Concrete — became the material of choice for architects tasked with the goal of rebuilding a war-torn Europe. In response to what must be considered the most catastrophic conflict in human history, a collective desire emerged to begin the process of rebuilding society. Inspired by the Modernist principle of \"form follows function,\" architects sought to create buildings that embodied the ideals of utilitarianism, egalitarianism, and honesty.",
   date: "2021-10-10",
 });
 
@@ -18,145 +18,165 @@ definePageMeta({
 
     <!-- Blog post title -->
     <div class="blog-content">
-    <h1 class="mt-4 mb-8 text-3xl font-bold uppercase">A Website is a Machine for Information and Delight
-    </h1>
-    <h2 class="mt-4 mb-8 text-2xl font-bold normal-case">Le Corbusier & Brutalism in the age of Digital Design
-    </h2>
-    <div class="leading-loose text-lg">
-      <p>In the post-WW2 reconstruction era, <a href="https://en.wikipedia.org/wiki/B%C3%A9ton_brut" target="_blank"
-          class="border-b-2 border-opacity-50 hover:border-opacity-100 border-primary">Béton Brut</a> —
-        the French term for Raw Concrete — became the material of choice for architects tasked with the goal of
-        rebuilding a war-torn Europe. In response to what must be considered
-        the most catastrophic conflict in human history, a collective desire emerged to begin the process of rebuilding
-        society. Inspired by the Modernist principle of "form follows
-        function," architects sought to create buildings that embodied the ideals of utilitarianism, egalitarianism, and
-        honesty. In Modernism, there was no need for the ornate
-        flourishes typical of classical architecture. Instead, Architects of that time embraced Le Corbusier's
-        perspective, treating homes as what they fundamentally are —
-        <a href="https://www.open.edu/openlearn/history-the-arts/history/heritage/le-corbusier" target="_blank"
-          class="border-b-2 border-opacity-50 hover:border-opacity-100 border-primary">machines for living in</a>.
-      </p>
+      <h1 class="mt-4 mb-8 text-3xl font-bold uppercase">A Website is a Machine for Information and Delight
+      </h1>
+      <h2 class="mt-4 mb-8 text-2xl font-bold normal-case">Le Corbusier & Brutalism in the age of Digital Design
+      </h2>
+      <div class="leading-loose text-lg">
+        <p>In the early 20th century, Modernism became the dominant architectural movement in Europe.
+          Inspired by the Modernist principle of "form follows
+          function," architects sought to create buildings that embodied the ideals of utilitarianism, egalitarianism, and
+          honesty, eschewing the elaborate ornamentation customary in classical architecture.
+        </p>
 
-      <p>The radical shift towards functionality in architecture embodied in the Modernist movement was pushed to an
-        extreme in Brutalism — a branch of its parent philosophy — by Le Corbusier himself. The proponents of this
-        movement championed the use of raw concrete and the creation of imposing structures, forgoing decorative
-        embellishments.
-        This ensured that buildings were understood and <i>felt</i> for
-        what they were, in their stark utilitarian essence, rather than designing under a framework that prioritized
-        Romantic ideals and human emotions.
-        In this way, Brutalist architects and planners were able to discard historical baggage, and begin their work of
-        rebuilding again from a blank slate — of Béton Brut, of course.</p>
+        <p>
+          The radical shift towards functionality seen in the Modernist movement was pushed to an
+          extreme by Le Corbusier who, under than banner of Burtalism, famously argued that <a
+            href="https://www.open.edu/openlearn/history-the-arts/history/heritage/le-corbusier" target="_blank"
+            class="border-b-2 border-opacity-50 hover:border-opacity-100 border-primary">a house is a machine for living
+            in</a>. In line with this utilitarian approach, and against the backdrop of WWII reconstruction, architects
+          of the day turned towards
+          <a href="https://en.wikipedia.org/wiki/B%C3%A9ton_brut" target="_blank"
+            class="border-b-2 border-opacity-50 hover:border-opacity-100 border-primary">Béton Brut</a> —
+          the French term for Raw Concrete — as their material of choice for
+          rebuilding a war-torn Europe. 
 
-      <p>Le Corbusier's vision was brought to life with his seminal work <a
-          href="https://www.archdaily.com/85971/ad-classics-unite-d-habitation-le-corbusier" target="_blank"
-          class="border-b-2 border-opacity-50 hover:border-opacity-100 border-primary">Unite d'Habitation</a>, a housing complex in Marseille, France,
-        finished in 1952 against grim and tumultuous backdrop of the post-WW2 era.
-        His dictum, "A house is a machine for living in," encapsulated the utilitarian spirit that fueled Brutalist 
-        and the push for an architecture that could address some of the
-        worlds most pressing issues. In this sense, Brutalism was more than a mere
-        stylistic preference; it was an emblem of shifting social and political current. The Brutalist movement gained
-        prominence during a period marked by ideological
-        tug-of-war between the world's two dominant powers, the Soviet Union and the United States. Both were trying to
-        promote their vision for a world emerging from the ashes of ww2. In this chaotic period, societal focus shifted toward
-        meeting people's basic needs through mass housing, public infrastructure, and affordability. Amidst these
-        conditions, Brutalism stood out. Even with its fervent emphasis on function, however, Brutalism didn’t entirely sideline
-        aesthetics, discovering a unique beauty in the rawness of, sometimes towering,
-        exposed structures and materials.</p>
 
-      <h2 class="text-2xl capitalize pt-8 pb-4">Translating Brutalism in the Digital Era</h2>
+          Le Corbusier's vision was brought to life with his seminal work <a
+            href="https://www.archdaily.com/85971/ad-classics-unite-d-habitation-le-corbusier" target="_blank"
+            class="border-b-2 border-opacity-50 hover:border-opacity-100 border-primary">Unite d'Habitation</a>, an
+          imposing concrete housing complex built in Marseille, France,
+          and completed in 1952, introducing to the world an architectural framework with the potential to address some of the world's most
+          pressing social issues.
 
-      <p>
-        Elements of Brutalist design can be seen in the works and writings of several earlier Modernist thinkers.
-        In his 1908 essay "<a href="https://designmanifestos.org/adolf-loos-ornament-and-crime/" target="_blank"
-          class="border-b-2 border-opacity-50 hover:border-opacity-100 border-primary">Ornament and Crime</a>," Alfred
-        Loos famously wrote, "The urge to ornament one's face and
-        everything within one's
-        reach is a primitive impulse." He went on to state, "The evolution of culture marches with the elimination of
-        ornament from
-        useful objects," thereby advocating a minimalist, functional design ethos. As we plunge further into the digital
-        era,
-        UI/UX designers must seriously consider the question of ornamentation, focusing specifically on the excesses of
-        digital media
-        consumption — what lessons can today's builders learn from the world that gave birth to Brutalism? More
-        specifically, can the Brutalist ethos be
-        accurately translated to a platform that, in recent years, has demanded excessive and ultra-abundant content,
-        passive consumption, and constant
-        attention? If we maintain that form should originate from function, how can we break through this wall of fleeting
-        content and strip UI/UX design down
-        to its barest essence, as Brutalism demands, while still remaining relevant and useful?
+     
 
+        <p>
+          While both Modernism and Brutalism allowed architects to discard certain historical baggage, they inevitably became constrained by new historical factors. This time, these constraints were associated with a quickly changing, increasingly global, and deeply tumultuous world shaken by conflict and social strife.
+        </p>
 
       </p>
 
-      <p>Nowadays, we are witnessing a resurgence of Brutalism in the form of neo-Brutalism. However, this new iteration
-        seems to lack the foundational philosophical drive that
-        underpinned the original movement. In many ways, neo-Brutalism appears to replicate some of the very aspects
-        Brutalism sought to challenge, aspects that would likely have
-        been criticized by Alfred Loos. If the aim of Brutalism is to strip down a structure to its essence and highlight
-        the strength of its raw material, then Brutalism in web
-        design should reject the urge to ornament with aesthetic trends such as scrolling marquees and vertical text.
-        Instead, it should aim to reveal the fundamental characteristics
-        of its underlying technology. In this sense, Brutalism aligns with the hacker ethos of mastering the machine
-        rather than being controlled by it.</p>
-      <div class="blog-image">
-        <img class="w-full h-64 object-cover" src="/exmachina.jpg" alt="Ex Machina Image">
-        <span class="pt-1.5 inline-block text-white-800 text-base">"Ex Machina" home — Brutalism in film.</span>
-      </div>
+        <h2 class="text-2xl capitalize pt-8 pb-4">The Dark Side of Brutalism</h2>
+<p>
+  On the surface, Brutalism championed a pragmatic approach to the construction of housing and infrastructure. Yet, on a deeper level, its aesthetic presentation was, consciously or subconsciously, animated by the horrors of WWII and the emerging power struggle between the West and the Soviet Union.  </p>
+        <p>
+As governments, and the world, became more dependent on automation and computerization, the importance of data, logistics and efficiency increasingly overshadowed
+the more familiar and human-centric ways of life that many were used to. Brutalist buildings, then, made of raw concrete and devoid of visible humanistic considerations, were monuments to those changing times, giving shape to a reality that was otherwise nebulous and difficult to grasp, yet deeply felt.
+</p>
+       
 
-      <p>However, the reality is that not everyone desires to delve into the nuts and bolts or engage with raw materials.
-        Often, simplicity and functionality suffice. For this reason, Modernism continues to hold an enduring appeal. 
-        While Brutalism acts as a necessary counterbalance that keeps Modernism anchored on firm ground, it is simply too aggressive
-        to be used in most use-cases.</p>
+        <h2 class="text-2xl capitalize pt-8 pb-4">Translating Brutalism in the Digital Era</h2>
 
-      <p>Contemporary UI/UX design must then allow for form to flow from function, however, with the understanding that the function of a website
-        is to first convey information or provide tools, while, as at same time, doing so in a way that is delightful or, at least, keeps the user
-        engaged in an ethical manner. 
-        The concept of a website as a machine for information and delight echoes Le Corbusier's idea of a house being a
-        machine for living in. Fundamentally,
-        both Brutalism and web design strive to strike a balance between the practical and the pleasurable, the essential
-        and the aesthetic. Keeping this in mind,
-        we can refer to Dieter Rams' "<a href="https://www.vitsoe.com/us/about/good-design" target="_blank"
-          class="border-b-2 border-opacity-50 hover:border-opacity-100 border-primary">Ten Principles for Good Design</a>"
-        as a guide:
-      </p>
+        <p> Brutalism in digital design has become a popular aesthetic trend in recent years. However, it has evolved in a way that is detached from the depth and significance of its original critique.
 
-      <ul class="list-none pl-10">
-        <li class="pb-2 pt-1 relative"><span class="font-bold">Good design is innovative:</span> It doesn't merely
-          replicate existing designs but strives to offer new solutions.</li>
-        <li class="pb-2 pt-1 relative"><span class="font-bold">Good design makes a product useful:</span> It prioritizes
-          the product's usability over its aesthetics.</li>
-        <li class="pb-2 pt-1 relative"><span class="font-bold">Good design is aesthetic:</span> Despite the emphasis on
-          usability, good design should also be visually appealing.</li>
-        <li class="pb-2 pt-1 relative"><span class="font-bold">Good design makes a product understandable:</span> It
-          clarifies the product's structure and operation.</li>
-        <li class="pb-2 pt-1 relative"><span class="font-bold">Good design is unobtrusive:</span> Design should be
-          neutral, providing room for the user's self-expression.</li>
-        <li class="pb-2 pt-1 relative"><span class="font-bold">Good design is honest:</span> It doesn't make promises that
-          the product can't fulfil.</li>
-        <li class="pb-2 pt-1 relative"><span class="font-bold">Good design is long-lasting:</span> It avoids trends and
-          thus never seems out of date.</li>
-        <li class="pb-2 pt-1 relative"><span class="font-bold">Good design is thorough down to the last detail:</span>
-          Nothing is arbitrary or left to chance.</li>
-        <li class="pb-2 pt-1 relative"><span class="font-bold">Good design is environmentally-friendly:</span> It
-          conserves resources and minimizes physical and visual pollution.</li>
-        <li class="pb-2 pt-1 relative"><span class="font-bold">Good design is as little design as possible:</span> It
-          focuses on the essential aspects of a product and eliminates the superfluous.</li>
-      </ul>
+          With this new form of Brutalism, we no longer see the traditional lack of ornamentation or the use of raw materials; instead, we encounter excessive ornamentation, 
+          bright colors, and unnecessary animations - the veneer of austrity and rawness covering over rampant consumerism in present-day digital media. </p><p>
+       
+        
+          This deviation not only represents a step back for Brutalism but contrasts with Modernist principles, as well. As Alfred Loos's argues in his 1908 essay 
+          
+          <a href="https://designmanifestos.org/adolf-loos-ornament-and-crime/" target="_blank"
+            class="border-b-2 border-opacity-50 hover:border-opacity-100 border-primary">Ornament and Crime</a>, the
+          
+          
+          "evolution of culture marches with the elimination of ornament from useful objects."
+        
+        
+        
+        
+        
+        </p>
+        <img class="w-full h-64 object-cover" src="/brutalistwebsites.jpg" alt="Blog post header image">
+    <span class="pt-1.5 pb-7 inline-block text-white-800 text-base">The quote claims that Brutalism is a reaction to frivolity among modern websites, but are these websites not frivolous, as well?</span>  
+       
+    <p class="quote">"In its ruggedness and lack of concern to look comfortable or easy, Brutalism can be seen as a reaction by a younger generation to the lightness, optimism, and frivolity of today's web design."</p>
+    <p>
+         With the vast majority of digital media essentially serving as ornament, we must ask, is the Brutalist framework - in the age of mass consumption - 
+         
+         
+         
+         
+         
+         
+         
+         truly capable of serving this medium or does digital media currently simply absorb and re-present all aesthetics for 
+         
+         an end-user in search of 'content'?
+         
+         </p><p>
+         The above line of questioning
+         opens two possible avenues for exploration: the first with regard to Guy Debord's concept of the <a href="https://en.wikipedia.org/wiki/Society_of_the_Spectacle" target="_blank" class="border-b-2 border-opacity-50 hover:border-opacity-100 border-primary">the Spectacle</a> and, the second, concerning the French Psychoanalyst Jacques Lacan's 'object petit a', both of which will be explored in a future post.
+
+        </p>
 
 
+        <div class="blog-image">
+          <img class="w-full h-64 object-cover" src="/exmachina.jpg" alt="Ex Machina Image">
+          <span class="pt-1.5 inline-block text-white-800 text-base">"Ex Machina" home — AI meets Brutalism in film.</span>
+        </div>
 
-      <p>With these principles in mind, it's crucial not to become overly preoccupied with theory. Sometimes, people
-        simply want to feel or experience something,
+        <p>If, according to Le Corbisier, a home is a machine for living in, then how shall we understand websites, given the Brutalist framework? 
+          They are indeed machines for information but, is that all? </p><p>
+            Whereas the primary function of a home is to provide shelter, a fundamental human need, websites serve a variety of purposes. They are used to document, for commerce, to communicate news and events, for politics, and sometimes simply for fun. 
+            
+            
+            While impossible to cater to each of these needs, the principle of "form follows function" can be applied properly if the designer is able to identify the primary function of a particular website and pierce through the superficiality of an easily imitated surface aesthetic.
+            </p>
+
+        <p>Ultimately, however, we must acknowledge that the website is also a machine for delight, however subtle. Guiding the user to some information, presenting an interesting product, or writing about something useful all, when done properly, elicit a response that draws in the user.
+          </p>
+             <p>Keeping this in mind,
+          we can refer to Dieter Rams' "<a href="https://www.vitsoe.com/us/about/good-design" target="_blank"
+            class="border-b-2 border-opacity-50 hover:border-opacity-100 border-primary">Ten Principles for Good
+            Design</a>"
+          as a guide:
+        </p>
+
+        <ul class="list-none pl-10">
+          <li class="pb-2 pt-1 relative"><span class="font-bold">Good design is innovative:</span> It doesn't merely
+            replicate existing designs but strives to offer new solutions.</li>
+          <li class="pb-2 pt-1 relative"><span class="font-bold">Good design makes a product useful:</span> It prioritizes
+            the product's usability over its aesthetics.</li>
+          <li class="pb-2 pt-1 relative"><span class="font-bold">Good design is aesthetic:</span> Despite the emphasis on
+            usability, good design should also be visually appealing.</li>
+          <li class="pb-2 pt-1 relative"><span class="font-bold">Good design makes a product understandable:</span> It
+            clarifies the product's structure and operation.</li>
+          <li class="pb-2 pt-1 relative"><span class="font-bold">Good design is unobtrusive:</span> Design should be
+            neutral, providing room for the user's self-expression.</li>
+          <li class="pb-2 pt-1 relative"><span class="font-bold">Good design is honest:</span> It doesn't make promises
+            that
+            the product can't fulfil.</li>
+          <li class="pb-2 pt-1 relative"><span class="font-bold">Good design is long-lasting:</span> It avoids trends and
+            thus never seems out of date.</li>
+          <li class="pb-2 pt-1 relative"><span class="font-bold">Good design is thorough down to the last detail:</span>
+            Nothing is arbitrary or left to chance.</li>
+          <li class="pb-2 pt-1 relative"><span class="font-bold">Good design is environmentally-friendly:</span> It
+            conserves resources and minimizes physical and visual pollution.</li>
+          <li class="pb-2 pt-1 relative"><span class="font-bold">Good design is as little design as possible:</span> It
+            focuses on the essential aspects of a product and eliminates the superfluous.</li>
+        </ul>
+
+
+
+        <p>With these principles in mind, it's crucial not to become overly preoccupied with theory. Sometimes, people
+          simply want to feel or experience something,
         and that's perfectly okay - not everything needs to be tailored perfectly to modernist ideals. However, if your
         goal is to build a machine for information and delight,
         these principles serve as valuable guidance.</p>
-    </div>
-  </div>
-  </div>
-</template>
+        <h2 class="text-2xl capitalize pt-8 pb-4">The Enduring Appeal of Modernism and Brutalism</h2>
+<p>
+  The preceding discussion is not intended as a rejection of Brutalism in favor of Modernism; rather, it aims to contextualize the Brutalist aesthetic to better understand its contemporary expression. Brutalism, at its inception, represented a dramatic shift away from the familiar classical architecture of its era. Similarly, today's digital Brutalism breaks away from the polished, minimalist aesthetic that dominates the digital landscape. However, something seems to be missing. Brutalism initially offered a critique of society, a critique that appears absent in many of today's reincarnations of the Brutalist aesthetic, despite such a critique being critically needed.
 
-<style scoped>
-p,
+</p><p>
+Any emerging aesthetic trend that takes on the current moment of over-consumption of digital images perhaps faces an uphill battle, yet, for the sake of humanity something can and inevitably will emerge.</p><p>
+In the meantime, the designers of today will continue to map out a path forward, understanding that ultimately minimalism is pleasing, particularly in a wold that is overrun with imagery. 
+</p>.
+</div>
+  </div>
+</div></template>
+
+<style scoped>p,
 ul {
   margin: 0px 0px 20px 0px;
 }

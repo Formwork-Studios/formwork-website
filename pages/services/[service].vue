@@ -9,7 +9,7 @@
           'background-repeat': 'no-repeat',
           'background-size': 'cover'
         }">
-        <div class="text-xl text-white clamp-text font-black mb-8 uppercase tracking-wide">
+        <div class="text-xl text-white clamp-text font-black mb-0 md:mb-8 uppercase tracking-wide shadow-md">
           {{ serviceName }}
         </div>
       </div>

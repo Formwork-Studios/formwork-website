@@ -1,5 +1,6 @@
 <template>
   <div class="overflow-auto">
+    <!--
     <div v-if="!passwordEntered && isProduction">
       <div id="password-popup">
         <div id="password-form">
@@ -10,8 +11,10 @@
           <p v-if="passwordError" id="password-error">Incorrect password. Please try again.</p>
         </div>
       </div>
+    
     </div>
-    <div v-else>
+  -->
+    <div>
       <Formwork />
       <Services />
       <BigQuote :bigQuote="bigQuote" />

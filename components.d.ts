@@ -14,6 +14,7 @@ declare module '@vue/runtime-core' {
     IMdiChevronDown: typeof import('~icons/mdi/chevron-down')['default']
     IMdiGithub: typeof import('~icons/mdi/github')['default']
     IMdiInformationSlabCircleOutline: typeof import('~icons/mdi/information-slab-circle-outline')['default']
+    IMdiInstagram: typeof import('~icons/mdi/instagram')['default']
     IMdiLinkedin: typeof import('~icons/mdi/linkedin')['default']
     IMdiPinterest: typeof import('~icons/mdi/pinterest')['default']
     IMdiRobotExcited: typeof import('~icons/mdi/robot-excited')['default']

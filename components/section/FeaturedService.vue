@@ -16,7 +16,7 @@
                 information.
               </div>
               <div class="flex w-full justify-center featured opacity-0">
-                <nuxt-link to="/services/ai-chatbot-integration" class="text-secondary text-xl m-2">
+                <nuxt-link to="/contact" class="text-secondary text-xl m-2">
                   <uiButton text="Contact" class="shadow-lg" />
                 </nuxt-link>
                 <nuxt-link to="/services/ai-chatbot-integration" class="text-secondary text-xl m-2">

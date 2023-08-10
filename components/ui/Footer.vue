@@ -35,17 +35,17 @@
 				<!-- End of new column -->
 				<div id="lastcol" class="flex flex-col h-full justify-between flex-grow">
 					<div class="flex flex-row justify-center md:justify-end space-x-2 sm:space-x-3 md:space-x-4 text-lg sm:text-xl mb-4 sm:mb-5 md:mb-6 md:py-0 py-4">
-						<a href="https://www.pinterest.com" target="_blank">
+						<a href="https://www.pinterest.com/formworkstudios/" target="_blank">
 							<i-mdi-pinterest />
 						</a>
-						<a href="https://www.twitter.com" target="_blank">
-							<i-mdi-twitter />
+						<a href="https://www.instagram.com/formworkstudios/" target="_blank">
+							<i-mdi-instagram />
 						</a>
-						<a href="https://www.linkedin.com" target="_blank">
+						<a href="https://www.linkedin.com/company/formwork-studios/" target="_blank">
 							<i-mdi-linkedin />
 						</a>
 						
-						<a href="https://www.github.com" target="_blank">
+						<a href="https://github.com/Formwork-Studios" target="_blank">
 							<i-mdi-github />
 						</a>
 					</div>
@@ -95,7 +95,6 @@ export default {
 				{
 					title: "About",
 					links: [
-						{ name: "Team", url: "/team" },
 						{ name: "Contact", url: "/contact" },
 						{ name: "Privacy", url: "/privacy" },
 						{ name: "Blog", url: "/posts" },
@@ -108,7 +107,7 @@ export default {
 						{ name: "Website Design", url: "/services/website-design" },
 						{ name: "Digital Marketing", url: "/services/digital-marketing" },
 						{ name: "SEO", url: "/services/digital-marketing" },
-						{ name: "Social Media", url: "/services/socialmedia" },
+						{ name: "Social Media", url: "/services/social-media" },
 						{
 							name: "Artificial Intelligence",
 							url: "/services/ai-chatbot-integration",

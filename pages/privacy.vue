@@ -1,9 +1,30 @@
 <template>
   <div class="flex items-center justify-center h-screen text-2xl text-white max-w-[40ch] mx-auto">
-    <div class="inline-block"><b>Cookie policy:</b><span> We use cookies to run this website and help us understand how it is used. We also use Google Analytics. </span>
+    <div class="inline-block"><div id="privacyPolicy">
+  <h1 class="text-4xl mb-6 font-bold">PRIVACY POLICY</h1>
+  
+  <ul class="mb-6">
+    <li>
+      <strong>No Cookies:</strong> Unlike many, our site doesn't use cookies. Your browsing here leaves no digital crumbs.
+    </li>
+    <li>
+      <strong>No Tracking:</strong> We don't track your activities. Your online journey stays your own.
+    </li>
+    <li>
+      <strong>Contact Form Use Only:</strong> We collect emails via our contact forms, but that's it. Your emails are for our communication only. No other use, no sharing.
+    </li>
+  </ul>
+
+  <p>That's it! No cookies, no tracking, and respect for your email privacy. Welcome to the unicorn of privacy policies, where your privacy matters to us.</p>
+</div>
+
       </div>
   </div>
 </template>
 
 
-<style scoped></style>
+<style scoped>
+li {
+  margin-bottom: 1rem;
+}
+</style>
