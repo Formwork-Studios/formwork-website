@@ -1,7 +1,6 @@
 <template>
-	<div class="bg-black text-white py-4 sm:py-6 md:py-8 z-50 w-full tracking-wide">
-		<div class="flex flex-col md:flex-row md:justify-between px-2 sm:px-4 md:px-6 lg:px-8 xl:px-10 2xl:px-20 w-full">
-
+    <div class="bg-black text-white py-4 sm:py-6 md:py-8 z-50 w-full tracking-wide">
+				<div class="flex flex-col md:flex-row md:justify-between px-2 sm:px-4 md:px-6 lg:px-8 xl:px-10 2xl:px-20 w-full">
 		   <div id="footer-content" class="flex flex-col md:flex-row md:grow w-full justify-between">
 				<div class="mr-8 my-10 md:my-0">
 					<img src="/formwork_color.png" alt="Formwork logo" class="fit mx-auto max-h-40" />
@@ -17,7 +16,6 @@
 						</li>
 					</ul>
 				</div>
-				<!-- New column for Business Inquiries -->
 				<div class="mb-4 sm:mb-5 md:mb-6 sm:mr-6 md:mr-8">
 					<h3 class="font-bold mb-2 border-b border-opacity-50 uppercase">
 						Business Inquiries
@@ -32,7 +30,6 @@
 					</ul>
 				</div>
 				</div>
-				<!-- End of new column -->
 				<div id="lastcol" class="flex flex-col h-full justify-between flex-grow">
 					<div class="flex flex-row justify-center md:justify-end space-x-2 sm:space-x-3 md:space-x-4 text-lg sm:text-xl mb-4 sm:mb-5 md:mb-6 md:py-0 py-4">
 						<a href="https://www.pinterest.com/formworkstudios/" target="_blank">
@@ -44,7 +41,6 @@
 						<a href="https://www.linkedin.com/company/formwork-studios/" target="_blank">
 							<i-mdi-linkedin />
 						</a>
-						
 						<a href="https://github.com/Formwork-Studios" target="_blank">
 							<i-mdi-github />
 						</a>
@@ -52,7 +48,6 @@
 					<div class="text-center md:text-right h-full flex flex-col justify-end text-sm text-stone-400">
 						<p class="mt-auto">
 							© 2023 Formwork Studios. All rights reserved.
-					
 						</p>
 					</div>
 				</div>
@@ -60,8 +55,6 @@
 		</div>
 	</div>
 </template>
-
-
 
 <style scoped>
 .column-list {
@@ -80,11 +73,10 @@ a {
 .section-link:hover:before {
   content: "+";
   position: absolute;
-  left: -20px; /* adjust as necessary */
+  left: -20px;
   color: #fff;
   opacity: 40%;
 }
-
 </style>
 
 <script>
@@ -113,7 +105,6 @@ export default {
 							url: "/services/ai-chatbot-integration",
 						},
 						{ name: "Branding", url: "/services/branding-identity" },
-	
 					],
 				},
 			],
