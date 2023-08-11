@@ -1,11 +1,11 @@
 <template>
   <div>
-    <div id="particles" class="relative h-full z-20 flex items-center justify-center">
+    <div data-id="particles" class="relative h-full z-20 flex items-center justify-center">
       <div class="content relative z-10">
         <div>
           <div id="theParent"
-            class="relative p-4 sm:p-10 md:p-20 flex justify-start items-center my-0 md:my-20 md:mb-60 flex-col md:max-w-3xl mx-auto group border-4 border-white rounded-lg shadow-lg featured opacity-0">
-            <div class="absolute inset-0 bg-gradient-to-b from-purple-950 via-secondary to-transparent opacity-50"></div>
+            class="relative p-4 sm:p-10 md:p-20 flex justify-start items-center my-0 md:my-20 md:mb-60 flex-col md:max-w-3xl mx-auto group border-4 border-white bg-blur shadow-lg featured opacity-0">
+            <div class="absolute inset-0 bg-stone-950"></div>
             <div class="relative z-10">
               <h2 class="text-left md:text-center text-white mb-4 featured opacity-0">
                 AI Chatbot Integration <span class="blinking">_</span>
@@ -24,7 +24,7 @@
                 </nuxt-link>
               </div>
             </div>
-            <vue-particles id="tsparticles" :options="options" :particles-init="particlesInit"
+            <vue-particles data-id="tsparticles" :options="options" :particles-init="particlesInit"
               class="absolute top-0 left-0 w-full h-full z-0" />
           </div>
         </div>

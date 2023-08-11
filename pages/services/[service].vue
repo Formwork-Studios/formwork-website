@@ -1,24 +1,24 @@
 <template>
   <div class="flex flex-col h-screen overflow-hidden">
     <!-- Top Part -->
-    <div class="bg-stone-950 px-4 md:px-10 pt-14 basis-1/4 md:basis-1/2 mb-6">
-      <div id="toparea" class="col-span-1 p-4 h-full flex flex-col justify-end custom-border"
+    <div class="bg-stone-950 basis-1/4 md:basis-1/2 mb-6">
+      <div id="toparea" class="col-span-1 p-4 h-full flex flex-col justify-end"
         :style="{
           'background-image': `url(${serviceImage})`,
           'background-position': 'center bottom',
           'background-repeat': 'no-repeat',
           'background-size': 'cover'
         }">
-        <div class="text-xl text-white clamp-text font-black mb-0 md:mb-8 uppercase tracking-wide shadow-md">
+        <div class="text-xl text-white clamp-text font-black mb-0 md:mb-8 uppercase tracking-wide ml-4">
           {{ serviceName }}
         </div>
       </div>
     </div>
     <!-- Bottom Part -->
-    <div class="flex flex-grow overflow-auto px-10 pb-10 bg-stone-950 flex-basis-50 flex-col md:flex-row">
+    <div class="flex flex-grow overflow-auto px-4 pb-10 bg-stone-950 flex-basis-50 flex-col md:flex-row">
   <!-- Menu - 1 column -->
   <div class="w-full md:w-1/4 flex-none p-4 mr-6 border-b-2 md:border-b-0 pb-8 mb-6 border-stone-500"> 
-    <ul class="space-y-4 text-xl uppercase">
+    <ul class="space-y-2 md:space-y-4 text-base md:text-lg uppercase">
       <li v-for="subService in subServices" :key="subService.sid"
         :class="{ 'text-stone-600': subService !== selectedSubService, 'text-white': subService === selectedSubService }"
         class="cursor-pointer hover:text-white" @click="selectSubService(subService)">
@@ -47,7 +47,7 @@
     </transition-group>
     <nuxt-link :to="{ path: '/contact', query: { reason: routeParam } }">
           <div
-          class="fixed md:absolute bottom-0 right-0 h-auto w-auto px-3 md:px-4 py-3 md:py-4 bg-secondary text-white font-bold flex items-center justify-center text-sm md:text-base"
+          class="rounded-tl-2xl md:rounded-tl-none fixed md:absolute bottom-0 right-0 h-auto w-auto px-3 md:px-4 py-3 md:py-4 bg-secondary text-white font-bold flex items-center justify-center text-sm md:text-base"
           :class="contactPulseAnimation">
           <span class="pr-2">GET IN TOUCH</span>
           <i-mdi-arrow-right-thick style="align-self: center;" />
@@ -136,13 +136,13 @@ function selectSubService(subService) {
 }
 
 .fade-enter-active {
-  transition: opacity 0.5s;
-  transition-delay: 0.5s;
+  transition: opacity 0.2s;
+  transition-delay: 0.2s;
   /* delay equal to the leave transition */
 }
 
 .fade-leave-active {
-  transition: opacity 0.5s;
+  transition: opacity 0.2s;
 }
 
 .fade-enter-from,

@@ -59,10 +59,10 @@ definePageMeta({
 
         <h2 class="text-2xl capitalize pt-8 pb-4">The Dark Side of Brutalism</h2>
 <p>
-  On the surface, Brutalism championed a pragmatic approach to the construction of housing and infrastructure. Yet, on a deeper level, its aesthetic presentation was, consciously or subconsciously, animated by the horrors of WWII and the emerging power struggle between the West and the Soviet Union.  </p>
+  On the surface, Brutalism championed a pragmatic approach to the construction of housing and infrastructure. From a more nuanced perspective, it was a response to the lightness of Modernism. Yet, on deeper level still, its aesthetic presentation was, consciously or subconsciously, animated by the horrors of WWII and the emerging power struggle between the West and the Soviet Union.  </p>
         <p>
 As governments, and the world, became more dependent on automation and computerization, the importance of data, logistics and efficiency increasingly overshadowed
-the more familiar and human-centric ways of life that many were used to. Brutalist buildings, then, made of raw concrete and devoid of visible humanistic considerations, were monuments to those changing times, giving shape to a reality that was otherwise nebulous and difficult to grasp, yet deeply felt.
+the more familiar and human-centric ways of life that many were used to. Brutalist buildings, then, made of raw concrete and devoid of visible humanistic considerations, were monuments to those changing times, giving shape to a reality that was otherwise nebulous and difficult to grasp, yet deeply troubling.
 </p>
        
 
@@ -88,10 +88,15 @@ the more familiar and human-centric ways of life that many were used to. Brutali
         
         </p>
         <img class="w-full h-64 object-cover" src="/brutalistwebsites.jpg" alt="Blog post header image">
-    <span class="pt-1.5 pb-7 inline-block text-white-800 text-base">The quote claims that Brutalism is a reaction to frivolity among modern websites, but are these websites not frivolous, as well?</span>  
-       
-    <p class="quote">"In its ruggedness and lack of concern to look comfortable or easy, Brutalism can be seen as a reaction by a younger generation to the lightness, optimism, and frivolity of today's web design."</p>
-    <p>
+    <span class="pt-1.5 pb-7 inline-block text-white-800 text-base"> Various brutalist websites displayed on <a href="https://brutalistwebsites.com">brutalistwebsites.com</a></span>  
+       <p>The website brutalistwebsites.com describes contemporary Brutalism as follows: </p>
+    <p class="quote relative">
+      <i-mdi:format-quote-open-outline class="absolute -left-10 text-4xl text-secondary"/>
+      <i-mdi:format-quote-open-outline class="absolute -left-11 -top-1 text-4xl text-secondary opacity-30"/>
+      In its ruggedness and lack of concern to look comfortable or easy, Brutalism can be seen as a reaction by a younger generation to the lightness, optimism, and frivolity of today's web design.</p>
+    
+    
+      <p>
          With the vast majority of digital media essentially serving as ornament, we must ask, is the Brutalist framework - in the age of mass consumption - 
          
          

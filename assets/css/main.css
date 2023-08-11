@@ -67,3 +67,12 @@ body {
 }
 
 .blog-content {}
+
+.quote {
+  padding-left: 20px;
+  font-size: 1.3em;
+  opacity: .6;
+
+  margin-left: 10px !important;
+
+}
