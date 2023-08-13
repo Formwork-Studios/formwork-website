@@ -113,13 +113,16 @@ the more familiar and human-centric ways of life that many were used to. Brutali
        <p>To better understand contemporary Brutalism, we can look at the definition presented on the website <a href="https://brutalistwebsites.com" target="_blank"
             class="border-b-2 border-opacity-50 hover:border-opacity-100 border-primary">brutalistwebsites.com</a>: </p>
     <p class="quote relative py-6">
-      <i-mdi:format-quote-open-outline class="absolute -left-10 text-4xl text-secondary"/>
-      In its ruggedness and lack of concern to look comfortable or easy, Brutalism can be seen as a reaction by a younger generation to the lightness, optimism, and frivolity of today's web design.</p>
+      <i-mdi:format-quote-open-outline class="absolute left-0 md:-left-10 text-2xl md:text-4xl text-secondary"/>
+     <div class="mx-10 md:mx-0">In its ruggedness and lack of concern to look comfortable or easy, Brutalism can be seen as a reaction by a younger generation to the lightness, optimism, and frivolity of today's web design.
+     </div>
+    </p>
     
 
 <p>In this context, Brutalism is said to provide a counter-weight to the alleged "frivolity" of certain web design, but, for the reasons described above, it seems to be more of a simple flip-side, substituting superficial ease with superficial difficulty, never diving into an actual critique as was the case with Brutalism's original appearance. </p>
 <p>Therefore, if we had to categorize Brutalist websites in a taxonomy of digital media, we cannot yet say they are of a different type distinct from more pleasant looking websites. </p>
-        <div class="blog-image">
+       <p>At the same time, designers might desire to pierce the surface-level aesthetic to create websites in a more intentional way in order to hold true to the principle of "form follows function". </p> 
+<div class="blog-image">
           <img class="w-full h-64 object-cover" src="/exmachina.jpg" alt="Ex Machina Image">
           <span class="pt-1.5 inline-block text-white-800 text-base">"Ex Machina" home — AI meets Brutalism in film.</span>
         </div>
@@ -130,11 +133,9 @@ the more familiar and human-centric ways of life that many were used to. Brutali
             Whereas the primary function of a home is to provide shelter, a fundamental human need, websites serve a variety of purposes. They are used to document, for commerce, to communicate news and events, for politics, and sometimes simply for fun. 
             
             
-            While impossible to cater to each of these needs, the principle of "form follows function" can be applied properly if the designer is able to identify the primary function of a particular website and pierce through the superficiality of an easily imitated surface aesthetic.
-            </p>
+            Though catering to all needs is unattainable, if user engagement is the objective, there are multiple paths to take. Some strategies may employ dark patterns or attention manipulation techniques, designed to unfairly direct user behavior; however, delighting the user remains the most ethical method, fostering genuine engagement and trust.            </p>
 
-        <p>Ultimately, however, we must acknowledge that the website is also a machine for delight, however subtle. Guiding the user to some information, presenting an interesting product, or writing about something useful all, when done properly, elicit a response that draws in the user.
-          </p>
+
              <p>Keeping this in mind,
           we can refer to Dieter Rams' "<a href="https://www.vitsoe.com/us/about/good-design" target="_blank"
             class="border-b-2 border-opacity-50 hover:border-opacity-100 border-primary">Ten Principles for Good
@@ -168,19 +169,11 @@ the more familiar and human-centric ways of life that many were used to. Brutali
 
 
 
-        <p>With these principles in mind, it's crucial not to become overly preoccupied with theory. Sometimes, people
-          simply want to feel or experience something,
-        and that's perfectly okay - not everything needs to be tailored perfectly to modernist ideals. However, if your
-        goal is to build a machine for information and delight,
-        these principles serve as valuable guidance.</p>
+        <p>Following these 10 Principles, designers can create websites that not only fulfill a functional role but also deliver a delightful and ethical user experience, 
+          aligning with the values of both aesthetics and responsibility.</p>
         <h2 class="text-2xl capitalize pt-8 pb-4">The Enduring Appeal of Modernism and Brutalism</h2>
-<p>
-  The preceding discussion is not intended as a rejection of Brutalism in favor of Modernism; rather, it aims to contextualize the Brutalist aesthetic to better understand its contemporary expression. Brutalism, at its inception, represented a dramatic shift away from the familiar classical architecture of its era. Similarly, today's digital Brutalism breaks away from the polished, minimalist aesthetic that dominates the digital landscape. However, something seems to be missing. Brutalism initially offered a critique of society, a critique that appears absent in many of today's reincarnations of the Brutalist aesthetic, despite such a critique being critically needed.
-
-</p><p>
-Any emerging aesthetic trend that takes on the current moment of over-consumption of digital images perhaps faces an uphill battle, yet, for the sake of humanity something can and inevitably will emerge.</p><p>
-In the meantime, the designers of today will continue to map out a path forward, understanding that ultimately minimalism is pleasing, particularly in a wold that is overrun with imagery. 
-</p>
+<p>In the midst of a world overrun with imagery, the principles of Modernism and Brutalism offer distinct perspectives and challenges. Modernism, with its minimalism and focus on essential design aspects, continues to provide a timeless and relevant aesthetic across various disciplines. Brutalism, though not perfect, its stripped-down stark forms, resonates with those seeking authenticity and a reaction against superficiality. As designers continue to navigate this complex landscape, the enduring lessons of both Modernism and Brutalism serve as valuable guides, paving a path forward that honors both aesthetics and ethical responsibility, and echoes the timeless mantra that 'form follows function.'
+  </p>
 </div>
   </div>
 </div></template>

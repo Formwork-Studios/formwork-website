@@ -13,8 +13,9 @@
         <h2 id="message3" class="font-sans tracking-wide animate-fade-in-out">LET'S BUILD SOMETHING</h2>
       </div>
     </div>
-    <i-mdi:chevron-down @click="scrollOneScreenDown" class="chevron-bottom text-white text-6xl animate-bounce cursor-pointer" />
-    </div>
+    <div class="chevron-container">
+      <i-mdi:chevron-down @click="scrollOneScreenDown" class="chevron-bottom text-white text-3xl md:text-6xl animate-bounce cursor-pointer" />
+    </div>    </div>
 </template>
 
 <script setup>
@@ -44,8 +45,9 @@ function scrollOneScreenDown() {
 }
 
 function handleScrollOpacity() {
-  const chevron = document.querySelector('.chevron-bottom');
-  
+  const chevronContainer = document.querySelector('.chevron-container');
+  const chevron = chevronContainer.querySelector('.chevron-bottom');
+
   if (chevron) {
     chevron.classList.add('fade-out');
     chevron.classList.remove('animate-bounce'); // remove bounce animation if it's interfering
@@ -56,7 +58,6 @@ function handleScrollOpacity() {
     }, 500);
   }
 }
-
 
 
 
@@ -100,14 +101,18 @@ function handleScrollOpacity() {
   color: #fff;
 }
 
-.chevron-bottom {
+.chevron-container {
   position: fixed;
-  bottom: 2%;  /* Adjust as needed */
+  bottom: 2%;
   left: 50%;
-  transform: translateY(50%);
-  transition: transform 0.3s ease;  /* To ensure any jump is smoother */
+  transform: translateX(-50%); /* Center the chevron horizontally */
   z-index: 10;
 }
+
+.chevron-bottom {
+  transition: transform 0.3s ease;
+}
+
 
 @keyframes fadeOut {
   from {
