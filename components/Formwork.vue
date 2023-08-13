@@ -13,20 +13,58 @@
         <h2 id="message3" class="font-sans tracking-wide animate-fade-in-out">LET'S BUILD SOMETHING</h2>
       </div>
     </div>
-  </div>
+    <i-mdi:chevron-down @click="scrollOneScreenDown" class="chevron-bottom text-white text-6xl animate-bounce cursor-pointer" />
+    </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 
 const activeMessage = ref(1)
 
 onMounted(() => {
   setInterval(() => {
     activeMessage.value = activeMessage.value % 3 + 1
-  }, 5000) 
+  }, 5000)
+  
+  // Event listener for scroll event
+  window.addEventListener('scroll', handleScrollOpacity);
 })
+
+onBeforeUnmount(() => {
+  window.removeEventListener('scroll', handleScrollOpacity);
+})
+
+function scrollOneScreenDown() {
+  window.scrollBy({
+    top: window.innerHeight,  // scroll by one screen height
+    left: 0,
+    behavior: 'smooth'
+  });
+}
+
+function handleScrollOpacity() {
+  const chevron = document.querySelector('.chevron-bottom');
+  
+  if (chevron) {
+    chevron.classList.add('fade-out');
+    chevron.classList.remove('animate-bounce'); // remove bounce animation if it's interfering
+
+    // Remove the event listener after animation completes (assuming animation is 0.5s)
+    setTimeout(() => {
+      window.removeEventListener('scroll', handleScrollOpacity);
+    }, 500);
+  }
+}
+
+
+
+
 </script>
+
+
+
+
 
 <style scoped>
 @keyframes fade-in-out {
@@ -61,4 +99,31 @@ onMounted(() => {
   line-height: 1.2; 
   color: #fff;
 }
+
+.chevron-bottom {
+  position: fixed;
+  bottom: 2%;  /* Adjust as needed */
+  left: 50%;
+  transform: translateY(50%);
+  transition: transform 0.3s ease;  /* To ensure any jump is smoother */
+  z-index: 10;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0%) scale(1);
+
+  }
+  to {
+    opacity: 0;
+    transform: translateY(50%) scale(.5);
+  }
+}
+
+.fade-out {
+  animation: fadeOut 0.5s forwards; /* The 'forwards' value ensures that the end value of the animation is retained after it completes */
+}
+
+
 </style>

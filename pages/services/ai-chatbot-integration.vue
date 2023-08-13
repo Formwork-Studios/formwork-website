@@ -9,10 +9,10 @@
 			<div v-if="showModal" class="modal" @click.self="showModal = false">
 			  <div class="m-auto p-10 bg-stone-900 text-white relative sm:w-full md:w-3/4 lg:max-w-3xl">
 				<span class="close absolute top-2 right-2" @click="showModal = false">&times;</span>
-				<h2 class="modal-header flex"><i-mdi-robot-excited class="mr-3"/><span class="inline-block align-baseline mt-[-2px]">Customized ChatBot Demo</span></h2>
+				<h2 class="modal-header flex"><span class="inline-block align-baseline mt-[-2px]">Customized ChatBot Demo</span></h2>
 
 				<p class="modal-text">Through the use of vector databases, users can provide private or up-to-date information for ChatGPT to learn and assist users with.</p>
-				<uiButton btnText="Schedule Consultation" icon="i-mdi-arrow-right-thick" ghost @click="navigateToContact"/>			</div>
+				<uiButton btnText="Schedule Consultation" icon="i-mdi-arrow-right-thick" ghost @click="navigateToContact" text="Get in Touch" />			</div>
 			</div>
 		  </transition>
   
@@ -53,7 +53,7 @@ definePageMeta ({
 	width: 100%; 
 	height: 100%; 
 	overflow: auto; 
-	background-color: rgba(0,0,0,0.4); 
+	background-color: rgba(0,0,0,0.6); 
   }
   
   /* Modal Content */
@@ -95,7 +95,7 @@ definePageMeta ({
   
   /* Fade In/Out Transition */
   .fade-enter-active, .fade-leave-active {
-	transition: opacity .5s;
+	transition: opacity .2s;
   }
   .fade-enter, .fade-leave-to {
 	opacity: 0;

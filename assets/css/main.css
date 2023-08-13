@@ -68,6 +68,7 @@ body {
 
 .blog-content {}
 
+
 .quote {
   padding-left: 20px;
   font-size: 1.3em;
@@ -75,4 +76,14 @@ body {
 
   margin-left: 10px !important;
 
+}
+@media (max-width: 640px) { /* Adjust this breakpoint as needed for your design */
+  .quote {
+    padding-left: 0px;
+    font-size: 1.3em;
+    opacity: .6;
+  
+    margin-left: 0px !important;
+  
+  }
 }

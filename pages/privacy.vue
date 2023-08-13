@@ -17,10 +17,22 @@
 
   <p>That's it! No cookies, no tracking, and respect for your email privacy. Welcome to the unicorn of privacy policies, where your privacy matters to us.</p>
 </div>
-
+<div class="mt-8">
+  <a @click="goBack" class="text-secondary text-lg group mt-8 cursor-pointer">Back</a>      </div>
       </div>
   </div>
 </template>
+
+
+<script setup>
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+const goBack = () => {
+  router.go(-1)
+}
+</script>
 
 
 <style scoped>

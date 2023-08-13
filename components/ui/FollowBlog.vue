@@ -3,13 +3,13 @@
     <div ref="form" class="opacity-0">
       <div class="max-w-2xl md:max-w-4xl bg-white w-full md:mx-auto mb-60 text-black grid grid-cols-5 h-full">
         <div class="p-14 flex flex-col justify-between col-span-5 md:col-span-3 relative"> <!-- Added relative positioning here -->
-          <div class="mb-20">
+          <div class="mb-10 md:mb-20">
             <h3 class="text-black text-3xl font-bold inline-block">New Article Notification</h3>
             <div class="my-4 text-lg">When you sign-up below we will kindly notify you when the next article drops.</div>
           </div>
           <div>
             <input type="email" v-model="email" placeholder="Enter your email" class="mb-4 p-3 w-full rounded-none"/>
-            <uiButton @click="submitEmail" class="inline-flex px-4 py-2 w-full uppercase font-bold" btnText="Submit" />
+            <uiButton @click="submitEmail" class="inline-flex px-4 py-2 w-full uppercase font-bold" full text="Submit" />
             <i-ri-loader-4-line v-show="isLoading" class="animate-spin" /> 
           </div>
           <div class="block absolute bottom-0 left-0 w-full"> <!-- Made the absolute positioned element span the width of its parent -->
@@ -17,7 +17,7 @@
           </div>
         </div>
         <div class="col-span-5 md:col-span-2 order-first md:order-none hidden md:flex">
-          <img src="/birds2.jpg" class="block object-fill h-full">
+          <img src="/birds2.jpg" class="block object-cover h-full">
         </div>
       </div>
     </div>

@@ -9,6 +9,7 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    'IMdi:chevronDown': typeof import('~icons/mdi/chevron-down')['default']
     'IMdi:formatQuoteOpenOutline': typeof import('~icons/mdi/format-quote-open-outline')['default']
     IMdiArrowRightThick: typeof import('~icons/mdi/arrow-right-thick')['default']
     IMdiChevronDoubleRight: typeof import('~icons/mdi/chevron-double-right')['default']

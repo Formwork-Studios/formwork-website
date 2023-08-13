@@ -1,31 +1,25 @@
 <template>
   <div>
-    <div data-id="particles" class="relative h-full z-20 flex items-center justify-center">
+    <div data-id="particles" class="relative h-full z-2\0 flex items-center justify-center">
       <div class="content relative z-10">
         <div>
           <div id="theParent"
-            class="relative p-4 sm:p-10 md:p-20 flex justify-start items-center my-0 md:my-20 md:mb-60 flex-col md:max-w-3xl mx-auto group border-4 border-white bg-blur shadow-lg featured opacity-0">
-            <div class="absolute inset-0 bg-stone-950"></div>
+            class="relative p-4 sm:p-10 md:pt-16 flex flex-col justify-between items-start my-0 md:my-20 md:mb-60 md:max-w-3xl mx-auto group bg-blur shadow-xl featured opacity-0 h-full">
+            <div class="absolute inset-0 bg-stone-950 opacity-80 border-2"></div>
             <div class="relative z-10">
               <h2 class="text-left md:text-center text-white mb-4 featured opacity-0">
                 AI Chatbot Integration <span class="blinking">_</span>
               </h2>
-
               <div class="text-xl pt-4 pb-2 inline text-center text-white featured opacity-0">
                 We provide custom chatbots that are trained on your own up-to-date documentation or recent news and
                 information.
               </div>
-              <div class="flex w-full justify-center featured opacity-0">
-                <nuxt-link to="/contact" class="text-secondary text-xl m-2">
-                  <uiButton text="Contact" class="shadow-lg" />
-                </nuxt-link>
-                <nuxt-link to="/services/ai-chatbot-integration" class="text-secondary text-xl m-2">
-                  <uiButton ghost icon="i-mdi-arrow-right-thick shadow-lg" text="Try Demo" />
-                </nuxt-link>
-              </div>
             </div>
-            <vue-particles data-id="tsparticles" :options="options" :particles-init="particlesInit"
-              class="absolute top-0 left-0 w-full h-full z-0" />
+            <div class="mt-10 flex w-full justify-center featured opacity-0">
+              <nuxt-link to="/services/ai-chatbot-integration" class="text-secondary text-xl m-2">
+                <uiButton ghost icon="i-mdi-arrow-right-thick shadow-lg" text="Try Demo" />
+              </nuxt-link>
+            </div>
           </div>
         </div>
       </div>

@@ -37,17 +37,18 @@
         <div class="text-white-500 mb-4 text-lg max-w-[80ch]">
           {{ selectedSubService.description }}
         </div>
-        <a :href="selectedSubService.link" class="text-secondary text-lg group" target="_blank">{{
+        <!-- removed link to contact, using fixed position link instead
+        <a :href="selectedSubService.link" class="hidden md:inline text-secondary text-lg group" target="_blank">{{
           selectedSubService.linkText }}
           <i-mdi-chevron-double-right
             class="inline transform transition-transform duration-200 ease-in-out group-hover:translate-x-1" />
         </a>
- 
+      -->
       </div>
     </transition-group>
     <nuxt-link :to="{ path: '/contact', query: { reason: routeParam } }">
           <div
-          class="rounded-tl-2xl md:rounded-tl-none fixed md:absolute bottom-0 right-0 h-auto w-auto px-3 md:px-4 py-3 md:py-4 bg-secondary text-white font-bold flex items-center justify-center text-sm md:text-base"
+          class="rounded-tl-2xl md:rounded-tl-none fixed bottom-0 right-0 h-auto w-auto px-4 md:px-4 py-3 md:py-4 bg-secondary text-white font-bold flex items-center justify-center text-sm md:text-base"
           :class="contactPulseAnimation">
           <span class="pr-2">GET IN TOUCH</span>
           <i-mdi-arrow-right-thick style="align-self: center;" />
@@ -131,7 +132,7 @@ function selectSubService(subService) {
 }
 
 .clamp-text {
-  font-size: clamp(1rem, 5vw, 5rem);
+  font-size: clamp(1.5rem, 5vw, 5rem);
   text-align: left;
 }
 

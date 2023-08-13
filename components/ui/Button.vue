@@ -13,9 +13,9 @@
       'text-lg',
       'mt-4',
       'border-2',
+      'uppercase',
       full ? 'w-full' : 'w-max', // Conditional class
-      ghost ? 'bg-transparent border-primary text-primary hover:bg-primary hover:text-white' : 'bg-primary border-primary hover:bg-primary-light text-white hover:text-white hover:shadow'
-    ]"
+      secondary ? 'bg-secondary border-secondary hover:bg-secondary-dark hover:bg-secondary-light text-white hover:text-white hover:shadow' : ghost ? 'bg-transparent border-primary text-primary hover:bg-primary hover:text-white' : 'bg-primary border-primary hover:bg-primary-light text-white hover:text-white hover:shadow'    ]"
   >
     {{ text }}
     <i-mdi-arrow-right-thick v-if="icon === 'i-mdi-arrow-right-thick'" class="ml-2"/>
@@ -36,6 +36,10 @@ const props = defineProps({
     default: 'Click Me',
   },
   ghost: {
+    type: Boolean,
+    default: false
+  },
+  secondary: {
     type: Boolean,
     default: false
   },

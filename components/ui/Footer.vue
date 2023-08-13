@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-black text-white py-4 sm:py-6 md:py-8 z-50 w-full tracking-wide">
+    <div class="bg-black text-white py-2 sm:py-4 md:py-6 z-50 w-full tracking-wide">
 				<div class="flex flex-col md:flex-row md:justify-between px-2 sm:px-4 md:px-6 lg:px-8 xl:px-10 2xl:px-20 w-full">
 		   <div id="footer-content" class="flex flex-col md:flex-row md:grow w-full justify-between">
 				<div class="mr-8 my-10 md:my-0">

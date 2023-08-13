@@ -1,6 +1,6 @@
 <template>
-  <div class="w-full h-screen flex items-center justify-center bg-transparent my-20">
-    <form ref="form" id="mainContact" class="w-full max-w-xl px-6 " @submit.prevent="submitForm">
+  <div class="w-full h-screen flex items-center justify-center bg-transparent my-14">
+    <form ref="form" id="mainContact" class="w-full max-w-xl px-6 opacity-0" @submit.prevent="submitForm">
       <uiLogoCombo />
       <div class="relative mb-8">
         <label class="block text-white text-lg font-bold mb-2 sr-only" for="name">Name</label>
@@ -57,6 +57,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 
+
 const consent = ref(false)
 const name = ref('')
 const email = ref('')
@@ -105,9 +106,34 @@ const submitForm = async () => {
 
   isLoading.value = false;
 }
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // add 'animate-delay' class to the target
+          entry.target.classList.add('animate-delay');
+        }
+      });
+    },
+    {
+      threshold: 0.5,
+    }
+  );
+
+  // Observe the form element
+  if (form.value) {
+    observer.observe(form.value);
+  }
+});
+
+
 </script>
 
 <style scoped>
+
+
 .border-b-extend {
   background-color: #14B8A6;
   transform: scaleX(0);
