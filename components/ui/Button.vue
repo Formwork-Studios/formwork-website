@@ -1,7 +1,9 @@
 <template>
-  <div 
+  <div class="w-full"
     :class="[
       'px-4', 
+      '!w-full', // Full width on small screens
+      '!md:w-auto', // Automatic width on medium and larger screens
       'py-2',
       'transition-color',
       'duration-200',

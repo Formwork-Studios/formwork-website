@@ -9,7 +9,7 @@
           </div>
           <div>
             <input type="email" v-model="email" placeholder="Enter your email" class="mb-4 p-3 w-full rounded-none"/>
-            <uiButton @click="submitEmail" class="inline-flex px-4 py-2 w-full uppercase font-bold" full text="Submit" />
+            <uiButton @click="submitEmail" class="inline-flex px-4 py-2 !w-full uppercase font-bold" full text="Submit" />
             <i-ri-loader-4-line v-show="isLoading" class="animate-spin" /> 
           </div>
           <div class="block absolute bottom-0 left-0 w-full"> <!-- Made the absolute positioned element span the width of its parent -->
