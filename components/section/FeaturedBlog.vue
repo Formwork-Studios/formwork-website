@@ -15,7 +15,11 @@
           honesty, eschewing the elaborate ornamentation customary in classical architecture.</p>
         </div>
         <p class="py-4">
-          The radical shift towards functionality seen in the Modernist movement was pushed to an extreme by Le Corbusier who, under than banner of Burtalism, famously argued that a house is a machine for living in. In line with this utilitarian approach, and against the backdrop of WWII reconstruction, architects of the day turned towards Béton Brut — the French term for Raw Concrete — as their material of choice for rebuilding a war-torn Europe. </p>
+          The radical shift towards functionality seen in the Modernist movement was pushed to an extreme by Le Corbusier who, under than banner of Burtalism, 
+          famously argued that a house is a machine for living in. 
+          In line with this utilitarian approach, and against the backdrop of 
+          WWII reconstruction, architects of the day turned towards Béton Brut — the French term for Raw Concrete — 
+          as their material of choice for rebuilding a war-torn Europe. </p>
 
       </div>
       <nuxt-link to="/posts/website-machine">
