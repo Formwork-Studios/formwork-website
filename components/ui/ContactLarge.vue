@@ -1,8 +1,8 @@
 <template>
   <div class="h-screen flex items-center justify-center bg-transparent w-full">
-    <form ref="form" id="mainContact" class="w-5/6 lg:w-2/3 px-0 lg:px-6 mx-auto" @submit.prevent="submitForm">
+    <form ref="form" id="mainContact" class="w-11/12 lg:w-2/3 px-0 lg:px-6 mx-auto" @submit.prevent="submitForm">
       <div class="flex flex-col md:flex-row items-center">
-        <div id="col1" class="flex items-center p-4 md:p-6 lg:p-10">
+        <div id="col1" class="flex items-center md:p-6 lg:p-10">
     <img
         src="/formwork_white.png"
         class="hidden md:block mr-0 md:mr-8 p-10na md:h-[500px] h-[300px]"
@@ -15,7 +15,7 @@
     </span>
 </div>
 
-        <div id="col2" class="w-4xl flex-grow p-4 md:p-6 lg:p-10">
+        <div id="col2" class="flex-grow p-2 md:p-6 lg:p-10">
           <div class="relative mb-8">
             <label class="block text-white text-lg font-bold mb-2" for="reason">REASON FOR CONTACT</label>
             <select v-model="reason" id="reason" class="w-full text-white text-lg py-3 px-4 leading-tight bg-black focus:z-10 relative">

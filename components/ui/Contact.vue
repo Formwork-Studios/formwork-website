@@ -1,6 +1,6 @@
 <template>
   <div class="w-full h-screen flex items-center justify-center bg-transparent my-14">
-    <form ref="form" id="mainContact" class="w-full max-w-xl px-6 opacity-0" @submit.prevent="submitForm">
+    <form ref="form" id="mainContact" class="w-full max-w-xl px-4 md:px-6 opacity-0" @submit.prevent="submitForm">
       <uiLogoCombo />
       <div class="relative mb-8">
         <label class="block text-white text-lg font-bold mb-2 sr-only" for="name">Name</label>
@@ -151,7 +151,7 @@ onMounted(() => {
 }
 
 form {
-  max-width: 500px;
+ 
   margin: 0 auto;
 }
 
