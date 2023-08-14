@@ -2,7 +2,7 @@
 definePageMeta({
   layout: "post",
   title: "A Website is a Machine for Information and Delight",
-  blurb: "In the post-WW2 reconstruction era, Béton Brut — the French term for Raw Concrete — became the material of choice for architects tasked with the goal of rebuilding a war-torn Europe. In response to what must be considered the most catastrophic conflict in human history, a collective desire emerged to begin the process of rebuilding society. Inspired by the Modernist principle of \"form follows function,\" architects sought to create buildings that embodied the ideals of utilitarianism, egalitarianism, and honesty.",
+  blurb: "In the early 20th century, Modernism became the dominant architectural movement in Europe. Inspired by the Modernist principle of 'form follows function,' architects sought to create buildings that embodied the ideals of utilitarianism, egalitarianism, and honesty.",
   date: "2021-10-10",
   status: "published",
   author: "Michael Synan"
@@ -12,7 +12,7 @@ definePageMeta({
 </script>
 
 <template>
-  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 blog py-40 tracking-wide">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8 blog py-20 tracking-wide">
     <!-- Header Image -->
     <img class="w-full h-64 object-cover" src="/Unite-dhabitation-Marseille_C.-Emden.jpg" alt="Blog post header image">
     <span class="pt-1.5 pb-7 inline-block text-white-800 text-base">The Unite d'habitation in Marseille, an example of Le

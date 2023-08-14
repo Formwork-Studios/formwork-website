@@ -17,7 +17,7 @@
     <!-- Bottom Part -->
     <div class="flex flex-grow overflow-auto px-4 pb-10 bg-stone-950 flex-basis-50 flex-col md:flex-row">
   <!-- Menu - 1 column -->
-  <div class="w-full md:w-1/4 flex-none p-4 mr-6 border-b-2 md:border-b-0 pb-8 mb-6 border-stone-500"> 
+  <div class="w-full md:w-1/4 flex-none p-4 mr-6 border-b-2 md:border-b-0 pb-6 mb-4 border-stone-600"> 
     <ul class="space-y-2 md:space-y-4 text-base md:text-lg uppercase">
       <li v-for="subService in subServices" :key="subService.sid"
         :class="{ 'text-stone-600': subService !== selectedSubService, 'text-white': subService === selectedSubService }"

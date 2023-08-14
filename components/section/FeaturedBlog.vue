@@ -1,26 +1,21 @@
 <template>
   <div class="grid grid-cols-1 md:grid-cols-2 text-black bg-white-300 text-xl w-full p-2 md:p-20 gap-10 relative">
     <!-- First Main Column -->
-    <div class="col-span-1 flex flex-col h-full relative space-y-8" tracking-wide>
+    <div class="col-span-1 flex flex-col h-full relative px-6 space-y-8" tracking-wide>
       <nuxt-link to="/posts/website-machine ">
         <h2 class="font-bold text-black text-4xl md:text-6xl uppercase blogitem opacity-0">A website is a machine for information and delight</h2>
       </nuxt-link>
-      <div class="bg-primary w-max h-auto text-white-300 p-2 font-bold blogitem opacity-0">LATEST POST</div>
+      <div class="bg-primary w-max h-auto text-white-300 p-2 font-bold blogitem opacity-0 text-base md:text-xl">LATEST POST</div>
 
       <div class="text-black-300 leading-loose text-lg blogitem opacity-0">
         <div>
-          <p class="py-4">In the post-WW2 reconstruction era, Béton Brut — the French term for Raw Concrete — became the
-            material of choice for architects tasked with the goal of rebuilding a war-torn Europe. In response to what
-            must be considered the most catastrophic conflict in human history, a collective desire emerged to begin the
-            process of rebuilding society. Inspired by the Modernist principle of 'form follows function,' architects
-            sought to create buildings that embodied the ideals of utilitarianism, egalitarianism, and honesty. In
-            Modernism, there was no need for the ornate flourishes typical of classical architecture. Instead, Architects
-            of that time embraced Le Corbusier's perspective, treating homes as what they fundamentally are — machines for
-            living in."</p>
+          <p class="py-4">In the early 20th century, Modernism became the dominant architectural movement in Europe.
+          Inspired by the Modernist principle of "form follows
+          function," architects sought to create buildings that embodied the ideals of utilitarianism, egalitarianism, and
+          honesty, eschewing the elaborate ornamentation customary in classical architecture.</p>
         </div>
         <p class="py-4">
-          The radical shift towards functionality in architecture embodied in the Modernist movement was pushed to an
-          extreme in Brutalism — a branch of its parent philosophy — by Le Corbusier himself. </p>
+          The radical shift towards functionality seen in the Modernist movement was pushed to an extreme by Le Corbusier who, under than banner of Burtalism, famously argued that a house is a machine for living in. In line with this utilitarian approach, and against the backdrop of WWII reconstruction, architects of the day turned towards Béton Brut — the French term for Raw Concrete — as their material of choice for rebuilding a war-torn Europe. </p>
 
       </div>
       <nuxt-link to="/posts/website-machine">

@@ -17,7 +17,7 @@
             </div>
             <div class="mt-10 flex w-full justify-center featured opacity-0">
               <nuxt-link to="/services/ai-chatbot-integration" class="text-secondary text-xl m-2 w-full md:w-auto">
-                <uiButton ghost icon="i-mdi-arrow-right-thick shadow-lg !w-full" text="Try Demo" />
+                <uiButton icon="i-mdi-arrow-right-thick shadow-lg !w-full" text="Try Demo" />
               </nuxt-link>
             </div>
           </div>

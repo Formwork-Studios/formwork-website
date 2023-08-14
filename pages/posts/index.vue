@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-40 min-h-screen">
+  <div class="mb-40 min-h-screen px-6">
     <h1 class="text-4xl sm:text-5xl md:text-6xl font-fancy font-bold text-white pt-28 md:pt-40 pb-10 md:pb-20 max-w-3xl mx-auto">Blog Posts</h1>
     <ul class="text-xl text-white max-w-3xl mx-auto">
       <li v-for="(post, index) in posts" :key="post.path" class="py-4 animate-delay" :style="{animationDelay: index * 0.1 + 's'}">
@@ -8,7 +8,7 @@
         <div class="flex items-center text-white-800 text-lg pt-1 pb-2">
          
   <p>By {{ post.meta.author }}</p>
-  <span class="px-3 text-2xl mt-1">☙</span>
+  <span class="px-3 text-lg md:text-2xl mt-1">☙</span>
   <p>{{ post.meta.date }}</p>
 </div>
 

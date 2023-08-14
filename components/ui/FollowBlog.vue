@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-10">
+  <div class="mx-6">
     <div ref="form" class="opacity-0">
       <div class="max-w-2xl md:max-w-4xl bg-white w-full md:mx-auto mb-60 text-black grid grid-cols-5 h-full">
         <div class="p-8 md:p-14 flex flex-col justify-between col-span-5 md:col-span-3 relative"> <!-- Added relative positioning here -->
