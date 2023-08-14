@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-black text-white py-6 z-50 w-full tracking-wide">
+    <div class="bg-black text-white py-6 z-50 w-full tracking-wide border-t-2 border-t-black">
 				<div class="flex flex-col md:flex-row md:justify-between px-6 lg:px-8 xl:px-10 2xl:px-20 w-full">
 		   <div id="footer-content" class="flex flex-col md:flex-row md:grow w-full justify-between">
 	
@@ -66,14 +66,20 @@ li {
 
 a {
 	position: relative;
+	display: inline-flex;
+	align-items: center;
 }
 
-.section-link:hover:before {
-  content: "+";
-  position: absolute;
-  left: -20px;
-  color: #fff;
-  opacity: 40%;
+@media (min-width: 640px) { /* Apply the styles only for screens larger than 640px */
+	.section-link:hover::before {
+		content: "+";
+		position: absolute;
+		left: -20px;
+		color: #fff;
+		opacity: 40%;
+		top: 50%;
+		transform: translateY(-50%);
+	}
 }
 </style>
 

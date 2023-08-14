@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center justify-center h-screen text-2xl text-white max-w-[40ch] mx-auto">
+  <div class="flex items-center justify-center h-screen text-lg md:text-2xl text-white max-w-[40ch] mx-auto px-6">
     <div class="inline-block"><div id="privacyPolicy">
   <h1 class="text-4xl mb-6 font-bold">PRIVACY POLICY</h1>
   

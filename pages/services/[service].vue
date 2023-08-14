@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col h-screen overflow-hidden">
     <!-- Top Part -->
-    <div class="bg-stone-950 basis-1/4 md:basis-1/2 mb-6">
+    <div class="bg-stone-950 basis-1/4 md:basis-1/2 mb-3">
       <div id="toparea" class="col-span-1 p-4 h-full flex flex-col justify-end"
         :style="{
           'background-image': `url(${serviceImage})`,

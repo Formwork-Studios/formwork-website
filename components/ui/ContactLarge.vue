@@ -9,16 +9,16 @@
     />
 
     <span 
-        class="md:hidden text-white text-xl" 
+        class="md:hidden text-white text-xl mx-6 mb-10 p-6" 
     >
-        FORMWORK STUDIOS
+        <img src="/FORMWORK_logo_combo.png">
     </span>
 </div>
 
         <div id="col2" class="flex-grow p-2 md:p-6 lg:p-10">
           <div class="relative mb-8">
             <label class="block text-white text-lg font-bold mb-2" for="reason">REASON FOR CONTACT</label>
-            <select v-model="reason" id="reason" class="w-full text-white text-lg py-3 px-4 leading-tight bg-black focus:z-10 relative">
+            <select v-model="reason" id="reason" class="w-full text-white text-lg py-3 leading-tight bg-black focus:z-10 relative">
   <option value="" disabled>-</option>
   <option value="web-design-and-ui-ux">Website Design</option>
   <option value="web-development">Website Development</option>
