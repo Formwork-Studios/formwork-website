@@ -15,6 +15,7 @@
       'text-lg',
       'mt-4',
       'border-2',
+      'font-bold',
       'uppercase',
       full ? 'w-full' : 'w-max', // Conditional class
       secondary ? 'bg-secondary border-secondary hover:bg-secondary-dark hover:bg-secondary-light text-white hover:text-white hover:shadow' : ghost ? 'bg-transparent border-primary text-primary hover:bg-primary hover:text-white' : 'bg-primary border-primary hover:bg-primary-light text-white hover:text-white hover:shadow'    ]"

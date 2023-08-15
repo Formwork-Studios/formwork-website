@@ -24,29 +24,16 @@
       </div>
       <nuxt-link to="/posts/website-machine">
         <div class="inline readmore text-black-300 text-base">Read More <i-mdi-chevron-double-right
-            class="inline chevron text-secondary" /> </div>
+            class="inline chevron text-secondary mb-0.5 md:mb-0 " /> </div>
       </nuxt-link>
       <div class="flex-grow"></div>
     </div>
     <!-- Second Main Column -->
-    <div class="col-span-1 flex flex-col gap-y-2 md:gap-y-4 order-first md:order-2">
-      <!-- First Row of Second Column -->
-      <div class="grid grid-cols-2">
-        <div class="col-span-2">
-          <img class="shadow-sm shadow-black blogitem opacity-0" src="/chinatown.jpg" alt="Image 2" />
-        </div>
-      </div>
+    <div class="col-span-1 flex flex-col gap-y-2 md:gap-y-4 order-first md:order-2 h-full">
+  <img class=" blogitem opacity-0 w-full h-full" src="/Unite-dhabitation-Marseille_C.-Emden.jpg" alt="Image 1" style="object-fit: cover;" />
+</div>
 
-      <!-- Second Row of Second Column -->
-      <div class="grid grid-cols-2 gap-x-2 md:gap-x-4">
-        <div class="col-span-1">
-          <img class="shadow-sm shadow-black blogitem opacity-0" src="/birds2.jpg" alt="Image 1" style="object-fit: cover;" />
-        </div>
-        <div class="col-span-1">
-          <img class="shadow-sm shadow-black blogitem opacity-0" src="/subwaycompressed.png" alt="Image 2" style="object-fit: cover;" />
-        </div>
-      </div>
-    </div>
+
   </div>
 </template>
 

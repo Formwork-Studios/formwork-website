@@ -14,7 +14,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="mb-4 sm:mb-5 md:mb-6 sm:mr-6 md:mr-8">
+				<div class="mb-4 sm:mb-5 md:mb-6 sm:pr-0 md:pr-0">
 					<h3 class="font-bold mb-2 border-b border-opacity-50 uppercase">
 						Business Inquiries
 					</h3>

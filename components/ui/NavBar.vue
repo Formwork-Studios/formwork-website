@@ -44,10 +44,10 @@
 
     </nav>
     <div id="nav-menu" 
-  :class="{ 'menu-open': isOpen, 'menu-closed': !isOpen, 'fixed inset-0 bg-gray-900 flex': isOpen }"
-  class="bg-stone-950 lg:hidden shadow-md pt-20 transition-all transition-150 nav-menu opacity-0 mt-10 w-full">
-
-  <div class="flex flex-col h-full w-full justify-between items-start space-y-4 text-2xl">
+  :class="{ 'menu-open': isOpen, 'menu-closed': !isOpen, 'fixed inset-0 bg-gray-900 flex': isOpen }" class="transition-all transition-150 nav-menu opacity-0 bg-stone-950 mt-10 bg-opacity-80"
+ >
+<div  class="bg-stone-950 lg:hidden shadow-md max-w-3/4 w-3/4 ml-auto pt-10 ">
+  <div class="flex flex-col h-full w-full justify-between items-start space-y-4 text-xl">
     <div class="p-4">
       <nuxt-link to="/" @click="isOpen = !isOpen" class="text-white border-none uppercase block mb-2">Home</nuxt-link>
       <nuxt-link to="/posts/" class="text-white border-none uppercase block mb-2">Blog</nuxt-link>
@@ -83,7 +83,7 @@
     <i-mdi-twitter style="color: white" class="turtle-icon text-xl md:text-4xl cursor-pointer" />
   </a>
 </div>
-
+</div>
   </div>
 </div>
 

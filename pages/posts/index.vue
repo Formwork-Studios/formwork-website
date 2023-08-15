@@ -8,7 +8,7 @@
         <div class="flex items-center text-white-800 text-lg pt-1 pb-2">
          
   <p>By {{ post.meta.author }}</p>
-  <span class="px-3 text-lg md:text-2xl mt-1">☙</span>
+  <span class="px-2 text-lg md:text-2xl mt-1">|</span>
   <p>{{ post.meta.date }}</p>
 </div>
 
