@@ -14,17 +14,24 @@ definePageMeta({
 <template>
   <div class="max-w-3xl mx-auto px-6 lg:px-8 blog py-20 tracking-wide">
     <!-- Header Image -->
-    <img class="w-full h-64 object-cover" src="/Unite-dhabitation-Marseille_C.-Emden.jpg" alt="Blog post header image">
+    <img class="w-full h-64 object-cover" src="/unite-dhabitation.webp" alt="Blog post header image">
     <span class="pt-1.5 pb-7 inline-block text-white-800 text-base">The Unite d'habitation in Marseille, an example of Le
       Corbusier's brutalist architecture.</span>
 
     <!-- Blog post title -->
     <div class="blog-content">
+
       <h1 class="mt-4 mb-8 text-3xl font-bold uppercase leading-normal">A Website is a Machine for Information and Delight
       </h1>
+  
+      <div class="leading-loose text-lg">
+        <p>Increasingly, we are inundated with imagery aimed at directing our behavior. As available data increases, design patterns are developed and market competition becomes more steep, we risk having this flood of content
+          overwhelm the consumers of digital media, leaving particularly vulnerable the youth who have not known a world without the internet and, also, have not yet developed parts of their brain responsible for inhibition and self-control. As designers, we 
+          have a moral obligation to consider the broader context in which we are creating and the history of design trends so that we can make more ethical decisions while creating digital media. </p>
+          <p>Like a hammer, a wheel or any other machine, websites can be used for many purposes, but it is up to us to reject uses that can be harmful to society and instead create websites that are both useful and delightful. </p>
+         
       <h2 class="mt-4 mb-8 text-2xl font-bold normal-case">Le Corbusier & Brutalism in the age of Digital Design
       </h2>
-      <div class="leading-loose text-lg">
         <p>In the early 20th century, Modernism became the dominant architectural movement in Europe.
           Inspired by the Modernist principle of "form follows
           function," architects sought to create buildings that embodied the ideals of utilitarianism, egalitarianism, and
@@ -33,7 +40,7 @@ definePageMeta({
 
         <p>
           The radical shift towards functionality seen in the Modernist movement was pushed to an
-          extreme by Le Corbusier who, under than banner of Burtalism, famously argued that <a
+          extreme by Le Corbusier, the influential Swiss-French architect and urban planner, who, under the banner of Brutalism, famously argued that <a
             href="https://www.open.edu/openlearn/history-the-arts/history/heritage/le-corbusier" target="_blank"
             class="border-b-2 border-opacity-50 hover:border-opacity-100 border-primary">a house is a machine for living
             in</a>. In line with this utilitarian approach, and against the backdrop of WWII reconstruction, architects

@@ -30,7 +30,7 @@
     </div>
     <!-- Second Main Column -->
     <div class="col-span-1 flex flex-col gap-y-2 md:gap-y-4 order-first md:order-2 h-full">
-  <img class=" blogitem opacity-0 w-full h-full" src="/Unite-dhabitation-Marseille_C.-Emden.jpg" alt="Image 1" style="object-fit: cover;" />
+  <img class=" blogitem opacity-0 w-full h-full" src="/unite-dhabitation.webp" alt="Image 1" style="object-fit: cover;" />
 </div>
 
 

@@ -75,6 +75,7 @@ export const useStore = defineStore("store", {
           {sid: 2,
             name: "Web Accessibility",
             description: "Digital inclusivity is an integral part of our philosophy of design. Our approach is consistent with WCAG guidelines and universal design principles, enabling seamless user experience for all, including individuals with diverse abilities and needs. Learn more about Universal Web Accessibility Integration.",
+            header: 'WCAG-Compliant Designs',
             question: "What are you interested in building?",
             link: "some-link.html",
             linkText: "Free Consultation" 

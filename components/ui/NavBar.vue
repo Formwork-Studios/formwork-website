@@ -46,12 +46,12 @@
     <div id="nav-menu" 
   :class="{ 'menu-open': isOpen, 'menu-closed': !isOpen, 'fixed inset-0 bg-gray-900 flex': isOpen }" class="transition-all transition-150 nav-menu opacity-0 bg-stone-950 mt-10 bg-opacity-80"
  >
-<div  class="bg-stone-950 lg:hidden shadow-md max-w-3/4 w-3/4 ml-auto pt-10 ">
+<div  class="bg-stone-950 lg:hidden shadow-md max-w-3/4 w-3/4 ml-auto pt-14 ">
   <div class="flex flex-col h-full w-full justify-between items-start space-y-4 text-xl">
-    <div class="p-4">
-      <nuxt-link to="/" @click="isOpen = !isOpen" class="text-white border-none uppercase block mb-2">Home</nuxt-link>
-      <nuxt-link to="/posts/" class="text-white border-none uppercase block mb-2">Blog</nuxt-link>
-      <div @click="isDropdownOpen = !isDropdownOpen" class="cursor-pointer text-white border-none uppercase block mb-2">Services
+    <div class="p-8">
+      <nuxt-link to="/" @click="isOpen = !isOpen" class="text-white border-none uppercase block mb-3">Home</nuxt-link>
+      <nuxt-link to="/posts/" class="text-white border-none uppercase block mb-3">Blog</nuxt-link>
+      <div @click="isDropdownOpen = !isDropdownOpen" class="cursor-pointer text-white border-none uppercase block mb-3">Services
         <i-mdi-chevron-down
           :class="isDropdownOpen ? 'rotate-180' : ''"
           class="inline transform transition-transform duration-200 ease-in-out group-hover:translate-x-1" />
