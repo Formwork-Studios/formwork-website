@@ -38,7 +38,10 @@ definePageMeta({
 
         </p>
 
-        <h2 class="mt-4 mb-8 text-2xl font-bold normal-case">Le Corbusier & Brutalism in the age of Digital Design
+        <h2 class="text-2xl capitalize pt-8 pb-4
+        
+        
+        ">Le Corbusier & Brutalism in the age of Digital Design
         </h2>
         <p>In the early 20th century, Modernism became the dominant architectural movement in Europe.
           Inspired by the Modernist principle of "form follows
