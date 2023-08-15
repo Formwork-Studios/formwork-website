@@ -103,7 +103,7 @@ const handleClick = async () => {
             <div class=" bg-white px-4 py-1 box-content sticky top-14 flex flex-col md:flex-row md:items-end r-0">
                 <p class="font-workSans text-black font-black text-4xl">CHATBOT</p>
                 <p class="font-workSans text-black text-sm ml-2 mb-1">
-                    Powered by GPT-3.5 (using the <a class="text-secondary" href="https://stevejobsarchive.com/book">Steve Job Book</a> as knowledge base)
+                    Powered by GPT-3.5 (using the recent <a class="text-secondary" href="https://stevejobsarchive.com/book">Steve Jobs Book</a> as knowledge base)
                 </p>
             </div>
             <div id="chatarea" class="flex-grow w-full flex flex-col justify-end p-6">
