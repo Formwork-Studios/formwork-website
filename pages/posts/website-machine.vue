@@ -68,10 +68,10 @@ definePageMeta({
 
         <h2 class="text-2xl capitalize pt-8 pb-4">The Dark Side of Brutalism</h2>
 <p>
-  On the surface, Brutalism championed a pragmatic approach to the construction of housing and infrastructure. From a more nuanced perspective, however, it was a response to the lightness of Modernism. Yet, on deeper level still, its aesthetic presentation was, consciously or subconsciously, animated by the horrors of WWII and the emerging power struggle between the West and the Soviet Union.  </p>
+  On the surface, Brutalism championed a pragmatic approach to the construction of housing and infrastructure. From a more nuanced perspective, however, it was a response to the lightness of Modernism. Yet, on a deeper level still, its aesthetic presentation was, consciously or subconsciously, animated by the horrors of WWII and the emerging power struggle between the West and the Soviet Union.  </p>
         <p>
 As governments, and the world, became more dependent on automation and computerization, the importance of data, logistics and efficiency increasingly overshadowed
-the more familiar and human-centric ways of life that many were used to. Brutalist buildings, then, made of raw concrete and devoid of visible humanistic considerations, were monuments to those changing times, giving shape to a reality that was otherwise nebulous and difficult to grasp, yet deeply troubling.
+the more familiar and human-centric ways of life that many were used to. Brutalist buildings, then, made of raw concrete and devoid of visible humanistic considerations, were monuments to those changing times, giving shape to a reality that was otherwise nebulous, difficult to grasp, yet deeply troubling.
 </p>
        
 
@@ -80,16 +80,24 @@ the more familiar and human-centric ways of life that many were used to. Brutali
         <p> Brutalism in digital design has become a popular aesthetic trend in recent years. However, it has evolved in a way that is detached from the depth and significance of its original critique.
 
           With this new form of Brutalism, we no longer see the traditional lack of ornamentation or the use of raw materials, ie the display of code; instead, we encounter excessive ornamentation, 
-          bright colors, and unnecessary animations — the veneer of austrity and rawness covering over rampant consumerism in present-day digital media. </p><p>
+          bright colors, and unnecessary animations — the veneer of Austerity and rawness covering over rampant consumerism in present-day digital media. </p><p>
        
         
           This deviation not only represents a step back for Brutalism but contrasts with Modernist principles, as well. As Alfred Loos's argues in his 1908 essay 
           
           <a href="https://designmanifestos.org/adolf-loos-ornament-and-crime/" target="_blank"
-            class="border-b-2 border-opacity-50 hover:border-opacity-100 border-primary">Ornament and Crime</a>, the
+            class="border-b-2 border-opacity-50 hover:border-opacity-100 border-primary">Ornament and Crime</a>,
           
           
-          "evolution of culture marches with the elimination of ornament from useful objects."
+
+            <p class="quote relative py-6">
+      <i-mdi:format-quote-open-outline class="absolute left-0 md:-left-10 text-2xl md:text-4xl text-secondary"/>
+     <div class="mx-10 md:mx-0"> the evolution of culture marches with the elimination of ornament from useful objects.
+     </div>
+    </p>
+    
+
+  
         
         
         
@@ -112,7 +120,7 @@ the more familiar and human-centric ways of life that many were used to. Brutali
          
          </p><p>
          The above line of questioning
-         opens two possible avenues for exploration: the first with regard to Guy Debord's concept of the <a href="https://en.wikipedia.org/wiki/Society_of_the_Spectacle" target="_blank" class="border-b-2 border-opacity-50 hover:border-opacity-100 border-primary">the Spectacle</a> and, the second, concerning the French Psychoanalyst Jacques Lacan's 'object petit a', both of which will be explored in a future post.
+         opens two possible avenues for exploration: the first with regard to Guy Debord's concept of the <a href="https://en.wikipedia.org/wiki/Society_of_the_Spectacle" target="_blank" class="border-b-2 border-opacity-50 hover:border-opacity-100 border-primary">the Spectacle</a> and, the second, concerning the French Psychoanalyst Jacques Lacan's '<a href="https://thedangerousmaybe.medium.com/lacans-concept-of-the-object-cause-of-desire-objet-petit-a-bd17b8f84e69" target="_blank" class="border-b-2 border-opacity-50 hover:border-opacity-100 border-primary">object petit a</a>', both of which will be explored in a future post.
 
         </p>
         <img class="w-full h-64 object-cover pt-10" src="/brutalistwebsites.jpg" alt="Blog post header image">
