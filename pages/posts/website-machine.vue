@@ -179,9 +179,9 @@ definePageMeta({
           design, but, for the reasons described above, it seems to be more of a simple flip-side, substituting
           superficial ease with superficial difficulty, never diving into an actual critique as was the case with
           Brutalism's original appearance. </p>
-        <p>Therefore, if we had to categorize Brutalist websites in a taxonomy of digital media, we cannot yet say they
+        <p>Therefore, if we had to categorize Brutalist websites in a taxonomy of digital media, while they might be interesting, jarring and appear novel, we cannot yet say they
           are fundamentally different from more pleasant looking websites. </p>
-        <p>At the same time, designers might desire to pierce the surface-level aesthetic to create websites in a more
+        <p>Despite the difficulties of creating meaning in world saturated with fleeting imagery, designers might desire to pierce the surface-level aesthetic to create websites in a more
           intentional way in order to hold true to the principle of "form follows function". </p>
         <div class="blog-image">
           <img class="w-full h-64 object-cover" src="/exmachina.jpg" alt="Ex Machina Image">
