@@ -31,7 +31,7 @@
   <div class="w-full md:w-3/4 text-white text-2xl p-4 relative ">
     <transition-group name="fade">
       <div v-if="selectedSubService" :key="selectedSubService.sid">
-        <div class="text-white font-bold mb-4 text-3xl uppercase" v-if="selectedSubService.header">
+        <div class="text-white font-bold mb-4 text-xl md:text-3xl uppercase" v-if="selectedSubService.header">
           <span class="">{{ selectedSubService.header }}</span>
         </div>
         <div class="text-white-500 mb-4 text-lg max-w-[80ch]">
@@ -132,7 +132,7 @@ function selectSubService(subService) {
 }
 
 .clamp-text {
-  font-size: clamp(1.5rem, 5vw, 5rem);
+  font-size: clamp(1.8rem, 5vw, 5rem);
   text-align: left;
 }
 

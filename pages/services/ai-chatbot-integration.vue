@@ -11,7 +11,7 @@
 				<span class="close absolute top-0 right-0" @click="showModal = false">&times;</span>
 				<h2 class="modal-header flex"><span class="inline-block align-baseline mt-[-2px]">Customized ChatBot Demo</span></h2>
 
-				<p class="modal-text">Through the use of vector databases, users can provide private or up-to-date information for ChatGPT to learn and assist users with.</p>
+				<p class="text-lg pb-6">Through the use of vector databases, users can provide private or up-to-date information for ChatGPT to learn and assist users with.</p>
 				<uiButton btnText="Schedule Consultation" icon="i-mdi-arrow-right-thick" @click="navigateToContact" text="Get in Touch" />			</div>
 			</div>
 		  </transition>
@@ -89,10 +89,7 @@ definePageMeta ({
 	margin-bottom: 10px;
   }
   
-  .modal-text {
-	font-size: 18px;
-  }
-  
+
   /* Fade In/Out Transition */
   .fade-enter-active, .fade-leave-active {
 	transition: opacity .2s;

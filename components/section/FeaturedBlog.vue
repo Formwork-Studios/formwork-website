@@ -1,11 +1,11 @@
 <template>
-  <div class="grid grid-cols-1 md:grid-cols-2 text-black bg-white-300 text-xl w-full p-2 md:p-20 gap-10 relative">
+  <div class="grid grid-cols-1 md:grid-cols-2 text-black bg-white-300 text-xl w-full p-0 md:p-20 gap-10 relative">
     <!-- First Main Column -->
     <div class="col-span-1 flex flex-col h-full relative px-6 space-y-8" tracking-wide>
       <nuxt-link to="/posts/website-machine ">
         <h2 class="font-bold text-black text-4xl md:text-6xl uppercase blogitem opacity-0">A website is a machine for information and delight</h2>
       </nuxt-link>
-      <div class="bg-primary w-max h-auto text-white-300 p-2 font-bold blogitem opacity-0 text-base md:text-xl">LATEST POST</div>
+      <div class="bg-tertiary w-max  text-white-300 p-2 font-bold blogitem opacity-0 text-base md:text-xl">LATEST POST</div>
 
       <div class="text-black-300 leading-loose text-lg blogitem opacity-0">
         <div>

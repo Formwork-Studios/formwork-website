@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+const route = useRoute()
 definePageMeta({
   layout: "post",
   title: "A Website is a Machine for Information and Delight",
@@ -18,12 +19,14 @@ definePageMeta({
     <span class="pt-1.5 pb-7 inline-block text-white-800 text-base">The Unite d'habitation in Marseille, an example of Le
       Corbusier's brutalist architecture.</span>
 
+
     <!-- Blog post title -->
     <div class="blog-content">
-
-      <h1 class="mt-4 mb-8 text-3xl font-bold uppercase leading-normal">A Website is a Machine for Information and Delight
+<div class="mt-4 mb-8 ">
+      <h1 class="text-3xl font-bold uppercase leading-normal">A Website is a Machine for Information and Delight
       </h1>
-
+      <div class="text-stone-600">By {{ route.meta.author }} | {{ route.meta.date }}</div>
+</div>
       <div class="leading-loose text-lg">
         <p>Increasingly, we are inundated with imagery aimed at directing our behavior. As available data increases,
           design patterns are developed and market competition becomes more steep, we risk having this flood of content

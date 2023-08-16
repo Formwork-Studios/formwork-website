@@ -20,7 +20,7 @@
 					</h3>
 					<ul>
 						<li>
-							<a href="#inquiry1" class="text-white-500 hover:text-white-300">+1-222-222-2222</a>
+							<a href="#inquiry1" class="text-white-500 hover:text-white-300">+1-800-657-6893</a>
 						</li>
 						<li>
 							<a href="#inquiry2" class="text-white-500 hover:text-white-300">hello@formworkstudios.com</a>
