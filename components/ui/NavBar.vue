@@ -60,7 +60,7 @@
   <nuxt-link 
     v-for="(item, index) in serviceItems" 
     :key="item.id" 
-    :to="`/services/${item.id}`" 
+    :to="`/services/${item.slug}`" 
     @click="isOpen = !isOpen; isDropdownOpen = false" 
     class="tracking-wide"
     :class="['text-white border-none flex flex-row text-lg py-2', { 'mb-4': index === serviceItems.length - 1 }]"

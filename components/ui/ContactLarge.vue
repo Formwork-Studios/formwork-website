@@ -9,13 +9,13 @@
     />
 
     <span 
-        class="md:hidden text-white text-xl mx-6 mb-10 p-6" 
+        class="md:hidden text-white text-xl" 
     >
-        <img src="/FORMWORK_logo_combo.png">
+        <uiLogoCombo />
     </span>
 </div>
 
-        <div id="col2" class="flex-grow p-2 md:p-6 lg:p-10">
+        <div id="col2" class="flex-grow p-2 md:p-6 lg:p-10 w-full md:w-1/2">
           <div class="relative mb-8">
             <label class="block text-white text-lg font-bold mb-2" for="reason">REASON FOR CONTACT</label>
             <select v-model="reason" id="reason" class="w-full text-white text-lg py-3 leading-tight bg-black focus:z-10 relative">
@@ -265,5 +265,7 @@ button[type="submit"] {
     width: 100%;
     top: 100%; /* This positions it right below the element */
 }
+
+
 
 </style>
