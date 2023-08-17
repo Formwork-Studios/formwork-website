@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen flex items-center justify-center bg-transparent w-full">
+  <div class="h-screen flex items-center justify-center bg-transparent w-full mb-20 md:mb-0">
     <form ref="form" id="mainContact" class="w-11/12 lg:w-2/3 px-0 lg:px-6 mx-auto" @submit.prevent="submitForm">
       <div class="flex flex-col md:flex-row items-center">
         <div id="col1" class="flex items-center md:p-6 lg:p-10">
@@ -31,7 +31,7 @@
 </select>
 
           </div>
-          <div class="relative mb-8">
+          <div class="relative mb-4 md:mb-8">
             <label class="block text-white text-lg font-bold mb-2 sr-only" for="name">Name</label>
             <input v-model="name"
               class="border-b !border-opacity-50 border-gray shadow appearance-none w-full text-white text-lg py-3 px-4 leading-tight focus:outline-none bg-transparent placeholder-gray focus:z-10 relative"
@@ -40,7 +40,7 @@
               class="z-10 border-b-extend absolute bottom-0 left-0 w-full h-0.5 bg-white transform transition-transform duration-200 ease-in-out origin-left">
             </div>
           </div>
-          <div class="relative mb-8">
+          <div class="relative mb-4 md:mb-8">
             <label class="block text-white text-lg font-bold mb-2 sr-only" for="email">Email</label>
             <input v-model="email"
               class="border-b !border-opacity-50 border-gray shadow appearance-none w-full text-white text-lg py-3 px-4 leading-tight focus:outline-none bg-transparent placeholder-gray focus:z-10 relative"
@@ -49,7 +49,7 @@
               class="z-10 border-b-extend absolute bottom-0 left-0 w-full h-0.5 bg-white transform transition-transform duration-200 ease-in-out origin-left">
             </div>
           </div>
-          <div class="relative mb-8">
+          <div class="relative mb-4 md:mb-8">
             <textarea v-model="message"
               class="border-b !border-opacity-50 border-gray  shadow appearance-none w-full text-white text-lg py-3 px-4 leading-tight focus:outline-none bg-transparent placeholder-gray focus:z-10 relative"
               id="message" placeholder="Your Message"></textarea>
