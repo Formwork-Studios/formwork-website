@@ -4,7 +4,7 @@
     <div class="col-span-1 flex flex-col h-full relative px-6 space-y-8" tracking-wide>
       <div class=" w-max  text-secondary font-bold blogitem opacity-0 text-base md:text-xl">LATEST POST</div>
 
-      <nuxt-link to="/posts/website-machine ">
+      <nuxt-link to="/posts/website-machine">
         <h2 class="font-bold text-black text-4xl md:text-6xl uppercase blogitem opacity-0">A website is a machine for information and delight</h2>
       </nuxt-link>
       <div class="text-black-300 leading-loose text-lg blogitem opacity-0">
