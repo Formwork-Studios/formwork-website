@@ -3,7 +3,7 @@
     <div class="inline-block"><div id="privacyPolicy">
   <h1 class="text-4xl mb-6 font-bold">PRIVACY POLICY</h1>
   
-  <ul class="mb-6">
+  <ul class="mb-6 text-xl">
     <li>
       <strong>No Cookies:</strong> Unlike many, our site doesn't use cookies. Your browsing here leaves no digital crumbs.
     </li>
@@ -15,7 +15,7 @@
     </li>
   </ul>
 
-  <p>That's it! No cookies, no tracking, and respect for your email privacy. Welcome to the unicorn of privacy policies, where your privacy matters to us.</p>
+  <p class="text-xl">That's it! No cookies, no tracking, and respect for your email privacy. Welcome to the unicorn of privacy policies, where your privacy matters to us.</p>
 </div>
 <div class="mt-8">
   <a @click="goBack" class="text-secondary text-lg group mt-8 cursor-pointer">Back</a>      </div>

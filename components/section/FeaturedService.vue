@@ -5,7 +5,7 @@
         <div>
           <div id="theParent"
             class="relative p-4 sm:p-10 md:pt-16 flex flex-col justify-between items-start my-0 md:my-20 md:mb-60 md:max-w-3xl mx-auto group bg-blur shadow-xl featured opacity-0 h-full">
-            <div class="absolute inset-0 bg-stone-950 opacity-80 border-2"></div>
+            <div class="absolute inset-0 bg-stone-950 opacity-80 border-2 shadow-lg"></div>
             <div class="relative z-10">
               <h2 class="text-left md:text-center text-white mb-4 featured opacity-0">
                 AI Chatbot Integration <span class="blinking">_</span>

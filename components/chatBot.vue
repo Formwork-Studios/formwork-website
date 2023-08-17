@@ -106,7 +106,7 @@ const handleClick = async () => {
                     Powered by GPT-3.5 (using the recent <a class="text-secondary" href="https://stevejobsarchive.com/book">Steve Jobs Book</a> as knowledge base)
                 </p>
             </div>
-            <div id="chatarea" class="flex-grow w-full flex flex-col justify-end p-6">
+            <div id="chatarea" class="flex-grow w-full flex flex-col justify-end p-4 md:p-6">
          
 		<div class="flex flex-col">
 			<div
@@ -116,12 +116,12 @@ const handleClick = async () => {
 			>
 				<div
 					v-if="item.role === 'assistant' && !item.loader"
-					class="min-h-[32px] h-fit p-1 px-2 bg-neutral-950 w-full"
+					class="min-h-[32px] h-fit p-1 px-1 md:px-2 bg-neutral-950 w-full"
 					v-text="item.content"
 				/>
 				<div
 					v-else-if="item.loader"
-					class="h-fit min-h-[32px] p-1 px-2 bg-neutral-950 w-full chatbot shadow-md"
+					class="h-fit min-h-[32px] p-1 px-1 md:px-2 bg-neutral-950 w-full chatbot shadow-md"
 				>
 					<div class="flex flex-row h-fit">
 						<div
@@ -144,7 +144,7 @@ const handleClick = async () => {
     <input
         @keyup.enter="handleClick"
         v-model="keyword"
-        class="font-workSans bg-gray1 w-full rounded-none focus:outline-gray-500 p-1 text-black pr-10"
+        class="font-workSans bg-gray1 w-full rounded-none focus:outline-gray-500 p-1 text-black pr-10 shadow-md"
     />
     <button
         class="text-primary font-workSans disabled:opacity-60 disabled:cursor-not-allowed absolute right-2 top-1/2 transform -translate-y-1/2"

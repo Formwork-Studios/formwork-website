@@ -1,5 +1,19 @@
 <template>
-  <header class="fixed top-0 left-0 right-0 z-50">
+  <div>
+    <div class="fixed top-0 right-2 z-[10000] lg:hidden">
+  <button @click="isOpen = !isOpen" class="text-white">
+    <svg v-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 cursor-pointer" fill="none"
+      viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+    <svg v-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 cursor-pointer" fill="none"
+      viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+    </svg>
+  </button>
+</div>
+
+  <header class="fixed top-0 left-0 right-0 z-[1000]">
     <nav
       class="flex items-center justify-between pl-4 lg:pl-10 w-full background-blur backdrop-filter backdrop-blur-sm bg-stone-950 bg-opacity-60 z-50">
       <div>
@@ -29,24 +43,13 @@
         <uiBtn @click="$router.push('/contact')" btnText="START A PROJECT" />
 
       </div>
-      <div class="m-2 lg:hidden flex items-center">
-  <button @click="isOpen = !isOpen" class="text-white z-50">
-    <svg v-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 cursor-pointer z-50" fill="none"
-      viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-    </svg>
-    <svg v-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 cursor-pointer z-50" fill="none"
-      viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-    </svg>
-  </button>
-</div>
+
 
     </nav>
     <div id="nav-menu" 
-  :class="{ 'menu-open': isOpen, 'menu-closed': !isOpen, 'fixed inset-0 bg-gray-900 flex': isOpen }" class="transition-all transition-150 nav-menu opacity-0 bg-stone-950 mt-10 bg-opacity-80"
+  :class="{ 'menu-open': isOpen, 'menu-closed': !isOpen, 'fixed inset-0 bg-gray-900 flex': isOpen }" class="transition-all transition-150 nav-menu opacity-0 bg-stone-950 bg-opacity-80"
  >
-<div  class="bg-stone-950 lg:hidden shadow-md max-w-3/4 w-3/4 ml-auto pt-14 ">
+<div class="bg-stone-950 lg:hidden shadow-md max-w-3/4 w-3/4 ml-auto pt-14 !z-40 ">
   <div class="flex flex-col h-full w-full justify-between items-start space-y-4 text-xl">
     <div class="p-8">
       <nuxt-link to="/" @click="isOpen = !isOpen" class="text-white border-none uppercase block mb-3">Home</nuxt-link>
@@ -74,13 +77,13 @@
 
     <div class="flex flex-row bottom-0 w-full items-center bg-gray-400">
   <a href="https://github.com" class="flex justify-center items-center bg-primary w-1/3 h-16" target="_blank">
-    <i-mdi-github style="color: white" class="turtle-icon text-xl md:text-4xl cursor-pointer" />
+    <i-mdi-github style="color: white" class="turtle-icon text-xl md:text-2xl cursor-pointer" />
   </a>
   <a href="https://pinterest.com" class="flex justify-center items-center bg-secondary w-1/3 h-16" target="_blank">
-    <i-mdi-pinterest style="color: white" class="turtle-icon text-xl md:text-4xl cursor-pointer" />
+    <i-mdi-pinterest style="color: white" class="turtle-icon text-xl md:text-2xl cursor-pointer" />
   </a>
   <a href="https://twitter.com" class="flex justify-center items-center bg-tertiary w-1/3 h-16" target="_blank">
-    <i-mdi-twitter style="color: white" class="turtle-icon text-xl md:text-4xl cursor-pointer" />
+    <i-mdi-twitter style="color: white" class="turtle-icon text-xl md:text-2xl cursor-pointer" />
   </a>
 </div>
 </div>
@@ -88,6 +91,7 @@
 </div>
 
   </header>
+  </div>
 </template>
 
 

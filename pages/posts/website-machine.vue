@@ -122,7 +122,7 @@ definePageMeta({
        
 
 
-        <div class="quote relative py-6">
+        <div class="quote relative pt-3 pb-6">
           <i-mdi:format-quote-open-outline class="absolute left-0 md:-left-10 text-2xl md:text-4xl text-secondary" />
         <div class="mx-10 md:mx-0">the evolution of culture marches with the elimination of ornament from useful objects.
         </div>
@@ -173,7 +173,7 @@ definePageMeta({
         <p>To better understand contemporary Brutalism, we can look at the definition presented on the website <a
             href="https://brutalistwebsites.com" target="_blank"
             class="border-b-2 border-opacity-50 hover:border-opacity-100 border-primary">brutalistwebsites.com</a>: </p>
-        <div class="quote relative py-6">
+        <div class="quote relative pt-3 pb-6">
           <i-mdi:format-quote-open-outline class="absolute left-0 md:-left-10 text-2xl md:text-4xl text-secondary" />
         <div class="mx-10 md:mx-0">In its ruggedness and lack of concern to look comfortable or easy, Brutalism can be
           seen as a reaction by a younger generation to the lightness, optimism, and frivolity of today's web design.

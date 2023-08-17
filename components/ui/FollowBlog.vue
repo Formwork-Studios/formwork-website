@@ -5,7 +5,7 @@
         <div class="p-8 md:p-14 flex flex-col justify-between col-span-5 md:col-span-3 relative"> <!-- Added relative positioning here -->
           <div class="mb-10 md:mb-20">
             <h3 class="text-black text-3xl font-bold inline-block">Let's Stay in Touch</h3>
-            <div class="my-4 text-lg">When you sign-up below we will kindly notify you when the next article drops. </div>
+            <div class="my-4 text-lg">When you sign-up below we will kindly notify you when the next post drops, once or twice a month. We won't send spammy emails and you can unsubscribe anytime.</div>
           </div>
           <div>
             <input type="email" v-model="email" placeholder="Enter your email" class="mb-4 p-3 w-full rounded-none"/>
