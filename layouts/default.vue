@@ -1,5 +1,10 @@
 <script setup>
 import "@/assets/css/main.css";
+const route = useRoute()
+
+useHead({
+  meta: [{ property: 'og:title', content: `Formwork Studios | ${route.meta.title}` }]
+})
 </script>
 <template>
 	<img src="../public/buildings.jpg"

@@ -13,6 +13,11 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
+definePageMeta({
+  title: 'Home',
+  description: 'Formwork Studios works at the nexus of creativity and technology. As a full-service web design and development team, we guide projects with data-driven rigor, helping ideas take shape.'
+})
+
 const bigQuote = ref("We Help Ideas Take Shape");
 const password = ref("");
 const passwordEntered = ref(false);
