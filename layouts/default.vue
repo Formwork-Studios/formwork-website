@@ -3,9 +3,14 @@ import "@/assets/css/main.css";
 const route = useRoute()
 
 useHead({
-  meta: [{ property: 'title', content: `Formwork Studios | ${route.meta.title}`},
-		   {property: 'description', content: route.meta.description }]
+  // as a string,
+  // where `%s` is replaced with the title
+  titleTemplate: 'Formwork Studios | %s',
+
 })
+
+
+
 </script>
 <template>
 	<img src="../public/buildings.jpg"

@@ -13,8 +13,14 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-definePageMeta({
+useHead({
   title: 'Home',
+    meta: [
+    { name: 'description', content: 'Formwork Studios works at the nexus of creativity and technology. As a full-service web design and development team, we guide projects with data-driven rigor, helping ideas take shape.' }
+  ],
+})
+
+definePageMeta({
   description: 'Formwork Studios works at the nexus of creativity and technology. As a full-service web design and development team, we guide projects with data-driven rigor, helping ideas take shape.'
 })
 
