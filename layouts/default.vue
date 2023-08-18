@@ -3,8 +3,8 @@ import "@/assets/css/main.css";
 const route = useRoute()
 
 useHead({
-  meta: [{ name: 'title', content: `Formwork Studios | ${route.meta.title}`,
-		   name: 'description', content: route.meta.description }]
+  meta: [{ property: 'title', content: `Formwork Studios | ${route.meta.title}`,
+		   property: 'description', content: route.meta.description }]
 })
 </script>
 <template>
