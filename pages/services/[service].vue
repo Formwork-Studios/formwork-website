@@ -69,6 +69,8 @@ definePageMeta({
   layout: "service",
 });
 
+
+
 const store = useStore();
 
 const route = useRoute();
@@ -92,6 +94,7 @@ watchEffect(() => {
     return;
   }
 
+
   serviceName.value = service ? service.name : '';
   routeParam.value = service ? service.routeParam : '';
   serviceDescription.value = service ? service.description : '';
@@ -100,6 +103,13 @@ watchEffect(() => {
   const defaultSubService = subServices.value.find(subService => subService.sid === 0);
   serviceImage.value = service ? service.image : '';  // add this line to set the image from the store
   selectedSubService.value = defaultSubService || {};
+
+  useHead({
+  title: serviceName.value,
+  meta: [
+    { name: 'description', content: serviceDescription.value }
+  ],
+})
 
   const pulseAnimationInterval = setInterval(() => {
     contactPulseAnimation.value = 'animate-pulse';

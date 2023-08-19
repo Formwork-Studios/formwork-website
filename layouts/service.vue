@@ -4,3 +4,19 @@
     <slot />
   </div>
 </template>
+
+
+
+<script setup>
+import "@/assets/css/main.css";
+const route = useRoute()
+
+useHead({
+
+  titleTemplate: 'Formwork Studios | %s',
+
+})
+
+
+
+</script>

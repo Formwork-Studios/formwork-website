@@ -1,5 +1,14 @@
 <script lang="ts" setup>
 import routes from '~/.nuxt/routes.mjs'
+
+const route = useRoute()
+
+useHead({
+
+  titleTemplate: 'Formwork Studios | %s',
+
+})
+
 </script>
 
 <template>

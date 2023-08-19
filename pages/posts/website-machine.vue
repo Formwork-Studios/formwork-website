@@ -9,7 +9,12 @@ definePageMeta({
   author: "Michael Synan"
 });
 
-
+useHead({
+  title: 'A Website is a Machine for Information and Delight',
+    meta: [
+    { name: 'description', content: 'Increasingly, we are inundated with imagery aimed at directing our behavior. As available data increases, design patterns are developed and market competition becomes more steep, we risk having this flood of content overwhelm the consumers of digital media.' }
+  ],
+})
 </script>
 
 <template>
