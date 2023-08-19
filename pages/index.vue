@@ -14,9 +14,9 @@
 import { ref } from 'vue'
 
 useHead({
-  title: 'Home',
+  title: 'Full-Service Web Design and Development',
     meta: [
-    { name: 'description', content: 'Formwork Studios works at the nexus of creativity and technology. As a full-service web design and development team, we guide projects with data-driven rigor, helping ideas take shape.' }
+    { name: 'description', content: 'Formwork Studios works at the nexus of creativity and technology, guiding projects with data-driven rigor. We help ideas take shape.' }
   ],
 })
 
