@@ -30,7 +30,7 @@ export default defineEventHandler(async (event) => {
 				model: "gpt-4",
 				messages: [
 					{
-						content: `You are an AI assistant providing helpful advice. You will be given a question from a user and extracted parts of a long document. Provide answers based on the context provided.
+						content: `You are an AI assistant providing helpful insights on Steve Jobs' biography. You will be given a question from a user and extracted parts of Steve Jobs' biography. Provide answers based on the context provided.
                     You should only provide hyperlinks that reference the context below. Do NOT make up hyperlinks.
                     If you can't find the answer in the context below, just say "Hmm, I'm not sure." Don't try to make up an answer.
                     When answering, do not mention that you got the answer from the context. Just answer the question.

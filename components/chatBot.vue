@@ -1,12 +1,28 @@
 <script lang="ts" setup>
 import { Roles } from "~~/lib/Roles";
 const keyword = ref("");
-var generateText = ref("");
+let generateText = ref(" ");
+const message = "Hello there! How can I help you?";
+let firstMessage = ref("");
+let display = ref("inline-block");
+
+var interval = setInterval(() => {
+	if (firstMessage.value.length < message.length) {
+		firstMessage.value = message.slice(0, firstMessage.value.length + 1);
+	} else {
+		clearInterval(interval);
+	}
+}, 25);
+
+setTimeout(() => {
+	display.value = "none";
+}, 25*message.length + 2000);
+
 const chat: Ref<Chat[]> = ref([
 	{
 		id: 1,
 		role: Roles.Assistant,
-		content: "Hello there! How can I help you?",
+		content: firstMessage.value,
 		timestamp: Date.now(),
 		loader: false,
 	},
@@ -44,11 +60,11 @@ const handleClick = async () => {
 	const reader = completion.body.getReader();
 	const decoder = new TextDecoder("utf-8");
 	const read = async (): Promise<void> => {
-		console.log(generateText.value);
+		// console.log(generateText.value);
 
 		const { done, value } = await reader.read();
 		if (done) {
-			console.log("release locked");
+			// console.log("release locked");
 			chat.value[chat.value.length - 1].loader = false;
 			chat.value[chat.value.length - 1].content = generateText.value;
 			generateText.value = "";
@@ -56,11 +72,11 @@ const handleClick = async () => {
 		}
 
 		const chunk = decoder.decode(value);
-		console.log(chunk);
+		// console.log(chunk);
 		const jsonData = chunk
 			.split("data: ")
 			.map((val) => {
-				console.log("val: ", val);
+				// console.log("val: ", val);
 
 				return val.replaceAll("\n", "");
 			})
@@ -103,30 +119,35 @@ const handleClick = async () => {
             <div class=" bg-white px-4 py-1 box-content sticky top-14 flex flex-col md:flex-row md:items-end r-0">
                 <p class="font-workSans text-black font-black text-4xl">CHATBOT</p>
                 <p class="font-workSans text-black text-sm ml-2 mb-1">
-                    Powered by GPT-3.5 (using the recent <a class="text-secondary" href="https://stevejobsarchive.com/book">Steve Jobs Book</a> as knowledge base)
+                    Powered by GPT-4 (using the recent <a class="text-secondary" href="https://stevejobsarchive.com/book">Steve Jobs Book</a> as knowledge base)
                 </p>
             </div>
             <div id="chatarea" class="flex-grow w-full flex flex-col justify-end p-4 md:p-6">
          
 		<div class="flex flex-col">
 			<div
-				v-for="item in chat"
+				v-for="item, i in chat"
 				:key="item.id"
 				class="flex flex-row font-workSans"
 			>
 				<div
-					v-if="item.role === 'assistant' && !item.loader"
-					class="min-h-[32px] h-fit p-1 px-1 md:px-2 bg-neutral-950 w-full"
+					v-if="i === 0"
+					class="min-h-[32px] h-fit p-1 px-1 md:px-2 bg-neutral-950 w-full first-message relative"
+					v-text="firstMessage"
+					:style="{'--display': display}"
+				/>
+				<div
+					v-else-if="item.role === 'assistant' && !item.loader"
+					class="min-h-[32px] h-fit p-1 px-1 md:px-2 bg-neutral-950 w-full name"
 					v-text="item.content"
 				/>
 				<div
 					v-else-if="item.loader"
-					class="h-fit min-h-[32px] p-1 px-1 md:px-2 bg-neutral-950 w-full chatbot shadow-md"
+					class="h-fit min-h-[32px] p-1 px-1 md:px-2 bg-neutral-950 w-full chatbot shadow-md "
 				>
 					<div class="flex flex-row h-fit">
 						<div
-							class="output relative"
-							:class="{ emptyState: generateText === '' }"
+							class="output relative name"
 						>
 							{{ generateText }}
 						</div>
@@ -162,16 +183,48 @@ const handleClick = async () => {
 </template>
 
 <style scoped>
-.output::after {
+.first-message::after {
+	content: "";
+	display: var(--display);
+	width: 0.5rem;
+	height: 1rem;
+	background-color: #6b7280;
+	margin-left: 4px;
+	margin-top: auto;
+	margin-bottom: auto;
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
+	animation: blink 0.8s step-start infinite;
+
+}
+@keyframes blink {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+.output::after {
+	position: absolute;
+	bottom: 0;
+	transform: translateY(-25%);
 	content: "";
 	display: inline-block;
 	width: 0.5rem;
 	height: 1rem;
 	background-color: #6b7280;
 	margin-left: 4px;
+	animation: blink 0.8s step-start infinite;
+}
+
+.name::before {
+	content: "Chatbot: ";
+	color: #a0a0a0;
 }
 
 .emptyState::after {
@@ -184,9 +237,9 @@ const handleClick = async () => {
     /* Add other styles as needed */
 }
 
-.chatbot::before {
+/* .chatbot::before {
     content: "Chatbot: ";
     color: #a0a0a0;
-    /* Add other styles as needed */
-}
+    /* Add other styles as needed * /
+} */
 </style>
