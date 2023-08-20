@@ -49,7 +49,7 @@ const services = ref([
 		link: "/services/branding-identity",
 	},
 	{
-		title: "E-commerce Solutions",
+		title: "E-commerce",
 		description:
 			"We will leverage the latest automation systems to help you save time and money.",
 		link: "/services/e-commerce-solutions",
