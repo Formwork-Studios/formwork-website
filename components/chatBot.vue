@@ -132,7 +132,7 @@ const handleClick = async () => {
 			>
 				<div
 					v-if="i === 0"
-					class="min-h-[32px] h-fit p-1 px-1 md:px-2 bg-neutral-950 w-full first-message relative"
+					class="min-h-[32px] h-fit p-1 px-1 md:px-2 bg-neutral-950 w-full first-message relative name"
 					v-text="firstMessage"
 					:style="{'--display': display}"
 				/>
