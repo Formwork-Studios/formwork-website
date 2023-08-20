@@ -13,6 +13,10 @@
   
   <script lang="ts" setup>
   import { useTeamStore } from '/store/team.ts'; // Importing useTeamStore from team.ts
+
+
+definePageMeta({
+  layout: "nofooter"})
   
   const { getTeamMemberBySlug } = useTeamStore(); // Using useTeamStore function
   const route = useRoute();
