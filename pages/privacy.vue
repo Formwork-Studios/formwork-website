@@ -1,9 +1,9 @@
 <template>
-  <div class="flex items-center justify-center h-screen text-lg md:text-2xl text-white max-w-[40ch] mx-auto px-6">
+  <div class="flex items-center justify-center h-screen  text-white max-w-[40ch] mx-auto px-6 leading-7 tracking-wide">
     <div class="inline-block"><div id="privacyPolicy">
-  <h1 class="text-4xl mb-6 font-bold">PRIVACY POLICY</h1>
+  <h1 class="text-3xl md:text-4xl mb-6 font-bold">PRIVACY POLICY</h1>
   
-  <ul class="mb-6 text-xl">
+  <ul class="mb-6">
     <li>
       <strong>No Cookies:</strong> Unlike many, our site doesn't use cookies. Your browsing here leaves no digital crumbs.
     </li>
@@ -15,7 +15,7 @@
     </li>
   </ul>
 
-  <p class="text-xl">That's it! No cookies, no tracking, and respect for your email privacy. Welcome to the unicorn of privacy policies, where your privacy matters to us.</p>
+  <p >That's it! No cookies, no tracking, and respect for your email privacy. Welcome to the unicorn of privacy policies, where your privacy matters to us.</p>
 </div>
 <div class="mt-8">
   <a @click="goBack" class="text-secondary text-lg group mt-8 cursor-pointer">Back</a>      </div>

@@ -30,6 +30,12 @@
   max-width: none;
   width: 60%;
 }
+
+@media (max-width: 768px) {
+  .custom-wide-container {
+    width: 90%;
+  }
+}
 </style>
 
 <script setup>
