@@ -7,7 +7,7 @@
       <nuxt-link to="/posts/website-machine">
         <h2 class="font-bold text-black text-4xl md:text-5xl uppercase blogitem opacity-0">A website is a machine for information and delight</h2>
       </nuxt-link>
-      <div class="text-black-300 leading-loose text-lg blogitem opacity-0">
+      <div class="text-black-300 leading-loose tracking-wide text-lg blogitem opacity-0">
         <div>
           <p class="py-4">In the early 20th century, Modernism became the dominant architectural movement in Europe.
           Inspired by the Modernist principle of "form follows

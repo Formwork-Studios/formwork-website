@@ -28,7 +28,7 @@
               :class="isDropdownOpen ? 'rotate-180' : ''"
               class="inline transform transition-transform duration-200 ease-in-out group-hover:translate-x-1" />
           </div>
-          <div v-show="isDropdownOpen" class="absolute top-full w-96 bg-stone-950 text-white border-white border-2 shadow-md right-0">
+          <div v-show="isDropdownOpen" class="absolute top-10 w-96 bg-stone-950 text-white border-white border-2 shadow-md right-0">
     <nuxt-link 
         v-for="item in serviceItems" 
         :key="item.id" 
@@ -40,8 +40,10 @@
 </div>
 
         </div>
-        <uiBtn class="h-full bg-primary -my-2 py-2" @click="$router.push('/contact')" btnText="START A PROJECT" />
-
+        <div  @click="$router.push('/contact')" class="!h-full -my-2 px-4 py-3 tracking-wider bg-primary bg-opacity-50 hover:bg-opacity-100 hover:text-stone-950 transition-color duration-200 text-stone-100 cursor-pointer">
+          START A PROJECT
+    
+  </div>
       </div>
 
 
@@ -49,7 +51,7 @@
     <div id="nav-menu" 
   :class="{ 'menu-open': isOpen, 'menu-closed': !isOpen, 'fixed inset-0 bg-gray-900 flex': isOpen }" class="transition-all transition-150 nav-menu opacity-0 bg-stone-950 bg-opacity-80"
  >
-<div class="bg-stone-950 lg:hidden shadow-md max-w-3/4 w-3/4 ml-auto pt-14 !z-40 ">
+<div class="bg-stone-950 lg:hidden shadow-md max-w-3/4 w-3/4 ml-auto pt-12 !z-40 ">
   <div class="flex flex-col h-full w-full justify-between items-start space-y-4 text-xl">
     <div class="p-8">
       <nuxt-link to="/" @click="isOpen = !isOpen" class="text-white border-none uppercase block mb-3">Home</nuxt-link>
