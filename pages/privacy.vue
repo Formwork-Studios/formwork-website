@@ -27,6 +27,12 @@
 <script setup>
 import { useRouter } from 'vue-router'
 
+
+definePageMeta({
+  layout: "nofooter"})
+
+
+
 const router = useRouter()
 
 const goBack = () => {

@@ -6,18 +6,11 @@ export default defineNuxtConfig({
 	target: "static",
 	ssr: false,
 	
+	
 
 	css: ['~/assets/css/main.css'],
 
-		router: {
-		  extendRoutes(routes, resolve) {
-			routes.push({
-			  path: '/services',
-			  redirect: '/#services'
-			});
-		  },
-		},
-	  
+
 	modules: [
 		'@nuxtjs/tailwindcss',
 		'@pinia/nuxt',
@@ -33,6 +26,7 @@ export default defineNuxtConfig({
 		  src: '~/plugins/vue3-particles.ts',
 		  mode: 'client',
 		},
+		
 	  ],
 	vite: {
 		plugins: [
