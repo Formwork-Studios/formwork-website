@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="fixed top-0 right-2 z-[10000] lg:hidden">
-  <button @click="isOpen = !isOpen" class="text-white">
+  <button @click="isOpen = !isOpen" class="text-white py-2">
     <svg v-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 cursor-pointer" fill="none"
       viewBox="0 0 24 24" stroke="currentColor">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -15,11 +15,11 @@
 
   <header class="fixed top-0 left-0 right-0 z-[1000]">
     <nav
-      class="flex items-center justify-between pl-4 lg:pl-10 w-full background-blur backdrop-filter backdrop-blur-sm bg-stone-950 bg-opacity-60 z-50">
+      class="py-2 flex items-center justify-between pl-4 lg:pl-10 w-full background-blur backdrop-filter backdrop-blur-sm bg-stone-950 bg-opacity-60 z-50">
       <div>
         <uiBranding />
       </div>
-      <div class="hidden lg:flex items-center space-x-8 relative tracking-wide">
+      <div class="hidden lg:flex items-center space-x-8 relative tracking-wide h-full">
         <nuxt-link to="/" class="text-white border-none uppercase">Home</nuxt-link>
         <nuxt-link to="/posts/" class="text-white border-none uppercase">Blog</nuxt-link>
         <div class="flex flex-col">
@@ -40,7 +40,7 @@
 </div>
 
         </div>
-        <uiBtn @click="$router.push('/contact')" btnText="START A PROJECT" />
+        <uiBtn class="h-full bg-primary -my-2 py-2" @click="$router.push('/contact')" btnText="START A PROJECT" />
 
       </div>
 
