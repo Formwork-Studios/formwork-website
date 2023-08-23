@@ -1,16 +1,12 @@
 <template>
   <div>
     <div class="fixed top-0 right-2 z-[10000] lg:hidden">
-  <button @click="isOpen = !isOpen" class="text-white py-2">
-    <svg v-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 cursor-pointer" fill="none"
-      viewBox="0 0 24 24" stroke="currentColor">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-    </svg>
-    <svg v-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 cursor-pointer" fill="none"
-      viewBox="0 0 24 24" stroke="currentColor">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-    </svg>
-  </button>
+      <button @click="isOpen = !isOpen" class="text-white py-2 cursor-pointer">
+  <div class="menu-icon" :class="{ 'menu-open': isOpen }">
+    <div class="menu-line top" style="top: 6px;"></div>
+    <div class="menu-line bottom short" style="top: 12px;"></div>
+  </div>
+</button>
 </div>
 
   <header class="fixed top-0 left-0 right-0 z-[1000]">
@@ -151,6 +147,40 @@ body {
   display: none;
 }
 
+.menu-icon {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    transition: all 0.3s ease;
+  }
 
+  .menu-icon {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+
+  .menu-line {
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    position: absolute;
+    transition: all 0.3s ease;
+  }
+
+  .menu-line.short {
+    width: 66%;
+  }
+
+  .menu-open .menu-line.top {
+    transform: translateY(0px) rotate(-45deg);
+    width: 100%;
+  }
+
+  .menu-open .menu-line.bottom {
+    transform: translateY(-6px) rotate(45deg);
+    width: 100%;
+  }
 </style>
 
