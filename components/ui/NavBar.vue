@@ -1,10 +1,10 @@
 <template>
   <div>
     <div class="fixed top-0 right-2 z-[10000] lg:hidden">
-      <button @click="isOpen = !isOpen" class="text-white py-2 cursor-pointer">
+      <button @click="isOpen = !isOpen" class="text-white py-4 cursor-pointer">
   <div class="menu-icon" :class="{ 'menu-open': isOpen }">
-    <div class="menu-line top" style="top: 6px;"></div>
-    <div class="menu-line bottom short" style="top: 12px;"></div>
+    <div class="menu-line top" style="top: 4px; right: 5px;"></div>
+    <div class="menu-line bottom short" style="top: 10px; right: 5px;"></div>
   </div>
 </button>
 </div>
@@ -148,13 +148,7 @@ body {
 }
 
 .menu-icon {
-    width: 24px;
-    height: 24px;
-    position: relative;
-    transition: all 0.3s ease;
-  }
 
-  .menu-icon {
     width: 24px;
     height: 24px;
     position: relative;
@@ -163,7 +157,7 @@ body {
 
   .menu-line {
     width: 100%;
-    height: 2px;
+    height: 3px;
     background-color: currentColor;
     position: absolute;
     transition: all 0.3s ease;
