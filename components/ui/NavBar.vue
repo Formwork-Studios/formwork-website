@@ -148,12 +148,14 @@ body {
 }
 
 .menu-icon {
-
+margin-top: -5px;
     width: 24px;
     height: 24px;
     position: relative;
     transition: all 0.3s ease;
   }
+
+  .menu-icon.menu-open {margin-top: 2px !important;}
 
   .menu-line {
     width: 100%;
