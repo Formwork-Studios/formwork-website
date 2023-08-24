@@ -4,7 +4,7 @@
       <button @click="isOpen = !isOpen" class="text-white py-4 cursor-pointer">
   <div class="menu-icon" :class="{ 'menu-open': isOpen }">
     <div class="menu-line top" style="top: 4px; right: 5px;"></div>
-    <div class="menu-line bottom short" style="top: 10px; right: 5px;"></div>
+    <div class="menu-line bottom short" style="top: 12px; right: 5px;"></div>
   </div>
 </button>
 </div>
@@ -168,7 +168,7 @@ body {
   }
 
   .menu-open .menu-line.top {
-    transform: translateY(0px) rotate(-45deg);
+    transform: translateY(1px) rotate(-45deg);
     width: 100%;
   }
 
