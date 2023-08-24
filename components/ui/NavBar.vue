@@ -168,7 +168,7 @@ body {
   }
 
   .menu-open .menu-line.top {
-    transform: translateY(0px) rotate(-45deg);
+    transform: translateY(2px) rotate(-45deg);
     width: 100%;
   }
 
