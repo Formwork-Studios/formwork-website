@@ -14,7 +14,7 @@
       <div class="flex flex-col items-start justify-center">
         <h1 class="text-3xl mb-10 font-bold">Our Team</h1>
         <div class="flex flex-col sm:flex-row items-start justify-start space-y-4 sm:space-y-0 sm:space-x-4">
-          <div class="flex flex-col items-start" v-for="member in team" :key="member.id">
+          <div class="flex flex-col items-start pb-10 md:pb-0" v-for="member in team" :key="member.id">
             <img :src="member.image" alt="Team Member" class="w-full sm:w-64 h-auto" />
             <NuxtLink :to="member.link" class="text-left mt-4 font-bold tracking-wide">{{ member.name }}</NuxtLink>
             <NuxtLink :to="member.link" class="text-left text-stone-500 mt-0">{{ member.role }}</NuxtLink>
