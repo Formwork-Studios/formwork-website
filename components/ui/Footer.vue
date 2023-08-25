@@ -91,6 +91,7 @@ export default {
 				{
 					title: "About",
 					links: [
+					{ name: "Team", url: "/team" },
 						{ name: "Contact", url: "/contact" },
 						{ name: "Privacy", url: "/privacy" },
 						{ name: "Blog", url: "/posts" },
