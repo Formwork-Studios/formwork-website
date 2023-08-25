@@ -4,7 +4,7 @@ definePageMeta({
   layout: "post",
   title: "A Website is a Machine for Information and Delight",
   blurb: "In the early 20th century, Modernism became the dominant architectural movement in Europe. Inspired by the Modernist principle of 'form follows function,' architects sought to create buildings that embodied the ideals of utilitarianism, egalitarianism, and honesty.",
-  date: "2021-10-10",
+  date: "2023-08-10",
   status: "published",
   author: "Michael Synan"
 });

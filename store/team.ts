@@ -20,7 +20,7 @@ export const useTeamStore = defineStore("team", {
         id: 2,
         name: 'Michael Synan',
         image: '/michael-synan.jpg',
-        bio: 'Bio for Michael Synan',
+        bio: "I'm Michael, a front-end engineer and UI/UX designer, long-time Linux user, philosophy nerd, and open-source advocate. My Master's degree in Urban Affairs and Bachelor's degree in Psychology have helped me understand the human side of technology.",
         slug: 'michael-synan',
         links: {
           github: 'https://github.com/michaelsynan',

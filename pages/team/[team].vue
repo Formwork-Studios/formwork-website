@@ -3,7 +3,7 @@
     <div class="w-full md:w-1/2 h-full flex-shrink-0">
       <img :src="teamMember.image" alt="Team Member" class="h-full w-full object-cover" />
     </div>
-    <div class="flex flex-col justify-center w-full md:w-1/2 text-left p-8">
+    <div class="flex flex-col justify-center w-full md:w-1/3 text-left p-8">
       <h1 class="mt-2 font-bold text-2xl md:text-4xl uppercase">{{ teamMember.name }}</h1>
       <p class="mt-2">{{ teamMember.bio }}</p>
       <div class="mt-2">
