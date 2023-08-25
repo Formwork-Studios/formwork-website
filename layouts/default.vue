@@ -13,7 +13,7 @@ useHead({
 
 </script>
 <template>
-	<img src="../public/buildings.jpg"
+	<img src="../public/buildings.webp"
 		class="fixed top-0 left-0 min-w-full max-w-full min-h-full max-h-full object-cover" />
 	<div class="flex flex-col min-h-screen w-screen">
 		<uiNavBar />

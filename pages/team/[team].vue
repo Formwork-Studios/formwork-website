@@ -6,7 +6,7 @@
     <div class="flex flex-col justify-center w-full md:w-1/3 text-left p-8">
       <h1 class="mt-2 font-bold text-2xl md:text-4xl uppercase">{{ teamMember.name }}</h1>
       <p class="mt-2">{{ teamMember.bio }}</p>
-      <div class="mt-2">
+      <div class="mt-4">
         <a :href="teamMember.links.github" target="_blank" class="mr-2">GitHub</a>|
         <a :href="teamMember.links.personalSite" target="_blank" class="mr-2">Personal Site</a>|
         <a :href="teamMember.links.mastodon" target="_blank">Mastodon</a>

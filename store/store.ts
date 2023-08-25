@@ -98,7 +98,7 @@ export const useStore = defineStore("store", {
         id: 3,
         name: "Web Development",
         routeParam: "web-development",
-        image: "/birds-flying.jpg",
+        image: "/birds-flying.webp",
         imageAria: "Web Design",
         description: "Transforming ideas into functional and scalable web solutions",
         details: "From responsive designs to dynamic user experiences, we focus on building websites that perform.",
