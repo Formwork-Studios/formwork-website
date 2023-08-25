@@ -17,7 +17,7 @@
           </div>
         </div>
         <div class="col-span-5 md:col-span-2 order-first md:order-none hidden md:flex">
-          <img src="/birds2.jpg" class="block object-cover h-full">
+          <img src="/birds2.webp" class="block object-cover h-full">
         </div>
       </div>
     </div>

@@ -50,7 +50,7 @@ export const useStore = defineStore("store", {
         id: 2,
         name: "Web Design & UI/UX",
         routeParam: "web-design-and-ui-ux",
-        image: "/subwaycompressed.png",
+        image: "/subwaycompressed.webp",
         imageAria: "Web Design",
         description: "We are a web design company.",
         details: "these are some details",

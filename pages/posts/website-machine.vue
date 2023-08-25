@@ -172,7 +172,7 @@ useHead({
             a</a>', both of which will be explored in a future post.
 
         </p>
-        <img class="w-full h-64 object-cover pt-10" src="/brutalistwebsites.jpg" alt="Blog post header image">
+        <img class="w-full h-64 object-cover pt-10" src="/brutalistwebsites.webp" alt="Blog post header image">
         <span class="pt-1.5 pb-7 inline-block text-white-800 text-base"> Various brutalist websites displayed on <a
             href="https://brutalistwebsites.com">brutalistwebsites.com</a></span>
         <p>To better understand contemporary Brutalism, we can look at the definition presented on the website <a
@@ -195,7 +195,7 @@ useHead({
         <p>Despite the difficulties of creating meaning in world saturated with fleeting imagery, designers might desire to pierce the surface-level aesthetic to create websites in a more
           intentional way in order to hold true to the principle of "form follows function". </p>
         <div class="blog-image">
-          <img class="w-full h-64 object-cover" src="/exmachina.jpg" alt="Ex Machina Image">
+          <img class="w-full h-64 object-cover" src="/exmachina.webp" alt="Ex Machina Image">
           <span class="pt-1.5 inline-block text-white-800 text-base">"Ex Machina" home — AI meets Brutalism in
             film.</span>
         </div>

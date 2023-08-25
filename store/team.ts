@@ -7,7 +7,7 @@ export const useTeamStore = defineStore("team", {
       {
         id: 1,
         name: 'Abderrahmane Hana',
-        image: '/abderrahmane-hana.jpg',
+        image: '/abderrahmane-hana.webp',
         bio: 'Bio for Abderrahmane Hana',
         slug: 'abderrahmane-hana',
         links: {
@@ -19,7 +19,7 @@ export const useTeamStore = defineStore("team", {
       {
         id: 2,
         name: 'Michael Synan',
-        image: '/michael-synan.jpg',
+        image: '/michael-synan.webp',
         bio: "I'm Michael, a front-end engineer and UI/UX designer, long-time Linux user, philosophy nerd, and open-source advocate. My Master's degree in Urban Affairs and Bachelor's degree in Psychology have helped me understand the human side of technology.",
         slug: 'michael-synan',
         links: {
