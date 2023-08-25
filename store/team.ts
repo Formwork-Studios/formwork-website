@@ -23,9 +23,9 @@ export const useTeamStore = defineStore("team", {
         bio: 'Bio for Michael Synan',
         slug: 'michael-synan',
         links: {
-          github: 'https://github.com/michael-synan',
+          github: 'https://github.com/michaelsynan',
           personalSite: 'https://www.michaelsynan.com',
-          mastodon: 'https://mastodon.social/@michael-synan',
+          mastodon: 'https://elk.zone/mstdn.social/@letsbecomehuman',
         },
       },
       // Add more team members as needed

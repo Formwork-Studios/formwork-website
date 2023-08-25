@@ -1,26 +1,27 @@
 <template>
-    <div class="flex flex-col items-center justify-center h-screen text-white" v-if="teamMember">
-      <img :src="teamMember.image" alt="Team Member" class="w-full sm:w-64 h-auto" />
-      <h1 class="text-center mt-2 font-bold text-2xl">{{ teamMember.name }}</h1>
-      <p class="text-center mt-2">{{ teamMember.bio }}</p>
+  <div class="flex flex-col md:flex-row items-stretch h-full md:h-screen h-min-screen text-white" v-if="teamMember">
+    <div class="w-full md:w-1/2 h-full flex-shrink-0">
+      <img :src="teamMember.image" alt="Team Member" class="h-full w-full object-cover" />
+    </div>
+    <div class="flex flex-col justify-center w-full md:w-1/2 text-left p-8">
+      <h1 class="mt-2 font-bold text-2xl md:text-4xl uppercase">{{ teamMember.name }}</h1>
+      <p class="mt-2">{{ teamMember.bio }}</p>
       <div class="mt-2">
-        <a :href="teamMember.links.github" target="_blank" class="mr-2">GitHub</a>
-        <a :href="teamMember.links.personalSite" target="_blank" class="mr-2">Personal Site</a>
+        <a :href="teamMember.links.github" target="_blank" class="mr-2">GitHub</a>|
+        <a :href="teamMember.links.personalSite" target="_blank" class="mr-2">Personal Site</a>|
         <a :href="teamMember.links.mastodon" target="_blank">Mastodon</a>
       </div>
     </div>
-  </template>
-  
-  <script lang="ts" setup>
-  import { useTeamStore } from '/store/team.ts'; // Importing useTeamStore from team.ts
+  </div>
+</template>
 
-
+<script lang="ts" setup>
+import { useTeamStore } from '/store/team.ts';
 definePageMeta({
-  layout: "nofooter"})
-  
-  const { getTeamMemberBySlug } = useTeamStore(); // Using useTeamStore function
-  const route = useRoute();
-  const slug = route.params.team as string;
-  const teamMember = getTeamMemberBySlug(slug);
-  </script>
-  
+  layout: "nofooter"
+});
+const { getTeamMemberBySlug } = useTeamStore();
+const route = useRoute();
+const slug = route.params.team as string;
+const teamMember = getTeamMemberBySlug(slug);
+</script>

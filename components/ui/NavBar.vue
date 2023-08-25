@@ -45,9 +45,11 @@
 
     </nav>
     <div id="nav-menu" 
-  :class="{ 'menu-open': isOpen, 'menu-closed': !isOpen, 'fixed inset-0 bg-gray-900 flex': isOpen }" class="transition-all transition-150 nav-menu opacity-0 bg-stone-950 bg-opacity-80"
- >
-<div class="bg-stone-950 lg:hidden shadow-md max-w-3/4 w-3/4 ml-auto pt-12 !z-40 ">
+       :class="{ 'menu-open': isOpen }" 
+       class="h-full transition-all duration-300 ease-in-out fixed inset-0 bg-stone-950 bg-opacity-80 opacity-0 transform translate-x-full lg:hidden z-40"
+  >
+    <div class="h-full bg-stone-950 shadow-md max-w-3/4 w-3/4 ml-auto pt-12 !z-40 ">
+
   <div class="flex flex-col h-full w-full justify-between items-start space-y-4 text-xl">
     <div class="p-8">
       <nuxt-link to="/" @click="isOpen = !isOpen" class="text-white border-none uppercase block mb-3">Home</nuxt-link>
