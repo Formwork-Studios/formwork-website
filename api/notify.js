@@ -8,18 +8,18 @@ module.exports = async (req, res) => {
     .from("blogFollows")
     .on("INSERT", async (payload) => {
       const transporter = nodemailer.createTransport({
-        host: process.env.SMTP_HOST,
-        port: process.env.SMTP_PORT,
+        host: 'mail.privateemail.com',
+        port: 465,
         secure: true, // true for 465, false for other ports
         auth: {
-          user: process.env.EMAIL,
+          user: 'notifications@formworkstudios.com',
           pass: process.env.PASSWORD,
         },
       });
 
       const mailOptions = {
-        from: process.env.EMAIL,
-        to: "hello@formworkstudios.com",
+        from: 'notifications@formworkstudios.com',
+        to: 'hello@formworkstudios.com',
         subject: "New Signup",
         text: `New user: ${JSON.stringify(payload.new)}`,
       };
