@@ -18,9 +18,11 @@
   },
   "dependencies": {
     "@pinia/nuxt": "^0.4.11",
+    "@supabase/supabase-js": "^2.33.1",
     "@vueuse/nuxt": "^10.2.1",
     "@vueuse/router": "^10.2.1",
     "dotenv": "^16.1.4",
+    "nodemailer": "^6.9.4",
     "nuxt-route-meta": "github:dword-design/nuxt-route-meta#renovate/nuxt-3.x",
     "openai": "^3.2.1",
     "particles.vue3": "^2.11.0",
