@@ -42,5 +42,10 @@ export default defineNuxtConfig({
 		OPENAI_API_KEY: process.env.OPENAI_API_KEY,
 		PINECONE_API_KEY: process.env.PINECONE_API_KEY,
 		PINECONE_BASE_URL: process.env.PINECONE_BASE_URL,
+		PASSWORD: process.env.PASSWORD,
+		EMAIL: process.env.EMAIL,
+		SUPABASE_URL: process.env.SUPABASE_URL,
+		SUPABASE_SERVICE_KEY: process.env.SUPABASE_SERVICE_KEY,
+		
 	}
 });
