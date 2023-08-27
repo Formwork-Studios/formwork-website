@@ -55,6 +55,78 @@
 
 
 <script setup>
+import { ref, onMounted } from 'vue'
+
+
+const consent = ref(false)
+const name = ref('')
+const email = ref('')
+const message = ref('')
+const form = ref('')
+const isLoading = ref(false)
+const formFeedback = ref(null) 
+const client = useSupabaseClient()
+const success = ref(true); 
+
+const submitForm = async () => {
+  isLoading.value = true;
+  formFeedback.value = null; // Reset feedback message
+
+  // Email validation
+  const regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+  if (email.value && !regex.test(email.value)) {
+    formFeedback.value = "invalidEmail";
+    success.value = false; 
+    isLoading.value = false;
+    return;
+  }
+
+  // Submit form data to Supabase
+  const { error } = await client
+    .from('blogFollows')
+    .insert([
+      { 
+        email: email.value, 
+        topic: 'home',
+        name: name.value,
+        message: message.value,
+        consent: consent.value 
+      },
+    ]);
+
+  if (error) {
+    console.error("Error submitting form:", error.message);
+    formFeedback.value = "error"; // Update feedback message
+    success.value = false; 
+  } else {
+    console.log("Form submitted successfully!");
+    formFeedback.value = "success"; // Update feedback message
+    success.value = true; 
+  }
+
+  isLoading.value = false;
+}
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // add 'animate-delay' class to the target
+          entry.target.classList.add('animate-delay');
+        }
+      });
+    },
+    {
+      threshold: 0.5,
+    }
+  );
+
+  // Observe the form element
+  if (form.value) {
+    observer.observe(form.value);
+  }
+});
 
 
 </script>
