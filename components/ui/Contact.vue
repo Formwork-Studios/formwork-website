@@ -56,7 +56,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-
+import { useNuxtApp } from '#app'
 
 const consent = ref(false)
 const name = ref('')
@@ -65,47 +65,58 @@ const message = ref('')
 const form = ref('')
 const isLoading = ref(false)
 const formFeedback = ref(null) 
-const client = useSupabaseClient()
+const nuxtApp = useNuxtApp()
+const client = nuxtApp.$supabaseClient
+
 const success = ref(true); 
 
 const submitForm = async () => {
   isLoading.value = true;
-  formFeedback.value = null; // Reset feedback message
+  formFeedback.value = null;
 
-  // Email validation
   const regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
   if (email.value && !regex.test(email.value)) {
     formFeedback.value = "invalidEmail";
-    success.value = false; 
+    success.value = false;
     isLoading.value = false;
     return;
   }
 
-  // Submit form data to Supabase
-  const { error } = await client
-    .from('blogFollows')
-    .insert([
-      { 
-        email: email.value, 
-        topic: 'home',
-        name: name.value,
-        message: message.value,
-        consent: consent.value 
-      },
-    ]);
+  const payload = {
+    email: email.value,
+    topic: 'home',
+    name: name.value,
+    message: message.value,
+    consent: consent.value
+  };
+
+  const { error } = await client.from('blogFollows').insert([payload]);
 
   if (error) {
-    console.error("Error submitting form:", error.message);
-    formFeedback.value = "error"; // Update feedback message
-    success.value = false; 
+    formFeedback.value = "error";
+    success.value = false;
   } else {
-    console.log("Form submitted successfully!");
-    formFeedback.value = "success"; // Update feedback message
-    success.value = true; 
+    formFeedback.value = "success";
+    success.value = true;
+
+    const response = await fetch('/api/sendEmail', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(payload),
+    });
+
+    if (response.status !== 200) {
+      console.error(`Failed to send email: ${response.status}`);
+      formFeedback.value = "error";
+      success.value = false;
+    }
   }
 
   isLoading.value = false;
-}
+};
+
 
 onMounted(() => {
   const observer = new IntersectionObserver(

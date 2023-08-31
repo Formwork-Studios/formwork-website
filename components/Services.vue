@@ -122,7 +122,7 @@ onMounted(() => {
           :class="{
             dim:
               hoveredService !== '' &&
-              service.title !== hoveredServicte,
+              service.title !== hoveredService,
           }"
         >
           <h2

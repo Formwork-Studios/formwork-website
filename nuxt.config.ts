@@ -21,6 +21,7 @@ export default defineNuxtConfig({
 		  src: '~/plugins/vue3-particles.ts',
 		  mode: 'client',
 		},
+		'~/plugins/supabase-actions.ts'
 		
 	  ],
 	vite: {
@@ -31,6 +32,7 @@ export default defineNuxtConfig({
 			Icons(),
 		],
 		optimizeDeps: { exclude: ["fsevents"] },
+
 	},
 	postcss: {
 		plugins: {
