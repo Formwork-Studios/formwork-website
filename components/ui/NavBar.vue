@@ -51,7 +51,7 @@
             <div class="p-8">
               <nuxt-link to="/" @click="isOpen = !isOpen" class="text-white border-none uppercase block mb-3 menulink">Home</nuxt-link>
               <nuxt-link to="/posts/" class="text-white border-none uppercase block mb-3 menulink">Blog</nuxt-link>
-              <div @click="isDropdownOpen = !isDropdownOpen" class="cursor-pointer text-white border-none uppercase block mb-3 menulink">Services
+              <div @click.stop="isDropdownOpen = !isDropdownOpen" class="cursor-pointer text-white border-none uppercase block mb-3 menulink">Services
                 <i-mdi-chevron-down
                   :class="isDropdownOpen ? 'rotate-180' : ''"
                   class="inline transform transition-transform duration-200 ease-in-out group-hover:translate-x-1" />

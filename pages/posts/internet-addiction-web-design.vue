@@ -46,8 +46,14 @@ useHead({
           
           
         </p>
-    
-  
+        <p>For Lacan object petit a can represent the placeholder for a desire which cannot be satisfied. This desire is sustained through the cycle of lack
+          and pursuit. Each time someone approaches the object of desire it moves slightly out of grasp keeping the desire wanting. 
+          This effect is particularily pronounced with technology and social media - indeed, the appeal of the ideas come directly from it. 
+        </p>
+    <p>
+      Unattainable object petit a can be also looked at from concerpts described in the buddhas fire sermon.
+    </p>
+  <p>From a neuroscience perspective you can also understand object petit a</p>
 
 
 
