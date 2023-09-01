@@ -1,0 +1,145 @@
+[33mfb5c6ec[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m Setting up getting email notifications
+[33mcaca4a5[m Setting up getting email notifications
+[33m48c3b31[m Setting up getting email notifications
+[33m8176f7a[m Setting up getting email notifications
+[33m16a729c[m Setting up getting email notifications
+[33m83e5f10[m Setting up getting email notifications
+[33m6aecc08[m Setting up getting email notifications
+[33m73f31d3[m Setting up getting email notifications
+[33m4102b29[m Cleaning up
+[33mfc99ea7[m Cleaning up
+[33m262df33[m updates
+[33m5293525[m updates
+[33ma350290[m a style update
+[33m78cf67e[m updated nav bar and team section
+[33ma8c09aa[m updated nav bar and team section
+[33m5ac10d5[m fixed nav bar button
+[33m15d7b6a[m fixed nav bar button
+[33m95452fb[m fixed nav bar button
+[33m98eeb4d[m fixed nav bar button
+[33mc55fd9c[m fixed nav bar button
+[33made0e93[m fixed button
+[33m7ece0d8[m Some styles
+[33m76f91e9[m Some styles
+[33m31bf797[m Some styles
+[33m7274cac[m Team updates and other style update
+[33m1f6b98b[m fix: add chatbot prefix to initial message
+[33m21e3fde[m fix: display typewritter animation better
+[33mf1de30e[m Team updates and other style update
+[33m04b8468[m Team updates and other style update
+[33m6befe9b[m updating team section
+[33m558fbd0[m adding team sections
+[33m2e71602[m Working on SEO meta
+[33m7b0aac3[m Working on SEO meta
+[33mcc1c5d9[m Working on SEO meta
+[33m120cd0f[m Working on SEO meta
+[33m040b07b[m Working on SEO meta
+[33md238173[m Working on SEO meta
+[33mb36ef3d[m Working on SEO meta
+[33mc9d64f5[m Working on SEO meta
+[33m702ef64[m Working on SEO meta
+[33m1d84942[m Fixed styles and favico
+[33m191821f[m Fixed a form style
+[33m522780b[m Fixed up form feedback
+[33me279c13[m fixed error
+[33mc1eb403[m menu and dev env updates
+[33md032a79[m Style updates
+[33mb01372d[m Blog updates
+[33m7902b69[m Style updates to AI page
+[33ma9c5262[m Edits to website machine post
+[33m4cf17ba[m Edits to website machine post
+[33m792dd32[m Edits to website machine post
+[33mf849f6d[m Edits to website machine post
+[33m35d58bf[m Edits to website machine post
+[33mf34fcc4[m style updates
+[33m0111ada[m style updates
+[33m9614038[m style updates
+[33mb994955[m style updates
+[33m12c6164[m style updates
+[33m050b7e0[m some style updates
+[33m2142856[m finished blog and fixed chevron
+[33m7a4e7fb[m fixed a style
+[33maa1bb35[m various updates
+[33m8600163[m services page update
+[33mc79d84e[m Various updates
+[33m2f7620f[m Various updates
+[33mac096fd[m added images
+[33m4f172db[m fixed css issue
+[33mcc732ad[m updated app.vue with css file
+[33m57b817c[m updated nuxt.config
+[33m00894f9[m updated services catch-all
+[33ma28a6a9[m Merge branch 'main' of github.com:Formwork-Studios/formwork-website
+[33md092385[m update featured service component, added tsparticles
+[33m1943558[m feat: upgrade chatbot to gpt4
+[33mb761f44[m Updated chatbot modal and contact from
+[33m4de2eac[m added modal to chatbot page
+[33m9741f55[m chatbot work
+[33m92276ef[m chatbot work
+[33m86a9f0e[m worked on user feedback from form and contact page
+[33m2c3a514[m worked on user feedback from form and contact page
+[33mfd73921[m worked on contact forms and form feedback
+[33m09cb228[m Connected blog and homepage contact forms to supabase
+[33m730da0b[m featured service component added inside of services component
+[33m1d30e53[m menu fixes, intersection observer
+[33m4bddb4c[m fixed footer and other style updates
+[33m847c780[m signup form, posts index page
+[33m4fab2b6[m updated page protection
+[33mfbf97c0[m blog updates
+[33m468fed7[m commented out placeholder image
+[33m0beb6e1[m blog post, privacy page, footer fix
+[33m70e30cc[m connected links, made contact and team page
+[33me3e017e[m work on navbar component
+[33m0e48d4f[m added catch-all route, error page, dropdown menu
+[33m5bcd487[m fixed some errors in index.vue
+[33mfea84e9[m added pinia
+[33m585eeff[m added pinia
+[33m0f7aa6e[m Merge pull request #3 from Formwork-Studios/hana/mobile
+[33m41eb3b7[m updated website-design page
+[33m260581f[m feat: display better on mobile
+[33mee7cf97[m Updated store, service layout and website design section
+[33m681f8f7[m updated servcies layou, still wip
+[33m20d2aed[m fix: make chatbot text input  black
+[33m331ea45[m fix: add environment variables the right way (?)
+[33mbcd68b0[m Merge branch 'main' of github.com:Formwork-Studios/formwork-website
+[33m53b6353[m added env variables
+[33m263cc88[m Merge pull request #2 from Formwork-Studios/hana/chatbot
+[33mc591619[m Merge branch 'main' of https://github.com/Formwork-Studios/formwork-website into hana/chatbot merge
+[33md363c66[m fix: add md break point
+[33m927b724[m Merge pull request #1 from Formwork-Studios/hana/chatbot
+[33med4a8d3[m fix: darken link color
+[33m7ffc4ec[m feat: enhance heading style
+[33m7512fcb[m feat: add heading text to clarify bot purpose
+[33mbb8f4ac[m Added sidemenu component
+[33mdbf7686[m index updates
+[33md0eed6c[m feat: add chatbot integration
+[33m204205e[m Pushing to build
+[33m25378e8[m Pushing to build
+[33m83948d8[m Added password protection, updated footer
+[33md3546f1[m Added password protection, updated footer
+[33m2271328[m fixing css path
+[33mfb7f422[m fixing css path
+[33m7cc5529[m fixing
+[33me8cf28d[m fixing
+[33m7d45d43[m Split '.output/public/' into commit 'a31c7ada521d7271c905d811ff3916cee484fcc6'
+[33me5f90bb[m Added output
+[33ma31c7ad[m Added output
+[33me16f81b[m Merge branch 'main' of github.com:Formwork-Studios/formwork-website
+[33mf8e307b[m First build
+[33m5af2cd9[m Update main.yml
+[33mcee4194[m Add GitHub Actions workflow
+[33m9cad730[m Merge branch 'main' of github.com:Formwork-Studios/formwork-website
+[33md78fafe[m Add GitHub Actions workflow
+[33md6ab931[m Create nuxtjs.yml
+[33m07678fc[m Add GitHub Actions workflow
+[33m7beec2d[m updates
+[33md45a348[m updates
+[33md5e1c97[m Updates
+[33m99ff19c[m Updates
+[33md1d091e[m Updates
+[33m1f28d5f[m Updates
+[33m171f57c[m Updates
+[33mf3c0fb5[m Updates
+[33ma9982cf[m Updates
+[33maed88f1[m Updates
+[33md1ae142[m Updates
+[33m7932149[m first commit

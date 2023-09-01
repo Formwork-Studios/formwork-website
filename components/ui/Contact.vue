@@ -53,12 +53,16 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 
+import { useNuxtApp } from '#app'
+
+
 const consent = ref(false)
 const name = ref('')
 const email = ref('')
 const message = ref('')
 const form = ref('')
 const isLoading = ref(false)
+
 const formFeedback = ref(null)
 const nuxtApp = useNuxtApp()
 const client = nuxtApp.$supabaseClient
@@ -84,7 +88,7 @@ const submitForm = async () => {
 
   console.log(`Here it is: ${JSON.stringify(payload)}`);
 
-  // Email validation
+
   const regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
   if (email.value && !regex.test(email.value)) {
     formFeedback.value = "invalidEmail";
@@ -92,6 +96,7 @@ const submitForm = async () => {
     isLoading.value = false;
     return;
   }
+
 
   // Submit form data to Supabase
   const { error } = await client
@@ -112,6 +117,7 @@ const submitForm = async () => {
   } else {
     formFeedback.value = "success"; // Update feedback message
     success.value = true;
+
   }
 
   isLoading.value = false;
