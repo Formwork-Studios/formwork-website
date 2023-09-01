@@ -29,14 +29,12 @@
         </div>
         <label class="block text-white text-lg font-bold mt-auto sr-only" for="message">Your Message</label>
       </div>
-
       <div class="mb-8">
         <label class="flex items-center text-white text-lg">
           <input type="checkbox" v-model="consent" class="mr-3" id="updates" />
           I agree to receive email updates
         </label>
       </div>
-
       <div class="flex items-center justify-between">
         <button
           class="bg-transparent hover:bg-white text-white font-bold py-2 px-4 border border-white hover:text-black w-20 h-10 grid place-items-center"
@@ -44,19 +42,16 @@
           <span v-show="!isLoading" class="uppercase">Send</span>
           <i-ri-loader-4-line v-show="isLoading" class="animate-spin" />
         </button>
- 
       </div>
       <div class="block">
-    <uiFormFeedback v-if="formFeedback" :formFeedback="formFeedback" class="feedback-animation" :success="success" />
-  </div>
+        <uiFormFeedback v-if="formFeedback" :formFeedback="formFeedback" class="feedback-animation" :success="success" />
+      </div>
     </form>
   </div>
 </template>
 
-
 <script setup>
 import { ref, onMounted } from 'vue'
-
 
 const consent = ref(false)
 const name = ref('')
@@ -64,19 +59,36 @@ const email = ref('')
 const message = ref('')
 const form = ref('')
 const isLoading = ref(false)
-const formFeedback = ref(null) 
-const client = useSupabaseClient()
-const success = ref(true); 
+const formFeedback = ref(null)
+const nuxtApp = useNuxtApp()
+const client = nuxtApp.$supabaseClient
+const success = ref(true);
 
 const submitForm = async () => {
-  isLoading.value = true;
-  formFeedback.value = null; // Reset feedback message
+  const payload = {
+    email: email.value,
+    topic: 'home',
+    name: name.value,
+    message: message.value,
+    consent: consent.value,
+  }
+
+  const { data: responseData } = await useFetch('/api/sendEmail', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    server: false,
+    body: JSON.stringify(payload)
+  });
+
+  console.log(`Here it is: ${JSON.stringify(payload)}`);
 
   // Email validation
   const regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
   if (email.value && !regex.test(email.value)) {
     formFeedback.value = "invalidEmail";
-    success.value = false; 
+    success.value = false;
     isLoading.value = false;
     return;
   }
@@ -85,27 +97,25 @@ const submitForm = async () => {
   const { error } = await client
     .from('blogFollows')
     .insert([
-      { 
-        email: email.value, 
+      {
+        email: email.value,
         topic: 'home',
         name: name.value,
         message: message.value,
-        consent: consent.value 
+        consent: consent.value
       },
     ]);
 
   if (error) {
-    console.error("Error submitting form:", error.message);
     formFeedback.value = "error"; // Update feedback message
-    success.value = false; 
+    success.value = false;
   } else {
-    console.log("Form submitted successfully!");
     formFeedback.value = "success"; // Update feedback message
-    success.value = true; 
+    success.value = true;
   }
 
   isLoading.value = false;
-}
+};
 
 onMounted(() => {
   const observer = new IntersectionObserver(
@@ -132,8 +142,6 @@ onMounted(() => {
 </script>
 
 <style scoped>
-
-
 .border-b-extend {
   background-color: #14B8A6;
   transform: scaleX(0);
@@ -151,7 +159,7 @@ onMounted(() => {
 }
 
 form {
- 
+
   margin: 0 auto;
 }
 
@@ -191,12 +199,16 @@ button[type="submit"] {
 }
 
 .feedback-animation {
-    animation: feedback-fade-in 1s ease-in-out forwards;
+  animation: feedback-fade-in 1s ease-in-out forwards;
+  opacity: 0;
+}
+
+@keyframes feedback-fade-in {
+  0% {
     opacity: 0;
   }
 
-  @keyframes feedback-fade-in {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+  100% {
+    opacity: 1;
   }
-</style>
+}</style>

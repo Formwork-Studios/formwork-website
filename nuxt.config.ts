@@ -21,7 +21,8 @@ export default defineNuxtConfig({
 		  src: '~/plugins/vue3-particles.ts',
 		  mode: 'client',
 		},
-		
+		'~/plugins/supabase-actions.js',
+	
 	  ],
 	vite: {
 		plugins: [
@@ -42,5 +43,6 @@ export default defineNuxtConfig({
 		OPENAI_API_KEY: process.env.OPENAI_API_KEY,
 		PINECONE_API_KEY: process.env.PINECONE_API_KEY,
 		PINECONE_BASE_URL: process.env.PINECONE_BASE_URL,
+		EMAIL_PASSWORD: process.env.EMAIL_PASSWORD,
 	}
 });

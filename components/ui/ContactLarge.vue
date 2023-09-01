@@ -3,33 +3,27 @@
     <form ref="form" id="mainContact" class="w-11/12 lg:w-2/3 px-0 lg:px-6 mx-auto" @submit.prevent="submitForm">
       <div class="flex flex-col md:flex-row items-center">
         <div id="col1" class="flex items-center md:p-6 lg:p-10">
-    <img
-        src="/formwork_white.png"
-        class="hidden md:block mr-0 md:mr-8 p-10na md:h-[500px] h-[300px]"
-    />
+          <img src="/formwork_white.png" class="hidden md:block mr-0 md:mr-8 p-10na md:h-[500px] h-[300px]" />
 
-    <span 
-        class="md:hidden text-white text-xl" 
-    >
-        <uiLogoCombo />
-    </span>
-</div>
-
+          <span class="md:hidden text-white text-xl">
+            <uiLogoCombo />
+          </span>
+        </div>
         <div id="col2" class="flex-grow p-2 md:p-6 lg:p-10 w-full md:w-1/2">
           <div class="relative mb-8">
             <label class="block text-white text-lg font-bold mb-2" for="reason">REASON FOR CONTACT</label>
-            <select v-model="reason" id="reason" class="w-full text-white text-lg px-2 py-3 leading-tight bg-black focus:z-10 relative">
-  <option value="" disabled>-</option>
-  <option value="web-design-and-ui-ux">Website Design</option>
-  <option value="web-development">Website Development</option>
-  <option value="digital-marketing">Digital Marketing</option>
-  <option value="branding-identity">Visual Identity</option>
-  <option value="e-commerce">E-commerce</option>
-  <option value="social-media">Social Media</option>
-  <option value="Artificial Intelligence">Artificial Intelligence</option>
-  <option value="General Inquiry">General Inquiry</option>
-</select>
-
+            <select v-model="reason" id="reason"
+              class="w-full text-white text-lg px-2 py-3 leading-tight bg-black focus:z-10 relative">
+              <option value="" disabled>-</option>
+              <option value="web-design-and-ui-ux">Website Design</option>
+              <option value="web-development">Website Development</option>
+              <option value="digital-marketing">Digital Marketing</option>
+              <option value="branding-identity">Visual Identity</option>
+              <option value="e-commerce">E-commerce</option>
+              <option value="social-media">Social Media</option>
+              <option value="Artificial Intelligence">Artificial Intelligence</option>
+              <option value="General Inquiry">General Inquiry</option>
+            </select>
           </div>
           <div class="relative mb-4 md:mb-8">
             <label class="block text-white text-lg font-bold mb-2 sr-only" for="name">Name</label>
@@ -89,10 +83,18 @@ import { useRouteQuery } from '@vueuse/router'
 
 const routeQuery = useRouteQuery('reason')
 const reason = ref('')
-
+const consent = ref(false)
+const name = ref('')
+const email = ref('')
+const message = ref('')
+const form = ref('')
+const isLoading = ref(false)
+const formFeedback = ref(null)
+const nuxtApp = useNuxtApp()
+const client = nuxtApp.$supabaseClient
+const success = ref(true);
 
 watch(routeQuery, newValue => {
-
   reason.value = newValue
 })
 
@@ -104,22 +106,27 @@ onMounted(() => {
   }
 })
 
-
-
-
-const consent = ref(false)
-const name = ref('')
-const email = ref('')
-const message = ref('')
-const form = ref('')
-const isLoading = ref(false)
-const formFeedback = ref(null)
-const client = useSupabaseClient()
-const success = ref(true);
-
-
-
 const submitForm = async () => {
+  const payload = {
+    email: email.value,
+    topic: 'home',
+    name: name.value,
+    message: message.value,
+    consent: consent.value,
+    reason: reason.value,
+  }
+
+  const { data: responseData } = await useFetch('/api/sendEmail', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    server: false,
+    body: JSON.stringify(payload)
+  });
+
+  console.log(`Here it is: ${JSON.stringify(payload)}`);
+
   isLoading.value = true;
   formFeedback.value = null;
 
@@ -160,7 +167,7 @@ const submitForm = async () => {
 
   if (error) {
     console.error("Error submitting form:", error.message);
-    formFeedback.value = "error"; 
+    formFeedback.value = "error";
     success.value = false;
   } else {
     console.log("Form submitted successfully!");
@@ -261,11 +268,9 @@ button[type="submit"] {
 
 
 .form-feedback {
-    position: absolute;
-    width: 100%;
-    top: 100%; /* This positions it right below the element */
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  /* This positions it right below the element */
 }
-
-
-
 </style>

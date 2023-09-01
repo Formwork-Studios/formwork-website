@@ -57,7 +57,8 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 
-const client = useSupabaseClient()
+const nuxtApp = useNuxtApp()
+const client = nuxtApp.$supabaseClient
 
 const email = ref('')
 const form = ref('')
@@ -65,6 +66,22 @@ const formFeedback = ref(null)
 const success = ref(true);  
 
 async function submitEmail() {
+  const payload = {
+    email: email.value,
+    topic: 'Blog Signup',
+  }
+
+  const { data: responseData } = await useFetch('/api/sendEmail', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    server: false,
+    body: JSON.stringify(payload)
+  });
+
+  console.log(`Here it is: ${JSON.stringify(payload)}`);
+  
   // Simple regex for email validation
   const regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
 
