@@ -50,8 +50,8 @@
           <div class="flex flex-col h-full w-full justify-between items-start space-y-4 text-xl">
             <div class="p-8">
               <nuxt-link to="/" @click="isOpen = !isOpen" class="text-white border-none uppercase block mb-3 menulink">Home</nuxt-link>
-              <nuxt-link to="/posts/" class="text-white border-none uppercase block mb-3 menulink">Blog</nuxt-link>
-              <div @click.stop="isDropdownOpen = !isDropdownOpen" class="cursor-pointer text-white border-none uppercase block mb-3 menulink">Services
+              <nuxt-link to="/posts/" @click="isOpen = !isOpen" class="text-white border-none uppercase block mb-3 menulink">Blog</nuxt-link>
+              <div @click.prevent="isDropdownOpen = !isDropdownOpen" class="cursor-pointer text-white border-none uppercase block mb-3 menulink">Services
                 <i-mdi-chevron-down
                   :class="isDropdownOpen ? 'rotate-180' : ''"
                   class="inline transform transition-transform duration-200 ease-in-out group-hover:translate-x-1" />
