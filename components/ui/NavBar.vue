@@ -42,9 +42,6 @@
            ref="menu"
            :class="{ 'menu-open': isOpen }"
            class="transition-all duration-300 ease-in-out fixed inset-0 bg-stone-950 bg-opacity-80 opacity-0 transform translate-x-full lg:hidden z-40 h-full"
-           @touchstart="handleTouchStart"
-           @touchmove="handleTouchMove"
-           @touchend="handleTouchEnd"
       >
         <div class="bg-stone-950 lg:hidden shadow-md max-w-3/4 w-3/4 ml-auto pt-12 !z-40 h-full">
           <div class="flex flex-col h-full w-full justify-between items-start space-y-4 text-xl">
@@ -68,7 +65,7 @@
                   {{ item.name }} 
                 </nuxt-link>
               </div>
-              <nuxt-link to="/contact" @click="isOpen = !isOpen" class="text-white border-none uppercase menulink opacity-0">Contact</nuxt-link>
+              <nuxt-link to="/contact" @click="isOpen = !isOpen" class="text-white border-none block uppercase menulink opacity-0">Contact</nuxt-link>
             </div>
             <div class="flex flex-row bottom-0 w-full items-center bg-gray-400">
               <a href="https://github.com" class="flex justify-center items-center bg-primary w-1/3 h-16" target="_blank">
@@ -88,8 +85,6 @@
   </div>
 </template>
 
-
-
 <script setup>
 import { ref } from 'vue';
 import { useStore } from '/store/store.ts';
@@ -100,28 +95,9 @@ const showModal = ref(false);
 const menuStore = useStore();
 const serviceItems = ref([]);
 const menu = ref(null);
-let touchStartX = 0;
+
 
 serviceItems.value = menuStore.projects;
-
-const handleTouchStart = (e) => {
-  touchStartX = e.touches[0].clientX;
-};
-
-const handleTouchMove = (e) => {
-  const touchEndX = e.touches[0].clientX;
-  const deltaX = touchEndX - touchStartX;
-  if (deltaX < 0 && Math.abs(deltaX) > 50) {
-    menu.value.style.transform = `translateX(${deltaX}px)`;
-  }
-};
-
-const handleTouchEnd = () => {
-  menu.value.style.transform = 'translateX(0)';
-  if (touchStartX > 50) {
-    isOpen.value = false;
-  }
-};
 
 onMounted(() => {
   let delay = 0.1;
