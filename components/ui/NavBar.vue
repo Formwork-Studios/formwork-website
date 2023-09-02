@@ -49,9 +49,9 @@
         <div class="bg-stone-950 lg:hidden shadow-md max-w-3/4 w-3/4 ml-auto pt-12 !z-40 h-full">
           <div class="flex flex-col h-full w-full justify-between items-start space-y-4 text-xl">
             <div class="p-8">
-              <nuxt-link to="/" @click="isOpen = !isOpen" class="text-white border-none uppercase block mb-3 menulink">Home</nuxt-link>
-              <nuxt-link to="/posts/" @click="isOpen = !isOpen" class="text-white border-none uppercase block mb-3 menulink">Blog</nuxt-link>
-              <div @click.prevent="isDropdownOpen = !isDropdownOpen" class="cursor-pointer text-white border-none uppercase block mb-3 menulink">Services
+              <nuxt-link to="/" @click="isOpen = !isOpen" class="text-white border-none uppercase block mb-3 menulink opacity-0">Home</nuxt-link>
+              <nuxt-link to="/posts/" @click="isOpen = !isOpen" class="text-white border-none uppercase block mb-3 menulink opacity-0">Blog</nuxt-link>
+              <div @click.prevent="isDropdownOpen = !isDropdownOpen" class="cursor-pointer text-white border-none uppercase block mb-3 menulink opacity-0">Services
                 <i-mdi-chevron-down
                   :class="isDropdownOpen ? 'rotate-180' : ''"
                   class="inline transform transition-transform duration-200 ease-in-out group-hover:translate-x-1" />
@@ -68,7 +68,7 @@
                   {{ item.name }} 
                 </nuxt-link>
               </div>
-              <nuxt-link to="/contact" @click="isOpen = !isOpen" class="text-white border-none uppercase menulink">Contact</nuxt-link>
+              <nuxt-link to="/contact" @click="isOpen = !isOpen" class="text-white border-none uppercase menulink opacity-0">Contact</nuxt-link>
             </div>
             <div class="flex flex-row bottom-0 w-full items-center bg-gray-400">
               <a href="https://github.com" class="flex justify-center items-center bg-primary w-1/3 h-16" target="_blank">
