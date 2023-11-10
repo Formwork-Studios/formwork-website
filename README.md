@@ -1,6 +1,14 @@
 # Nuxt 3 Minimal Starter
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Clone repo with degit
+Install Degit
+```
+npm install -g degit
+```
+Clone repository
+```
+degit github:Formwork-Studios/nuxt-tailwind-starter
+```
 
 ## Setup
 
